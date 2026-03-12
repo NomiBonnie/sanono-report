@@ -9,7 +9,6 @@
 ![Scorecard](/sanono-report/images/perplexity-pc/01-infographic-scorecard.png)
 
 
-![Scorecard](/sanono-report/images/perplexity-pc/01-infographic-scorecard.png)
 
 
 | 维度 | 分数 | 评语 |
@@ -300,7 +299,6 @@ Perplexity 选择与 OpenAI 对齐的价格带，暗示这不是给普通用户�
 ![Risks](/sanono-report/images/perplexity-pc/07-comparison-risks-opportunities.png)
 
 
-![Risks & Opportunities](/sanono-report/images/perplexity-pc/07-comparison-risks-opportunities.png)
 
 
 ### Top 3 风险
