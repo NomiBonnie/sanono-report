@@ -177,7 +177,7 @@ function ReportView() {
 
   return (
     <div className="relative">
-      {/* Mini chapter nav - right side */}
+      {/* Mini chapter nav - desktop: right side dots */}
       {headings.length > 0 && (
         <nav className="fixed right-4 top-1/2 -translate-y-1/2 z-30 hidden lg:flex flex-col items-center gap-2">
           {headings.map((h) => (
@@ -197,6 +197,27 @@ function ReportView() {
               <span className="absolute right-6 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-xs text-brand-500 dark:text-brand-400 bg-brand-50 dark:bg-brand-950 px-2 py-1 rounded shadow-sm border border-brand-200 dark:border-brand-800 pointer-events-none">
                 {h.text}
               </span>
+            </button>
+          ))}
+        </nav>
+      )}
+
+      {/* Mini chapter nav - mobile: bottom right dots */}
+      {headings.length > 0 && (
+        <nav className="fixed right-3 bottom-6 z-30 flex lg:hidden flex-col items-center gap-1.5 bg-brand-50/90 dark:bg-brand-950/90 backdrop-blur-sm rounded-full py-2 px-1.5 border border-brand-200 dark:border-brand-800 shadow-sm">
+          {headings.map((h) => (
+            <button
+              key={h.id}
+              onClick={() => {
+                const el = document.getElementById(h.id)
+                if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+              }}
+            >
+              <span className={`block rounded-full transition-all ${
+                activeHeading === h.id
+                  ? 'w-2 h-2 bg-brand-900 dark:bg-brand-100'
+                  : 'w-1 h-1 bg-brand-300 dark:bg-brand-700'
+              }`} />
             </button>
           ))}
         </nav>

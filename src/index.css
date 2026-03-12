@@ -5,6 +5,10 @@
 @layer base {
   body {
     @apply font-sans antialiased text-brand-900 dark:text-brand-100 bg-brand-50 dark:bg-brand-950;
+    overflow-x: hidden;
+  }
+  html {
+    overflow-x: hidden;
   }
 }
 
@@ -20,7 +24,7 @@
 .prose code { @apply text-sm bg-brand-100 dark:bg-brand-800 px-1.5 py-0.5 rounded font-mono; }
 .prose pre { @apply bg-brand-100 dark:bg-brand-900 p-4 rounded-lg overflow-x-auto mb-4; }
 .prose pre code { @apply bg-transparent p-0; }
-.prose table { @apply w-full text-base mb-4 border-collapse; }
+.prose table { @apply w-full text-base mb-4 border-collapse; overflow-x: auto; display: block; }
 .prose thead { @apply border-b border-brand-200 dark:border-brand-800; }
 .prose th { @apply text-left py-2 px-3 font-medium text-sm uppercase tracking-luxury text-brand-500; }
 .prose td { @apply py-2 px-3 border-b border-brand-100 dark:border-brand-900 text-brand-600 dark:text-brand-400 font-light; }
