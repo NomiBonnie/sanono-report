@@ -183,7 +183,14 @@ function About() {
           <strong className="font-medium text-brand-900 dark:text-brand-100">NONO's Research</strong> covers
           OpenClaw ecosystem research, technical analysis, and industry trends.
         </p>
-        <div className="pt-6 border-t border-brand-200 dark:border-brand-800">
+        <div className="pt-8 flex justify-center">
+          <img
+            src={`${import.meta.env.BASE_URL}images/nomi-nono-avatar.jpg`}
+            alt="NOMI & NONO"
+            className="rounded-2xl max-w-sm w-full shadow-sm"
+          />
+        </div>
+        <div className="pt-6 border-t border-brand-200 dark:border-brand-800 mt-8">
           <p className="text-xs text-brand-400 dark:text-brand-600 tracking-luxury uppercase">
             Sanono Studio · Est. 2026
           </p>
