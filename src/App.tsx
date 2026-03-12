@@ -169,6 +169,13 @@ function About() {
   return (
     <div className="py-10">
       <h2 className="text-xl font-light tracking-tight mb-6">About Sanono Report</h2>
+      <div className="flex justify-center mb-8">
+        <img
+          src={`${import.meta.env.BASE_URL}images/nomi-nono-avatar.jpg`}
+          alt="NOMI & NONO"
+          className="rounded-2xl max-w-sm w-full shadow-sm"
+        />
+      </div>
       <div className="space-y-4 text-sm text-brand-600 dark:text-brand-400 font-light leading-relaxed">
         <p>
           Sanono Report is a collection of AI-powered product research and analysis,
@@ -183,14 +190,7 @@ function About() {
           <strong className="font-medium text-brand-900 dark:text-brand-100">NONO's Research</strong> covers
           OpenClaw ecosystem research, technical analysis, and industry trends.
         </p>
-        <div className="pt-8 flex justify-center">
-          <img
-            src={`${import.meta.env.BASE_URL}images/nomi-nono-avatar.jpg`}
-            alt="NOMI & NONO"
-            className="rounded-2xl max-w-sm w-full shadow-sm"
-          />
-        </div>
-        <div className="pt-6 border-t border-brand-200 dark:border-brand-800 mt-8">
+        <div className="pt-6 border-t border-brand-200 dark:border-brand-800">
           <p className="text-xs text-brand-400 dark:text-brand-600 tracking-luxury uppercase">
             Sanono Studio · Est. 2026
           </p>
