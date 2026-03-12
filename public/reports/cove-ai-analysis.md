@@ -10,6 +10,9 @@ Cove 是一个由前 Google/Uber/Stripe 团队打造、Sequoia 领投 $6M 的 AI
 
 ## 评分卡（1-10）
 
+![Scorecard](/sanono-report/images/cove-ai/01-infographic-scorecard.png)
+
+
 | 维度 | 评分 | 说明 |
 |------|------|------|
 | 产品定位清晰度 | 9 | "AI thought partner, not chatbot" — 极度清晰的差异化叙事 |
@@ -24,6 +27,9 @@ Cove 是一个由前 Google/Uber/Stripe 团队打造、Sequoia 领投 $6M 的 AI
 ---
 
 ## 1. 产品定位（WHO & WHY）
+
+![Product Positioning](/sanono-report/images/cove-ai/02-comparison-chat-vs-canvas.png)
+
 
 ### 核心洞察：从"问答"到"协作"
 
@@ -54,6 +60,9 @@ Cove 的差异化：**AI 不是回答者，是"同桌"——你们在同一张�
 ---
 
 ## 2. 产品策略（WHAT）
+
+![Feature Ecosystem](/sanono-report/images/cove-ai/03-framework-feature-ecosystem.png)
+
 
 ### 核心功能矩阵
 
@@ -137,6 +146,9 @@ AI 的输出不是一大段文字，而是结构化卡片自动流入画布。�
 
 ## 4. 商业模式（HOW it makes money）
 
+![Pricing](/sanono-report/images/cove-ai/04-comparison-pricing-strategy.png)
+
+
 ### 定价
 
 | 计划 | 价格 | 核心权益 |
@@ -178,6 +190,9 @@ AI 的输出不是一大段文字，而是结构化卡片自动流入画布。�
 
 ## 5. 技术实现（HOW it's built）
 
+![Architecture](/sanono-report/images/cove-ai/05-flowchart-tech-architecture.png)
+
+
 ### 多模型架构
 
 Cove 的技术策略在 Anthropic 官方客户案例中有详细披露 🟢：
@@ -217,6 +232,9 @@ Cove 的技术策略在 Anthropic 官方客户案例中有详细披露 🟢：
 ---
 
 ## 6. 竞争格局（WHO else）
+
+![Competitive](/sanono-report/images/cove-ai/06-infographic-competitive-landscape.png)
+
 
 ### 竞品矩阵
 
@@ -285,6 +303,9 @@ Cove 的核心交互创新——画布式 AI 协作——已经被大模型厂�
 ---
 
 ## 9. 风险与机会
+
+![Risks](/sanono-report/images/cove-ai/07-comparison-risks-opportunities.png)
+
 
 ### 最大的 3 个风险
 
