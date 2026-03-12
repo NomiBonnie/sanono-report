@@ -26,10 +26,9 @@ function Header() {
     <header className="border-b border-brand-200 dark:border-brand-800">
       <div className="max-w-4xl mx-auto px-6 py-8 flex items-center justify-between">
         <NavLink to="/" className="block">
-          <h1 className="text-xs tracking-luxury uppercase text-brand-400 dark:text-brand-600 mb-1">
-            Sanono Studio
+          <h1 className="text-2xl font-semibold tracking-tight" style={{ fontFamily: "'Playfair Display', serif" }}>
+            Sanono Report
           </h1>
-          <p className="text-2xl font-light tracking-tight">Report</p>
         </NavLink>
         <button
           onClick={toggle}
