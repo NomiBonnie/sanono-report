@@ -122,6 +122,8 @@ function ReportView() {
   const { id } = useParams()
   const [content, setContent] = useState<string>('')
   const [loading, setLoading] = useState(true)
+  const [headings, setHeadings] = useState<{id: string; text: string; level: number}[]>([])
+  const [activeHeading, setActiveHeading] = useState<string>('')
   const allReports = [...nomiReports, ...nonoReports]
   const report = allReports.find(r => r.id === id)
 
@@ -133,10 +135,73 @@ function ReportView() {
       .catch(() => { setContent('Report not found.'); setLoading(false) })
   }, [report])
 
+  // Extract headings from rendered content
+  useEffect(() => {
+    if (loading || !content) return
+    const timer = setTimeout(() => {
+      const article = document.querySelector('article.prose')
+      if (!article) return
+      const h2s = article.querySelectorAll('h2')
+      const items: {id: string; text: string; level: number}[] = []
+      h2s.forEach((h, i) => {
+        const hid = `section-${i}`
+        h.id = hid
+        items.push({ id: hid, text: h.textContent || '', level: 2 })
+      })
+      setHeadings(items)
+    }, 100)
+    return () => clearTimeout(timer)
+  }, [loading, content])
+
+  // Track active heading on scroll
+  useEffect(() => {
+    if (headings.length === 0) return
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            setActiveHeading(entry.target.id)
+          }
+        }
+      },
+      { rootMargin: '-100px 0px -60% 0px', threshold: 0 }
+    )
+    headings.forEach(h => {
+      const el = document.getElementById(h.id)
+      if (el) observer.observe(el)
+    })
+    return () => observer.disconnect()
+  }, [headings])
+
   if (!report) return <div className="py-20 text-center text-brand-400">Report not found</div>
 
   return (
-    <div>
+    <div className="relative">
+      {/* Mini chapter nav - right side */}
+      {headings.length > 0 && (
+        <nav className="fixed right-4 top-1/2 -translate-y-1/2 z-30 hidden lg:flex flex-col items-center gap-2">
+          {headings.map((h) => (
+            <button
+              key={h.id}
+              onClick={() => {
+                const el = document.getElementById(h.id)
+                if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+              }}
+              className="group relative flex items-center"
+            >
+              <span className={`block rounded-full transition-all ${
+                activeHeading === h.id
+                  ? 'w-2.5 h-2.5 bg-brand-900 dark:bg-brand-100'
+                  : 'w-1.5 h-1.5 bg-brand-300 dark:bg-brand-700 group-hover:bg-brand-500 dark:group-hover:bg-brand-400 group-hover:w-2 group-hover:h-2'
+              }`} />
+              <span className="absolute right-6 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-xs text-brand-500 dark:text-brand-400 bg-brand-50 dark:bg-brand-950 px-2 py-1 rounded shadow-sm border border-brand-200 dark:border-brand-800 pointer-events-none">
+                {h.text}
+              </span>
+            </button>
+          ))}
+        </nav>
+      )}
+
       <NavLink
         to={report.author === 'nomi' ? '/' : '/nono'}
         className="inline-flex items-center gap-1 text-xs text-brand-400 dark:text-brand-600 hover:text-brand-600 dark:hover:text-brand-400 transition-colors mb-8 tracking-luxury uppercase"
