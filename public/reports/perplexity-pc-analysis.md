@@ -6,6 +6,9 @@
 
 ## 评分卡
 
+![Scorecard](/sanono-report/images/perplexity-pc/01-infographic-scorecard.png)
+
+
 | 维度 | 分数 | 评语 |
 |------|------|------|
 | 定位清晰度 | 8/10 | "AI is the Computer"——叙事简洁有力，但与 Computer/Personal Computer/Comet 三线并行略显混乱 |
@@ -275,6 +278,9 @@ Perplexity 选择与 OpenAI 对齐的价格带，暗示这不是给普通用户�
 ---
 
 ## 风险与机会
+
+![Risks & Opportunities](/sanono-report/images/perplexity-pc/07-comparison-risks-opportunities.png)
+
 
 ### Top 3 风险
 
