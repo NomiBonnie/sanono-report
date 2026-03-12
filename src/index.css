@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans antialiased text-brand-900 dark:text-brand-100 bg-brand-50 dark:bg-brand-950;
+  }
+}
+
+/* Markdown content styling */
+.prose h1 { @apply text-2xl font-light tracking-tight mb-6 mt-10; }
+.prose h2 { @apply text-xl font-light tracking-tight mb-4 mt-8 pb-2 border-b border-brand-200 dark:border-brand-800; }
+.prose h3 { @apply text-lg font-medium mb-3 mt-6; }
+.prose p { @apply text-sm leading-relaxed mb-4 text-brand-700 dark:text-brand-300 font-light; }
+.prose ul { @apply list-disc pl-5 mb-4 space-y-1; }
+.prose ol { @apply list-decimal pl-5 mb-4 space-y-1; }
+.prose li { @apply text-sm text-brand-700 dark:text-brand-300 font-light; }
+.prose blockquote { @apply border-l-2 border-brand-300 dark:border-brand-700 pl-4 my-4 italic text-brand-500 dark:text-brand-400; }
+.prose code { @apply text-xs bg-brand-100 dark:bg-brand-800 px-1.5 py-0.5 rounded font-mono; }
+.prose pre { @apply bg-brand-100 dark:bg-brand-900 p-4 rounded-lg overflow-x-auto mb-4; }
+.prose pre code { @apply bg-transparent p-0; }
+.prose table { @apply w-full text-sm mb-4 border-collapse; }
+.prose thead { @apply border-b border-brand-200 dark:border-brand-800; }
+.prose th { @apply text-left py-2 px-3 font-medium text-xs uppercase tracking-luxury text-brand-500; }
+.prose td { @apply py-2 px-3 border-b border-brand-100 dark:border-brand-900 text-brand-600 dark:text-brand-400 font-light; }
+.prose hr { @apply my-8 border-brand-200 dark:border-brand-800; }
+.prose strong { @apply font-medium text-brand-900 dark:text-brand-100; }
+.prose a { @apply underline underline-offset-2 decoration-brand-300 dark:decoration-brand-700 hover:decoration-brand-500 transition-colors; }
+.prose img { @apply rounded-lg my-6 w-full; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { @apply bg-brand-300 dark:bg-brand-700 rounded-full; }
