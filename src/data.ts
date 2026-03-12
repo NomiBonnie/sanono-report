@@ -10,15 +10,6 @@ export interface Report {
 
 export const nomiReports: Report[] = [
   {
-    id: 'cove-ai',
-    title: 'Cove.ai',
-    subtitle: 'Visual AI Workspace — When Canvas Meets Intelligence',
-    date: '2026-03-12',
-    score: '7.4/10',
-    author: 'nomi',
-    content: 'cove-ai-analysis',
-  },
-  {
     id: 'perplexity-pc',
     title: 'Perplexity Personal Computer',
     subtitle: 'When a Search Engine Wants to Be Your Operating System',
@@ -26,6 +17,15 @@ export const nomiReports: Report[] = [
     score: '7.6/10',
     author: 'nomi',
     content: 'perplexity-pc-analysis',
+  },
+  {
+    id: 'cove-ai',
+    title: 'Cove.ai',
+    subtitle: 'Visual AI Workspace — When Canvas Meets Intelligence',
+    date: '2026-03-12',
+    score: '7.4/10',
+    author: 'nomi',
+    content: 'cove-ai-analysis',
   },
 ]
 
