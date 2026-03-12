@@ -23,7 +23,7 @@ function useTheme() {
 function Header() {
   const { dark, toggle } = useTheme()
   return (
-    <header className="border-b border-brand-200 dark:border-brand-800">
+    <header className="border-b border-brand-200 dark:border-brand-800 bg-brand-50/80 dark:bg-brand-950/80 backdrop-blur-xl sticky top-0 z-50">
       <div className="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between">
         <NavLink to="/" className="block">
           <h1 className="text-2xl font-semibold tracking-tight" style={{ fontFamily: "'Playfair Display', serif" }}>
@@ -53,7 +53,7 @@ function Tabs() {
     { to: '/about', label: 'About' },
   ]
   return (
-    <nav className="border-b border-brand-100 dark:border-brand-900">
+    <nav className="border-b border-brand-100 dark:border-brand-900 bg-brand-50/80 dark:bg-brand-950/80 backdrop-blur-xl sticky top-[57px] z-40">
       <div className="max-w-4xl mx-auto px-6 flex gap-8">
         {tabs.map(t => (
           <NavLink
