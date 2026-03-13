@@ -32,8 +32,7 @@ The combined effect of foreign competition and the loss of their
 protective exchange rate would have decimated the Swiss watch
 industry even if it hadn't been for quartz movements. But quartz
 movements were the final blow. Now the whole game they'd been trying
-to win at became irrelevant. Something that had been expensive —
-knowing the exact time — was now a commodity.
+to win at became irrelevant. **Something that had been expensive — knowing the exact time — was now a commodity.**
 
 ![The Swiss watch crisis of the 1970s](/sanono-report/images/reading/pg-brand-age-1.jpg)
 
@@ -58,12 +57,10 @@ industry probably makes more now from selling brand than they would
 have if they were still selling engineering. And indeed, when you
 look at the graph of Swiss watch sales by revenue, it tells a
 different story than the graph of unit sales. Instead of falling
-off a cliff, the revenue numbers merely flatten out for a while,
-and then take off like a rocket in the late 1980s as the surviving
+off a cliff, the revenue numbers merely flatten out for a while, and then **take off like a rocket** in the late 1980s as the surviving
 watchmakers come to terms with their new destiny.
 
-It took the watchmakers about 20 years to figure out the new rules
-of the game. And it's interesting to watch them do it, because the
+**It took the watchmakers about 20 years to figure out the new rules of the game.** And it's interesting to watch them do it, because the
 completeness of their transformation makes it the perfect case study
 in one of the most powerful forces of our era: brand.
 
@@ -165,14 +162,14 @@ for the future.
 [2]
 
 How could merely designing a distinctive case be so important?
-Because it turned the entire watch into an expression of brand.
+Because it **turned the entire watch into an expression of brand**.
 
 The trouble with the best watches of the golden age, from the point
 of view of someone who wanted to impress people with the brand of
 watch he was wearing, was that no one could tell what brand of watch
 you were wearing. Until you got within a few inches of them, the
 watches of all the top makers looked the same. That's the thing
-about minimalism: there tends to be just one answer. Plus the watches
+about minimalism: **there tends to be just one answer**. Plus the watches
 of the golden age were small by present standards. Watchmakers had
 spent centuries working to make them smaller, and by 1960 they'd
 gotten very good at it. So the only thing distinguishing one top
@@ -214,17 +211,14 @@ the right answer, and right answers tend to converge.
 There is some wiggle room here of course. Design doesn't have as
 sharply defined right answers as math, especially design meant for
 a human audience. So it's not necessarily bad design to do something
-distinctive if you have honest motives. But you can't evade the
-fundamental conflict between branding and design, any more than you
-can evade gravity.
+distinctive if you have honest motives. But **you can't evade the fundamental conflict between branding and design, any more than you can evade gravity**.
 
 Indeed, the conflict between branding and design is so fundamental
 that it extends far beyond things we call design. We see it even
 in religion. If you want the adherents of a religion to have customs
 that set them apart from everyone else, you can't make them do
 things that are convenient or reasonable, or other people would do
-them too. If you want to set your adherents apart, you have to make
-them do things that are inconvenient and unreasonable.
+them too. If you want to set your adherents apart, you have to **make them do things that are inconvenient and unreasonable**.
 
 It's the same if you want to set your designs apart. If you choose
 good options, other people will choose them too.
@@ -411,8 +405,7 @@ quality. Quality doesn't stop mattering when a product switches to
 something people buy for its brand. But the way it matters changes
 shape. **It becomes a threshold.** It no longer has to be so great that
 it sells the product; brand sells the product; but it does have to
-be good enough to maintain the brand's reputation. The brand must
-not break character.
+be good enough to maintain the brand's reputation. **The brand must not break character.**
 
 It was a lucky thing for the watchmakers that yuppies arose just
 in time to save them. Or maybe not so lucky. Because the evolution
@@ -447,9 +440,7 @@ seem to be doing better than ever. They're not only all still around,
 but most now have their own boutiques instead of depending on
 jewelers to sell their products as they used to back in the day.
 
-In fact this is an illusion. Only three watchmakers survived the
-dark days of the 70s and 80s as independent companies: Patek Philippe,
-Audemars Piguet, and Rolex. All the rest are owned by six holding
+In fact this is an illusion. **Only three watchmakers survived the dark days of the 70s and 80s as independent companies: Patek Philippe, Audemars Piguet, and Rolex.** All the rest are owned by six holding
 companies, which reinflated them as it became clear that mechanical
 watches would have a second life as luxury accessories for men.
 Instead of separate companies they're now more like the brands
@@ -543,8 +534,7 @@ When they made thick, tough watches, they made them out of gold as
 well as steel. The result was a sort of luxury Jeep. And if that
 phrase didn't ring a bell in your head, stop and think about it,
 because that is exactly what everyone is driving now. That's what
-SUVs are, luxury Jeeps. What happened to watches is the same thing
-that happened to cars. And indeed if our time traveler turned and
+SUVs are, luxury Jeeps. **What happened to watches is the same thing that happened to cars.** And indeed if our time traveler turned and
 saw a Porsche Cayenne pass by and realized what it was — a huge,
 pseudo-offroad vehicle meant to recall the Porsche 911 — he might
 have been even more shocked than he was by the watches he'd been
@@ -646,14 +636,11 @@ from the wreckage?
 One obvious lesson is to stay away from brand. Indeed it's probably
 a good idea not just to avoid buying brand, but to avoid selling
 it too. Sure, you might be able to make money this way — though I
-bet it's harder than it looks — but pushing people's brand buttons
-is just not a good problem to work on, and it's hard to do good
-work without a good problem.
+bet it's harder than it looks — but **pushing people's brand buttons is just not a good problem to work on, and it's hard to do good work without a good problem**.
 
 The more subtle lesson is that fields have natural rhythms that are
 beyond the power of individuals to resist. Fields have golden ages
-and not so golden ages, and you're much more likely to do good work
-in a field that's on the way up.
+and not so golden ages, and **you're much more likely to do good work in a field that's on the way up**.
 
 Of course they don't call them golden ages as they're happening.
 "Golden age" is a term people use later, after they're over. That
@@ -661,8 +648,7 @@ doesn't mean that golden ages aren't real, but rather that their
 participants take them for granted at the time. They don't know how
 good they have it. But while it's usually a mistake to take one's
 good fortune for granted, it's not in this case. What a golden age
-feels like, at the time, is just that smart people are working hard
-on interesting problems and getting results. It would be overfitting
+feels like, at the time, is just that **smart people are working hard on interesting problems and getting results**. It would be overfitting
 to optimize for more than that.
 
 ![Follow the problems: the core lesson](/sanono-report/images/reading/pg-brand-age-5.jpg)
