@@ -43,6 +43,17 @@ export interface ReadingArticle {
 
 export const nomiReadings: ReadingArticle[] = [
   {
+    id: 'satya-nadella-omr',
+    title: 'Satya Nadella: The $1 Billion OpenAI Bet',
+    subtitle: 'Microsoft CEO on AI diffusion, reducing floors & raising ceilings',
+    date: '2026-03-13',
+    author: 'Satya Nadella',
+    source: 'https://www.youtube.com/watch?v=NANwT123E3U',
+    language: 'bilingual' as const,
+    content: 'satya-nadella-omr-zh',
+    contentEn: 'satya-nadella-omr-en',
+  },
+  {
     id: 'pg-brand-age',
     title: 'The Brand Age',
     subtitle: '当技术消灭了产品差异，品牌就是剩下的一切',
