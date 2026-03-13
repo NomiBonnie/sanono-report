@@ -29,6 +29,20 @@ export const nomiReports: Report[] = [
   },
 ]
 
+export interface ReadingArticle {
+  id: string
+  title: string
+  subtitle: string
+  date: string
+  author: string
+  source?: string
+  language: 'zh' | 'en' | 'bilingual'
+  content: string
+  contentEn?: string
+}
+
+export const nomiReadings: ReadingArticle[] = []
+
 export const nonoReports: Report[] = [
   {
     id: 'openclaw-daily-0312',

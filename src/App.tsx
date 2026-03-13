@@ -1,5 +1,5 @@
 import { Routes, Route, NavLink, useParams, useNavigate } from 'react-router-dom'
-import { nomiReports, nonoReports, type Report } from './data'
+import { nomiReports, nonoReports, nomiReadings, type Report, type ReadingArticle } from './data'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import { useState, useEffect } from 'react'
@@ -49,6 +49,7 @@ function Header() {
 function Tabs() {
   const tabs = [
     { to: '/', label: "NOMI's Research" },
+    { to: '/reading', label: "NOMI's Reading" },
     { to: '/nono', label: "NONO's Research" },
     { to: '/about', label: 'About' },
   ]
@@ -229,6 +230,187 @@ function ReportView() {
   )
 }
 
+function ReadingCard({ article }: { article: ReadingArticle }) {
+  const navigate = useNavigate()
+  const langLabel = article.language === 'zh' ? '中' : article.language === 'en' ? 'EN' : '中英'
+  return (
+    <button
+      onClick={() => navigate(`/reading/${article.id}`)}
+      className="w-full text-left group py-6 border-b border-brand-100 dark:border-brand-900 transition-colors hover:bg-brand-100/50 dark:hover:bg-brand-900/50 px-2 -mx-2 rounded-lg"
+    >
+      <div className="flex items-baseline justify-between mb-1">
+        <h3 className="text-base font-medium group-hover:text-brand-600 dark:group-hover:text-brand-300 transition-colors">
+          {article.title}
+        </h3>
+        <span className="text-xs font-mono text-brand-400 dark:text-brand-600 ml-4 shrink-0 border border-brand-200 dark:border-brand-800 rounded px-1.5 py-0.5">
+          {langLabel}
+        </span>
+      </div>
+      <p className="text-sm text-brand-500 dark:text-brand-500 font-light mb-2">
+        {article.subtitle}
+      </p>
+      <div className="flex items-center gap-3">
+        <time className="text-xs text-brand-400 dark:text-brand-600 font-light">
+          {article.date}
+        </time>
+        <span className="text-xs text-brand-400 dark:text-brand-600 font-light">
+          by {article.author}
+        </span>
+      </div>
+    </button>
+  )
+}
+
+function ReadingList() {
+  if (nomiReadings.length === 0) {
+    return (
+      <div className="py-20 text-center">
+        <p className="text-sm text-brand-400 dark:text-brand-600 font-light">Readings coming soon.</p>
+      </div>
+    )
+  }
+  return (
+    <div className="divide-y-0">
+      {nomiReadings.map(r => <ReadingCard key={r.id} article={r} />)}
+    </div>
+  )
+}
+
+function ReadingView() {
+  const { id } = useParams()
+  const [content, setContent] = useState<string>('')
+  const [loading, setLoading] = useState(true)
+  const [lang, setLang] = useState<'zh' | 'en'>('zh')
+  const [headings, setHeadings] = useState<{id: string; text: string; level: number}[]>([])
+  const [activeHeading, setActiveHeading] = useState<string>('')
+  const article = nomiReadings.find(r => r.id === id)
+
+  useEffect(() => {
+    if (!article) return
+    const file = lang === 'en' && article.contentEn ? article.contentEn : article.content
+    setLoading(true)
+    fetch(`${import.meta.env.BASE_URL}reports/${file}.md`)
+      .then(r => r.text())
+      .then(text => { setContent(text); setLoading(false) })
+      .catch(() => { setContent('Article not found.'); setLoading(false) })
+  }, [article, lang])
+
+  useEffect(() => {
+    if (loading || !content) return
+    const timer = setTimeout(() => {
+      const el = document.querySelector('article.prose')
+      if (!el) return
+      const h2s = el.querySelectorAll('h2')
+      const items: {id: string; text: string; level: number}[] = []
+      h2s.forEach((h, i) => {
+        const hid = `section-${i}`
+        h.id = hid
+        items.push({ id: hid, text: h.textContent || '', level: 2 })
+      })
+      setHeadings(items)
+    }, 100)
+    return () => clearTimeout(timer)
+  }, [loading, content])
+
+  useEffect(() => {
+    if (headings.length === 0) return
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) setActiveHeading(entry.target.id)
+        }
+      },
+      { rootMargin: '-100px 0px -60% 0px', threshold: 0 }
+    )
+    headings.forEach(h => {
+      const el = document.getElementById(h.id)
+      if (el) observer.observe(el)
+    })
+    return () => observer.disconnect()
+  }, [headings])
+
+  if (!article) return <div className="py-20 text-center text-brand-400">Article not found</div>
+
+  return (
+    <div className="relative">
+      {headings.length > 0 && (
+        <nav className="fixed right-4 top-1/2 -translate-y-1/2 z-30 hidden lg:flex flex-col items-center gap-2">
+          {headings.map((h) => (
+            <button
+              key={h.id}
+              onClick={() => {
+                const el = document.getElementById(h.id)
+                if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+              }}
+              className="group relative flex items-center"
+            >
+              <span className={`block rounded-full transition-all ${
+                activeHeading === h.id
+                  ? 'w-2.5 h-2.5 bg-brand-900 dark:bg-brand-100'
+                  : 'w-1.5 h-1.5 bg-brand-300 dark:bg-brand-700 group-hover:bg-brand-500 dark:group-hover:bg-brand-400 group-hover:w-2 group-hover:h-2'
+              }`} />
+              <span className="absolute right-6 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-xs text-brand-500 dark:text-brand-400 bg-brand-50 dark:bg-brand-950 px-2 py-1 rounded shadow-sm border border-brand-200 dark:border-brand-800 pointer-events-none">
+                {h.text}
+              </span>
+            </button>
+          ))}
+        </nav>
+      )}
+
+      <NavLink
+        to="/reading"
+        className="inline-flex items-center gap-1 text-xs text-brand-400 dark:text-brand-600 hover:text-brand-600 dark:hover:text-brand-400 transition-colors mb-8 tracking-luxury uppercase"
+      >
+        ← Back
+      </NavLink>
+      <div className="mb-8">
+        <h2 className="text-2xl font-light tracking-tight mb-2">{article.title}</h2>
+        <p className="text-sm text-brand-500 font-light mb-2">{article.subtitle}</p>
+        <div className="flex items-center gap-4 flex-wrap">
+          <time className="text-xs text-brand-400 font-light">{article.date}</time>
+          <span className="text-xs text-brand-400 font-light">by {article.author}</span>
+          {article.source && (
+            <a href={article.source} target="_blank" rel="noopener noreferrer" className="text-xs text-brand-400 hover:text-brand-600 dark:hover:text-brand-300 transition-colors underline underline-offset-2">
+              Original →
+            </a>
+          )}
+          {article.language === 'bilingual' && (
+            <div className="flex rounded-md border border-brand-200 dark:border-brand-800 overflow-hidden">
+              <button
+                onClick={() => setLang('zh')}
+                className={`px-3 py-1 text-xs transition-colors ${
+                  lang === 'zh'
+                    ? 'bg-brand-900 dark:bg-brand-100 text-brand-50 dark:text-brand-900'
+                    : 'text-brand-400 dark:text-brand-600 hover:text-brand-600 dark:hover:text-brand-400'
+                }`}
+              >
+                中文
+              </button>
+              <button
+                onClick={() => setLang('en')}
+                className={`px-3 py-1 text-xs transition-colors ${
+                  lang === 'en'
+                    ? 'bg-brand-900 dark:bg-brand-100 text-brand-50 dark:text-brand-900'
+                    : 'text-brand-400 dark:text-brand-600 hover:text-brand-600 dark:hover:text-brand-400'
+                }`}
+              >
+                English
+              </button>
+            </div>
+          )}
+        </div>
+      </div>
+      {loading ? (
+        <div className="py-10 text-center text-brand-400 text-sm">Loading...</div>
+      ) : (
+        <article className="prose">
+          <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>
+        </article>
+      )}
+    </div>
+  )
+}
+
 function About() {
   return (
     <div className="py-10">
@@ -249,6 +431,11 @@ function About() {
           <strong className="font-medium text-brand-900 dark:text-brand-100">NOMI's Research</strong> focuses on
           product deep-dives: 7-dimension scoring, competitive analysis, design critique,
           and strategic insights with AI-generated illustrations.
+        </p>
+        <p>
+          <strong className="font-medium text-brand-900 dark:text-brand-100">NOMI's Reading</strong> is
+          a curated reading list — articles that Sam shares with NOMI, carefully read, translated when needed,
+          and enriched with illustrations.
         </p>
         <p>
           <strong className="font-medium text-brand-900 dark:text-brand-100">NONO's Research</strong> covers
@@ -272,6 +459,8 @@ export default function App() {
       <main className="max-w-4xl mx-auto px-6 py-8">
         <Routes>
           <Route path="/" element={<ReportList reports={nomiReports} emptyMessage="No reports yet." />} />
+          <Route path="/reading" element={<ReadingList />} />
+          <Route path="/reading/:id" element={<ReadingView />} />
           <Route path="/nono" element={<ReportList reports={nonoReports} emptyMessage="NONO's research coming soon." />} />
           <Route path="/about" element={<About />} />
           <Route path="/report/:id" element={<ReportView />} />
