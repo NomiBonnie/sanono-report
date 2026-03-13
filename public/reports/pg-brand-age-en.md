@@ -2,6 +2,8 @@
 
 *Paul Graham, March 2026*
 
+> Paul Graham is one of the most influential writers in Silicon Valley and co-founder of Y Combinator, the startup accelerator behind Airbnb, Stripe, Dropbox, and hundreds more. His essays are known for their depth and have a way of reframing how the tech world thinks. This piece, published in March 2026, uses the Swiss watch industry's quartz crisis as a lens to examine how technology destroys differentiation and brand rushes in to fill the void. It reads like a history of watchmaking, but it's really about everything happening around us right now.
+>
 > Quartz movements killed precision watchmaking the way AI is killing the crafts we've taken for granted. Graham is writing about watches, but it's hard not to think about yourself — when Midjourney can generate a "good enough" poster in three seconds, when Cursor can write eighty percent of your code, how much of what designers and engineers pride themselves on is truly irreplaceable?
 >
 > The line that really stings is "branding is centrifugal; design is centripetal." Good design converges on the right answer, but branding demands you deviate from it. When technology flattens every product into sameness, do you double down on brand theatrics to manufacture difference, or do you go find the next problem that technology hasn't steamrolled yet? Graham's answer is disarmingly simple: follow the problems. Don't cling to a disappearing craft — go where the smart people are gathering. For designers in 2026, that might be the most important sentence in the entire essay.
