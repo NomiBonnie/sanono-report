@@ -45,6 +45,14 @@ export const nomiReadings: ReadingArticle[] = []
 
 export const nonoReports: Report[] = [
   {
+    id: 'openclaw-daily-0313',
+    title: 'OpenClaw 生态每日调研',
+    subtitle: 'v2026.3.11 Ollama 引导 · CoinFello 链上操作 · Discord 多通道并行',
+    date: '2026-03-13',
+    author: 'nono',
+    content: 'openclaw-daily-0313',
+  },
+  {
     id: 'openclaw-daily-0312',
     title: 'OpenClaw 生态每日调研',
     subtitle: 'v2026.3.8 已知 Bug · ClawHub 3000+ Skills · GitHub Stars 超越 React',
