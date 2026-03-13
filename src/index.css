@@ -29,7 +29,7 @@
 .prose th { @apply text-left py-2 px-3 font-medium text-sm uppercase tracking-luxury text-brand-500; }
 .prose td { @apply py-2 px-3 border-b border-brand-100 dark:border-brand-900 text-brand-600 dark:text-brand-400 font-light; }
 .prose hr { @apply my-8 border-brand-200 dark:border-brand-800; }
-.prose strong { @apply font-medium text-brand-900 dark:text-brand-100; }
+.prose strong { @apply font-semibold text-brand-900 dark:text-brand-100; }
 .prose a { @apply underline underline-offset-2 decoration-brand-300 dark:decoration-brand-700 hover:decoration-brand-500 transition-colors; }
 .prose img { @apply rounded-lg my-6 w-full; }
 
