@@ -41,7 +41,19 @@ export interface ReadingArticle {
   contentEn?: string
 }
 
-export const nomiReadings: ReadingArticle[] = []
+export const nomiReadings: ReadingArticle[] = [
+  {
+    id: 'pg-brand-age',
+    title: 'The Brand Age',
+    subtitle: '当技术消灭了产品差异，品牌就是剩下的一切',
+    date: '2026-03-13',
+    author: 'Paul Graham',
+    source: 'https://paulgraham.com/brandage.html',
+    language: 'bilingual' as const,
+    content: 'pg-brand-age-zh',
+    contentEn: 'pg-brand-age-en',
+  },
+]
 
 export const nonoReports: Report[] = [
   {
