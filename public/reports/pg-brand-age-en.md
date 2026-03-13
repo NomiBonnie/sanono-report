@@ -41,8 +41,7 @@ Between the early 1970s and the early 1980s, unit sales of Swiss
 watches fell by almost two thirds. Most Swiss watchmakers became
 insolvent or close to it and were sold. But not all of them. A
 handful survived as independent companies. And the way they did it
-was by transforming themselves from precision instrument makers
-into luxury brands.
+was by **transforming themselves from precision instrument makers into luxury brands**.
 
 In the process the nature of the mechanical watch was also transformed.
 The most expensive watches have always cost a lot, but why they
@@ -68,9 +67,7 @@ of the game. And it's interesting to watch them do it, because the
 completeness of their transformation makes it the perfect case study
 in one of the most powerful forces of our era: brand.
 
-Brand is what's left when the substantive differences between
-products disappear. But making the substantive differences between
-products disappear is what technology naturally tends to do. So
+**Brand is what's left when the substantive differences between products disappear.** But **making the substantive differences between products disappear is what technology naturally tends to do**. So
 what happened to the Swiss watch industry is not merely an interesting
 outlier. It's very much a story of our times.
 
@@ -182,8 +179,7 @@ gotten very good at it. So the only thing distinguishing one top
 brand from another was the name printed on the dial, and dials were
 so small that these names were tiny. The manufacturers' names on
 the holy trinity's golden age watches are between half and three
-quarters of a millimeter high. So by taking over the case, Patek
-expanded the size of the brand from 8 square millimeters to 800.
+quarters of a millimeter high. So by taking over the case, **Patek expanded the size of the brand from 8 square millimeters to 800.**
 
 Why did they suddenly decide to make their brand shout, after a
 century of whispering? Because they knew they weren't going to beat
@@ -206,12 +202,11 @@ small, with the result that they're distractingly hard to wind.
 [3]
 
 So even in this early example we see an important point about the
-relationship between brand and design. Branding isn't merely
-orthogonal to good design, but opposed to it. Branding by definition
+relationship between brand and design. **Branding isn't merely orthogonal to good design, but opposed to it.** Branding by definition
 has to be distinctive. But good design, like math or science, seeks
 the right answer, and right answers tend to converge.
 
-Branding is centrifugal; design is centripetal.
+**Branding is centrifugal; design is centripetal.**
 
 ![Brand Age vs Golden Age — Centrifugal vs Centripetal](/sanono-report/images/reading/pg-brand-age-3.jpg)
 
@@ -330,7 +325,7 @@ But you could recognize one from across the room.
 
 Of all the watches Patek makes now, the Nautilus is the most sought
 after. It's perfectly aligned with what present-day buyers want — 
-basically, the loudest possible expression of brand. But in 1976
+basically, **the loudest possible expression of brand**. But in 1976
 it was ahead of its time. In 1976 it was still a little too much.
 The watch that finally turned Patek's fortunes around was another
 iconic design, the hobnail calatrava. The hobnail calatravas were
@@ -414,7 +409,7 @@ time. But 5 seconds a day was close enough.
 This is an important point about the relationship between brand and
 quality. Quality doesn't stop mattering when a product switches to
 something people buy for its brand. But the way it matters changes
-shape. It becomes a threshold. It no longer has to be so great that
+shape. **It becomes a threshold.** It no longer has to be so great that
 it sells the product; brand sells the product; but it does have to
 be good enough to maintain the brand's reputation. The brand must
 not break character.
@@ -559,7 +554,7 @@ looking at.
 If the time traveller walked into a Patek Philippe boutique and
 actually tried to buy a Nautilus, he'd get the biggest shock of
 all. They wouldn't sell him one. Because at Patek he'd encounter
-the most extreme brand age phenomenon: artificial scarcity. You
+the most extreme brand age phenomenon: **artificial scarcity**. You
 can't just buy a Nautilus. You have to spend years proving your
 loyalty first by buying your way through multiple tiers of other
 models, and then spend years on a waiting list. 
@@ -606,8 +601,7 @@ close to retail prices, you're getting close to a price collapse
 have the same disastrous cascading effect as the bursting of an
 asset bubble. It wouldn't just be like the bursting of an asset
 bubble. It would *be* the bursting of an asset bubble. That's the
-business an elite watchmaker is in now: carefully managing a sustained
-asset bubble. 
+business an elite watchmaker is in now: **carefully managing a sustained asset bubble**. 
 [16]
 
 This is an instance of what I call the comb-over effect: when a
@@ -627,7 +621,7 @@ that reverse 500 years of progress in making them smaller. The
 business model that requires a company to rebuy their own watches
 on the secondary market to catch rogue customers. The very concept
 of rogue customers. It's all so strange. And the reason it's strange
-is that there's no function for form to follow.
+is that **there's no function for form to follow**.
 
 Up to the end of the golden age, mechanical watches were necessary.
 You needed them to know the time. And that constraint gave both the
@@ -675,13 +669,13 @@ to optimize for more than that.
 
 In fact there's a single principle that will both save you from
 working on things like brand, and also automatically find golden
-ages for you. Follow the problems.
+ages for you. **Follow the problems.**
 
 The way to find golden ages is not to go looking for them. The way
 to find them — the way almost all their participants have found
 them historically — is by following interesting problems. If you're
 smart and ambitious and honest with yourself, there's no better
-guide than your taste in problems. Go where interesting problems
+guide than **your taste in problems**. Go where interesting problems
 are, and you'll probably find that other smart and ambitious people
 have turned up there too. And later they'll look back on what you
 did together and call it a golden age.
