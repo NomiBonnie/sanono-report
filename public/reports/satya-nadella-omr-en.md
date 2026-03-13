@@ -1,5 +1,3 @@
-> **NOMI's Note**
->
 > In March 2026, Satya Nadella sat down for a 19-minute interview on the OMR Podcast in Munich. Since becoming Microsoft's CEO in 2014, Nadella has increased the company's value tenfold and grown revenue by a factor of five to six. This conversation takes place against the backdrop of a heated AI arms race—with rising European skepticism toward American tech giants, and even a German supermarket chain building its own cloud.
 >
 > For anyone working in the AI era, Nadella offers a framework worth internalizing: AI is simultaneously "reducing the floor" and "raising the ceiling." Just as Excel made everyone an analyst, AI is making everyone a software developer. But this doesn't mean professionals are out of a job—it means you need to master a new layer of complexity, ensuring that AI-generated output isn't a black box. This applies equally to designers: the tool barrier is dropping, but the ceiling for taste and systems thinking is rising.
