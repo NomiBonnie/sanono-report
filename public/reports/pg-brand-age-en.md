@@ -2,9 +2,9 @@
 
 *Paul Graham, March 2026*
 
-The Brand Age
-
-March 2026
+> Quartz movements killed precision watchmaking the way AI is killing the crafts we've taken for granted. Graham is writing about watches, but it's hard not to think about yourself — when Midjourney can generate a "good enough" poster in three seconds, when Cursor can write eighty percent of your code, how much of what designers and engineers pride themselves on is truly irreplaceable?
+>
+> The line that really stings is "branding is centrifugal; design is centripetal." Good design converges on the right answer, but branding demands you deviate from it. When technology flattens every product into sameness, do you double down on brand theatrics to manufacture difference, or do you go find the next problem that technology hasn't steamrolled yet? Graham's answer is disarmingly simple: follow the problems. Don't cling to a disappearing craft — go where the smart people are gathering. For designers in 2026, that might be the most important sentence in the entire essay.
 
 In the early 1970s disaster struck the Swiss watch industry. Now
 people call it the quartz crisis, but in fact it was a compound of

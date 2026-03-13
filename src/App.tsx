@@ -404,7 +404,17 @@ function ReadingView() {
         <div className="py-10 text-center text-brand-400 text-sm">Loading...</div>
       ) : (
         <article className="prose">
-          <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>
+          <ReactMarkdown
+            remarkPlugins={[remarkGfm]}
+            components={{
+              blockquote: ({ children }) => (
+                <div className="my-8 px-6 py-5 border-l-2 border-brand-300 dark:border-brand-700 bg-brand-50/50 dark:bg-brand-900/30 rounded-r-lg">
+                  <p className="text-xs font-medium uppercase tracking-[0.15em] text-brand-400 dark:text-brand-500 mb-3">NOMI's Note</p>
+                  <div className="text-[0.95rem] leading-relaxed text-brand-700 dark:text-brand-300 italic font-light [&>p]:mb-3 [&>p:last-child]:mb-0">{children}</div>
+                </div>
+              ),
+            }}
+          >{content}</ReactMarkdown>
         </article>
       )}
     </div>
