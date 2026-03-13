@@ -37,9 +37,6 @@ knowing the exact time — was now a commodity.
 
 ![The Swiss watch crisis of the 1970s](/sanono-report/images/reading/pg-brand-age-1.jpg)
 
-![The Quartz Crisis of the 1970s Swiss Watch Industry](/sanono-report/images/reading/pg-brand-age-1.jpg)
-
-
 Between the early 1970s and the early 1980s, unit sales of Swiss
 watches fell by almost two thirds. Most Swiss watchmakers became
 insolvent or close to it and were sold. But not all of them. A
@@ -119,9 +116,6 @@ watches of the golden age have a
 [quiet perfection](https://goldammer.me/products/vacheron-constantin-18k-white-gold) that has never
 been equalled since. And for reasons I'm about to explain, probably
 never will be.
-
-![Golden age precision watchmaking](/sanono-report/images/reading/pg-brand-age-2.jpg)
-
 The three most prestigious brands of the golden age were the so-called
 "holy trinity" of Patek Philippe, Vacheron Constantin, and Audemars
 Piguet. Their prestige was mostly deserved; they had earned it by
@@ -264,9 +258,6 @@ Since the space of watch design is neither unexplored nor enormously
 large, branding can only be achieved at the expense of good design.
 And in fact if you wanted one sentence to describe the current age
 of watchmaking, that one would do pretty well.
-
-![Brand age vs Golden age contrast](/sanono-report/images/reading/pg-brand-age-3.jpg)
-
 Patek Philippe didn't know for sure that making visibly branded
 watches would work. It was not even their only strategy, at the
 time. They were finding their way. But it was the strategy that did
@@ -341,9 +332,6 @@ Of all the watches Patek makes now, the Nautilus is the most sought
 after. It's perfectly aligned with what present-day buyers want — 
 basically, the loudest possible expression of brand. But in 1976
 it was ahead of its time. In 1976 it was still a little too much.
-
-![Iconic watches: Nautilus and Royal Oak](/sanono-report/images/reading/pg-brand-age-4.jpg)
-
 The watch that finally turned Patek's fortunes around was another
 iconic design, the hobnail calatrava. The hobnail calatravas were
 so called because they were decorated with tiny pyramid-shaped
@@ -688,9 +676,6 @@ to optimize for more than that.
 In fact there's a single principle that will both save you from
 working on things like brand, and also automatically find golden
 ages for you. Follow the problems.
-
-![Follow the Problems](/sanono-report/images/reading/pg-brand-age-5.jpg)
-
 
 The way to find golden ages is not to go looking for them. The way
 to find them — the way almost all their participants have found
