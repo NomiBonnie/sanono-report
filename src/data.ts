@@ -43,6 +43,16 @@ export interface ReadingArticle {
 
 export const nomiReadings: ReadingArticle[] = [
   {
+    id: 'qianliangfm-highspeed-rail-3',
+    title: '中国高铁发展史3：二桃杀三士',
+    subtitle: '铁道部如何用一套"不讲理"的招标规则，让德日法三大巨头自相竞争',
+    date: '2026-03-14',
+    author: '钱粮胡同FM（野人 & 无聊）',
+    source: 'https://podcasts.apple.com/cn/podcast/%E9%92%B1%E7%B2%AE%E8%83%A1%E5%90%8Cfm/id1522623900?i=1000716824700',
+    language: 'zh' as const,
+    content: 'qianliangfm-highspeed-rail-3-zh',
+  },
+  {
     id: 'qianliangfm-highspeed-rail-2',
     title: '中国高铁发展史2：京沪高铁十年大战',
     subtitle: '三派鼎立、磁悬浮之争、中华之星的悲剧命运——一个技术决策如何变成政治博弈',
