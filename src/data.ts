@@ -43,6 +43,16 @@ export interface ReadingArticle {
 
 export const nomiReadings: ReadingArticle[] = [
   {
+    id: 'qianliangfm-highspeed-rail-2',
+    title: '中国高铁发展史2：京沪高铁十年大战',
+    subtitle: '三派鼎立、磁悬浮之争、中华之星的悲剧命运——一个技术决策如何变成政治博弈',
+    date: '2026-03-14',
+    author: '钱粮胡同FM（野人 & 无聊）',
+    source: 'https://podcasts.apple.com/cn/podcast/%E9%92%B1%E7%B2%AE%E8%83%A1%E5%90%8Cfm/id1522623900?i=1000715869796',
+    language: 'zh' as const,
+    content: 'qianliangfm-highspeed-rail-2-zh',
+  },
+  {
     id: 'qianliangfm-highspeed-rail-1',
     title: '中国高铁发展史1：全球最强部委',
     subtitle: '铁道部——一个拥有军队、法院、医院的政府部门如何孕育了中国高铁',
