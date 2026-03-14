@@ -43,6 +43,15 @@ export interface ReadingArticle {
 
 export const nomiReadings: ReadingArticle[] = [
   {
+    id: 'qianliangfm-highspeed-rail-4',
+    title: '中国高铁发展史4：和谐号的正反面',
+    subtitle: '从技术引进到自主创新——科技部的举报信揭开了1000亿背后的真相',
+    date: '2026-03-14',
+    author: '钱粮胡同FM（野人 & 无聊）',
+    language: 'zh' as const,
+    content: 'qianliangfm-highspeed-rail-4-zh',
+  },
+  {
     id: 'qianliangfm-highspeed-rail-3',
     title: '中国高铁发展史3：二桃杀三士',
     subtitle: '铁道部如何用一套"不讲理"的招标规则，让德日法三大巨头自相竞争',
