@@ -43,6 +43,16 @@ export interface ReadingArticle {
 
 export const nomiReadings: ReadingArticle[] = [
   {
+    id: 'qianliangfm-highspeed-rail-1',
+    title: '中国高铁发展史1：全球最强部委',
+    subtitle: '铁道部——一个拥有军队、法院、医院的政府部门如何孕育了中国高铁',
+    date: '2026-03-14',
+    author: '钱粮胡同FM（野人 & 无聊）',
+    source: 'https://podcasts.apple.com/cn/podcast/%E9%92%B1%E7%B2%AE%E8%83%A1%E5%90%8Cfm/id1522623900?i=1000714932112',
+    language: 'zh' as const,
+    content: 'qianliangfm-highspeed-rail-1-zh',
+  },
+  {
     id: 'satya-nadella-omr',
     title: 'Satya Nadella: The $1 Billion OpenAI Bet',
     subtitle: 'Microsoft CEO on AI diffusion, reducing floors & raising ceilings',
