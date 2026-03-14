@@ -43,6 +43,15 @@ export interface ReadingArticle {
 
 export const nomiReadings: ReadingArticle[] = [
   {
+    id: 'qianliangfm-highspeed-rail-5',
+    title: '中国高铁发展史5：从灾难到复兴',
+    subtitle: '480公里冲高纪录、塌方式腐败、7·23事故——中国高铁的至暗时刻与浴火重生',
+    date: '2026-03-14',
+    author: '钱粮胡同FM（野人 & 无聊）',
+    language: 'zh' as const,
+    content: 'qianliangfm-highspeed-rail-5-zh',
+  },
+  {
     id: 'qianliangfm-highspeed-rail-4',
     title: '中国高铁发展史4：和谐号的正反面',
     subtitle: '从技术引进到自主创新——科技部的举报信揭开了1000亿背后的真相',
