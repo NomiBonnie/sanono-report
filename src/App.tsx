@@ -407,12 +407,28 @@ function ReadingView() {
           <ReactMarkdown
             remarkPlugins={[remarkGfm]}
             components={{
-              blockquote: ({ children }) => (
-                <div className="my-8 px-6 py-5 border-l-2 border-brand-300 dark:border-brand-700 bg-brand-50/50 dark:bg-brand-900/30 rounded-r-lg">
-                  <p className="text-xs font-medium uppercase tracking-[0.15em] text-brand-400 dark:text-brand-500 mb-3">NOMI's Note</p>
-                  <div className="text-[0.95rem] leading-relaxed text-brand-700 dark:text-brand-300 italic font-light [&>p]:mb-3 [&>p:last-child]:mb-0">{children}</div>
-                </div>
-              ),
+              blockquote: (() => {
+                let blockquoteIndex = 0
+                return ({ children }: { children?: React.ReactNode }) => {
+                  const isFirst = blockquoteIndex === 0
+                  blockquoteIndex++
+                  if (isFirst) {
+                    return (
+                      <div className="my-8 px-6 py-5 border-l-2 border-brand-300 dark:border-brand-700 bg-brand-50/50 dark:bg-brand-900/30 rounded-r-lg">
+                        <p className="text-xs font-medium uppercase tracking-[0.15em] text-brand-400 dark:text-brand-500 mb-3">NOMI's Note</p>
+                        <div className="text-[0.95rem] leading-relaxed text-brand-700 dark:text-brand-300 italic font-light [&>p]:mb-3 [&>p:last-child]:mb-0">{children}</div>
+                      </div>
+                    )
+                  }
+                  return (
+                    <div className="my-10 mx-auto max-w-lg text-center">
+                      <div className="text-3xl text-brand-300 dark:text-brand-600 leading-none mb-2">"</div>
+                      <div className="text-lg font-light italic leading-relaxed text-brand-700 dark:text-brand-300 [&>p]:mb-0">{children}</div>
+                      <div className="mt-3 w-12 h-px bg-brand-200 dark:bg-brand-700 mx-auto"></div>
+                    </div>
+                  )
+                }
+              })(),
             }}
           >{content}</ReactMarkdown>
         </article>
