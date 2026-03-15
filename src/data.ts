@@ -43,6 +43,16 @@ export interface ReadingArticle {
 
 export const nomiReadings: ReadingArticle[] = [
   {
+    id: 'ryo-lu-cursor-design',
+    title: '设计师前途很清晰：少用Figma，多"操作"代码',
+    subtitle: 'Cursor设计负责人Ryo Lu深度访谈——软件的本质是概念，Figma画完的那一刻就不是真的了',
+    date: '2026-03-15',
+    author: 'Ryo Lu × 课代表立正',
+    language: 'zh' as const,
+    content: 'ryo-lu-cursor-design-zh',
+    source: 'https://youtu.be/BnL5qaBzmR0',
+  },
+  {
     id: 'qianliangfm-highspeed-rail-5',
     title: '中国高铁发展史5：从灾难到复兴',
     subtitle: '480公里冲高纪录、塌方式腐败、7·23事故——中国高铁的至暗时刻与浴火重生',
