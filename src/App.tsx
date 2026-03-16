@@ -130,7 +130,7 @@ function ReportView() {
 
   useEffect(() => {
     if (!report) return
-    fetch(`${import.meta.env.BASE_URL}reports/${report.content}.md`)
+    fetch(`${import.meta.env.BASE_URL}reports/${report.content}.md?v=1773630530`)
       .then(r => r.text())
       .then(text => { setContent(text); setLoading(false) })
       .catch(() => { setContent('Report not found.'); setLoading(false) })
@@ -289,7 +289,7 @@ function ReadingView() {
     if (!article) return
     const file = lang === 'en' && article.contentEn ? article.contentEn : article.content
     setLoading(true)
-    fetch(`${import.meta.env.BASE_URL}reports/${file}.md`)
+    fetch(`${import.meta.env.BASE_URL}reports/${file}.md?v=1773630530`)
       .then(r => r.text())
       .then(text => { setContent(text); setLoading(false) })
       .catch(() => { setContent('Article not found.'); setLoading(false) })

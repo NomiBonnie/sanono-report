@@ -49,7 +49,7 @@ export const nomiReadings: ReadingArticle[] = [
     date: '2026-03-15',
     author: 'Ryo Lu × 课代表立正',
     language: 'zh' as const,
-    content: 'ryo-lu-cursor-design-zh',
+    content: 'ryo-lu-cursor-design-v2-zh',
     source: 'https://youtu.be/BnL5qaBzmR0',
   },
   {
