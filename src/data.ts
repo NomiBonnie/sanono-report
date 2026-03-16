@@ -45,7 +45,7 @@ export const nomiReadings: ReadingArticle[] = [
   {
     id: 'agentic-engineering',
     title: 'The 8 Levels of Agentic Engineering',
-    subtitle: 'AI编码能力已经跑在了我们驾驭它的能力前面——弥合这条鸿沟需要8个层级',
+    subtitle: 'AI编码能力已经远远跑在了我们驾驭它的能力前面——弥合这道鸿沟需要8个段位',
     date: '2026-03-16',
     author: 'Bassim Eledath',
     source: 'https://www.bassimeledath.com/blog/levels-of-agentic-engineering',
