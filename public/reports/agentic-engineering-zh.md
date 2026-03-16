@@ -8,7 +8,7 @@
 
 ---
 
-![The 8 Levels of Agentic Engineering](/sanono-report/images/reading/agentic-engineering-1.jpg)
+![The 8 Levels of Agentic Engineering](/images/reading/agentic-engineering-1.jpg)
 
 AI 的编码能力，已经远远跑在了我们驾驭它的能力前面。这就是为什么 SWE-bench（SWE-bench，AI 编码能力的标准测试基准）分数刷得再高，工程管理层真正在意的生产力指标却没什么起色。Anthropic 团队能在 10 天内发布 Cowork 这样的产品，另一个团队用同样的模型却连一个 POC 都跑不通——区别在于，一个团队弥合了能力与实践之间的鸿沟，另一个没有。
 
@@ -20,7 +20,7 @@ AI 的编码能力，已经远远跑在了我们驾驭它的能力前面。这�
 
 ## 第 1 和第 2 级：Tab 补全与智能体 IDE
 
-![Tab补全到智能体IDE](/sanono-report/images/reading/agentic-engineering-2.jpg)
+![Tab补全到智能体IDE](/images/reading/agentic-engineering-2.jpg)
 
 这两级我快速带过，主要是为了记录完整。随意跳读。
 
@@ -32,7 +32,7 @@ AI 的编码能力，已经远远跑在了我们驾驭它的能力前面。这�
 
 ## 第 3 级：上下文工程
 
-![上下文工程](/sanono-report/images/reading/agentic-engineering-3.jpg)
+![上下文工程](/images/reading/agentic-engineering-3.jpg)
 
 2025 年的年度热词，上下文工程（Context Engineering）之所以成为一个概念，是因为模型终于能稳定地在合适的上下文量下执行合理数量的指令了。嘈杂的上下文和不充分的上下文一样糟糕，所以核心工作就是提升每个 token 的信息密度。"每个 token 都得为自己在 prompt 里的位置拼命"——这就是当时的信条。
 
@@ -50,7 +50,7 @@ AI 的编码能力，已经远远跑在了我们驾驭它的能力前面。这�
 
 ## 第 4 级：复利工程
 
-![复利工程](/sanono-report/images/reading/agentic-engineering-4.jpg)
+![复利工程](/images/reading/agentic-engineering-4.jpg)
 
 上下文工程改善的是当前会话。复利工程（Compounding Engineering，类似复利效应——每一次改进都会累积到下一次，像利滚利一样越滚越大）改善的是之后的每一次会话。这个概念由 Kieran Klaassen 推广开来，它是一个转折点——不仅对我，也对很多人来说——让大家意识到凭感觉编程（Vibe Coding）远不止能做做原型。
 
@@ -62,7 +62,7 @@ AI 的编码能力，已经远远跑在了我们驾驭它的能力前面。这�
 
 ## 第 5 级：MCP 与技能
 
-![MCP与技能](/sanono-report/images/reading/agentic-engineering-5.jpg)
+![MCP与技能](/images/reading/agentic-engineering-5.jpg)
 
 第 3 和第 4 级解决的是上下文问题。第 5 级解决的是能力问题。MCP（Model Context Protocol，模型上下文协议——一种让 AI 调用外部工具的标准协议）和自定义技能（Skills）让你的 LLM 能访问数据库、API、CI 流水线、设计系统，能用 Playwright 做浏览器测试，能用 Slack 发通知。模型不再只是"思考"你的代码库，它现在能直接"操作"它。
 
@@ -80,7 +80,7 @@ MCP 这边，我用 Braintrust MCP 让 LLM 直接查询评估日志并做出修�
 
 ## 第 6 级：工程脚手架与自动反馈循环
 
-![工程脚手架与反压](/sanono-report/images/reading/agentic-engineering-6.jpg)
+![工程脚手架与反压](/images/reading/agentic-engineering-6.jpg)
 
 到这里，火箭才真正点火升空。
 
@@ -104,7 +104,7 @@ OpenAI 的 Codex 团队把 Chrome DevTools、可观测性工具和浏览器导�
 
 ## 第 7 级：后台智能体
 
-![后台智能体](/sanono-report/images/reading/agentic-engineering-7.jpg)
+![后台智能体](/images/reading/agentic-engineering-7.jpg)
 
 一个大胆的观点：计划模式正在消亡。
 
@@ -130,7 +130,7 @@ Dispatch 在本地运行，特别适合需要贴近代码的快速开发：反�
 
 ## 第 8 级：自主智能体团队
 
-![自主智能体团队](/sanono-report/images/reading/agentic-engineering-8.jpg)
+![自主智能体团队](/images/reading/agentic-engineering-8.jpg)
 
 还没有人精通这一级，不过有些团队正在探索。这是当前的前沿。
 

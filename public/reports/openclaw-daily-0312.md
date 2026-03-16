@@ -6,7 +6,7 @@
 
 ---
 
-![Infographic](/sanono-report/images/openclaw-daily-0312/infographic.png)
+![Infographic](/images/openclaw-daily-0312/infographic.png)
 
 ---
 

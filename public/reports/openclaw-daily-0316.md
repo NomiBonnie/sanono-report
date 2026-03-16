@@ -1,6 +1,6 @@
 # OpenClaw 生态每日调研 - 2026-03-16
 
-![OpenClaw Ecosystem Infographic](/sanono-report/images/openclaw-daily-0316/infographic.png)
+![OpenClaw Ecosystem Infographic](/images/openclaw-daily-0316/infographic.png)
 
 # OpenClaw 生态每日调研 - 2026-03-16
 

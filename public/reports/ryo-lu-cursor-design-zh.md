@@ -22,7 +22,7 @@
 
 > 他们都被简化到不能再简单了，他就更接近他的本质，它就可以last更久。
 
-![设计的两面](/sanono-report/images/reading/ryo-lu-cursor-design-1.jpg)
+![设计的两面](/images/reading/ryo-lu-cursor-design-1.jpg)
 
 **主持人：** 我去了Notion的headquarters，非常有品位的一个headquarters，起码家具都很贵。
 
@@ -138,7 +138,7 @@
 
 **Figma做这些东西很浅**。它们卡在了这个canvas。Canvas有canvas的好，但它不好的点是，**它不是代码，它不是跑出来的东西，它不真，它是一个抽象层**。
 
-![Figma的局限](/sanono-report/images/reading/ryo-lu-cursor-design-3.jpg)它卡在了WebGL canvas renderer，卡在了这个.fig文件格式里面。它不是真的。
+![Figma的局限](/images/reading/ryo-lu-cursor-design-3.jpg)它卡在了WebGL canvas renderer，卡在了这个.fig文件格式里面。它不是真的。
 
 但是当可以真正去manipulate这些真正的material代码，这个工具变得更加简单，你可以可能跟以前一样，甚至更快地去iterate你的idea，但它同时，它会越来越像它本来应该有的样子，它可以活起来，它就是它本身。或者说，你可能做了一个你的ideal version of the thing，或者一个未来版本的东西。
 
@@ -180,7 +180,7 @@
 
 **Ryo：** 是。我已经看到这个正在发生。**我们给自己的这些职能、title、specialization越来越不重要**。
 
-![Builder的融合](/sanono-report/images/reading/ryo-lu-cursor-design-4.jpg)甚至你可以强化你specialize的这一边的同时，你可以开始做一些之前你觉得应该是别人做的事。当你做这件事的时候，你甚至可以更自由，更能够发现这些edge case，把它解决，花一点时间在这些细节上。
+![Builder的融合](/images/reading/ryo-lu-cursor-design-4.jpg)甚至你可以强化你specialize的这一边的同时，你可以开始做一些之前你觉得应该是别人做的事。当你做这件事的时候，你甚至可以更自由，更能够发现这些edge case，把它解决，花一点时间在这些细节上。
 
 如果你是个设计师，你能notice很多细节，你可以直接上手，"这里有点歪，把它改一下"，peng～，agent给你改好了。以前你可能要写个文档，把这些东西列成task，然后送给你的PM，你那边那个EM还要prioritize说啊，这些东西，哎呀我没有时间，做不了了。
 
@@ -312,7 +312,7 @@
 
 设计师能看到，普通人可能看不到，但普通人能感觉到。
 
-![设计的韵律](/sanono-report/images/reading/ryo-lu-cursor-design-5.jpg)他能感觉到。说啊，这个东西很像音乐，它是有韵律在的，它有些规则，然后他有的时候会大，有的时候会小，但是他在这个交叉的之间，他是有一些规则的，让你感觉舒服的。他有一些网格的规则，有些字级（type scale）的规则，空间之间的规则，颜色使用的规则，这就是Graphic design。
+![设计的韵律](/images/reading/ryo-lu-cursor-design-5.jpg)他能感觉到。说啊，这个东西很像音乐，它是有韵律在的，它有些规则，然后他有的时候会大，有的时候会小，但是他在这个交叉的之间，他是有一些规则的，让你感觉舒服的。他有一些网格的规则，有些字级（type scale）的规则，空间之间的规则，颜色使用的规则，这就是Graphic design。
 
 ## 审美是共通的吗
 
@@ -378,7 +378,7 @@
 
 **所以软件本质它可能真的就是一样，信息的转变和passing around和展示，input、output**。
 
-![软件的概念本质](/sanono-report/images/reading/ryo-lu-cursor-design-2.jpg)
+![软件的概念本质](/images/reading/ryo-lu-cursor-design-2.jpg)
 
 这样子想的话，你就会发现说，啊，为什么还要做同样的东西？每一个大的东西都做了，但我只做一个用例，比如团队项目管理、支付、billing，whatever。但它底层都是啊，这边有个API，要有什么很high throughput，passing messages around。我一个OpenAI、Anthropic AI的model的API，跟一个Stripe的API，it's not that different。底下可能要跑的这些东西，有一些层面它也not that different，只不过有一边是我在连银行，我在连卡组织（如Visa，银联），我有一边我在连模型。
 
