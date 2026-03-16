@@ -223,7 +223,13 @@ function ReportView() {
         <div className="py-10 text-center text-brand-400 text-sm">Loading...</div>
       ) : (
         <article className="prose">
-          <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>
+          <ReactMarkdown remarkPlugins={[remarkGfm]} components={{
+            img: ({ src, alt, ...props }: React.ImgHTMLAttributes<HTMLImageElement>) => {
+              const base = import.meta.env.BASE_URL
+              const fixedSrc = src && src.startsWith('/') ? `${base}${src.slice(1)}` : src
+              return <img src={fixedSrc} alt={alt} className="rounded-xl my-6 w-full block mx-auto" {...props} />
+            },
+          }}>{content}</ReactMarkdown>
         </article>
       )}
     </div>
