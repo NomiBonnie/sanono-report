@@ -4,20 +4,19 @@ type: infographic
 style: blueprint
 ---
 
-后台智能体 - 中心辐射式编排架构
+Background Agents - Hub-and-Spoke Orchestration
 
-Layout: hub-and-spoke with model diversity
+Layout: hub-and-spoke with 3 colored workers, centered
 
 ZONES:
-- Zone 1 (中心): "指挥中心"主会话节点，人类操作者图标
-- Zone 2 (辐射工作者): 三个并行工作者在独立上下文中 — Opus(实现，蓝色)、Gemini(研究，绿色)、Codex(审查，紫色)，每个有自己的工作树
-- Zone 3 (左侧): Dispatch调度流程 — 规划→委派→跟踪，卡住时抛出澄清问题
-- Zone 4 (右侧): 本地 vs 云端对比 — Dispatch(本地，快速反馈) vs Inspect(云端VM，规模化)
-- Zone 5 (底部): CI集成 — 文档机器人、安全审查器、依赖更新机器人
+- Center top: "Command Center" node with human operator icon
+- 3 worker nodes below, each in different color: Opus (blue, "Implement"), Gemini (green, "Research"), Codex (purple, "Review")
+- Async arrows from center to workers
+- Small clock icon indicating background/async execution
 
-LABELS: 指挥中心, Opus实现, Gemini研究, Codex审查, Dispatch, 异步运行, 实现者≠审查者, 群体智慧
-COLORS: Deep Blue (#1A2B4A) background, Cyan (#00D4FF) for command center, Blue (#4488FF) for Opus, Green (#00CC88) for Gemini, Purple (#AA66FF) for Codex, Electric Blue (#0066FF) for dispatch lines
-STYLE: Blueprint technical drawing. Grid background. Hub-and-spoke layout with different colored worker nodes. Async arrows with clock icons. Monospace labels. Glow effects on active workers.
+LABELS: Command Center, Opus: Implement, Gemini: Research, Codex: Review, Async, Wisdom of Crowds
+COLORS: Deep Blue (#1A2B4A) background, Cyan (#00D4FF) command center, Blue (#4488FF) Opus, Green (#00CC88) Gemini, Purple (#AA66FF) Codex, White (#FFFFFF) labels
+STYLE: Blueprint technical drawing. Grid background. Hub-and-spoke with colored worker nodes. Async arrows with clock icons. Large monospace font.
 ASPECT: 16:9
 
-Clean composition with generous white space. Command center in upper-center, workers radiating below. Dark blue grid background.
+Clean composition. Command center upper-center, workers below. Wide margins.

@@ -4,23 +4,17 @@ type: infographic
 style: blueprint
 ---
 
-智能体工程8个段位总览 - 层级信息图
+The 8 Levels of Agentic Engineering - Overview Tower
 
-Layout: vertical hierarchical, bottom-to-top tower/staircase
+Layout: vertical tower/staircase, bottom-to-top, centered
 
 ZONES:
-- Zone 1 (底部): Level 1-2 基础层 — "Tab补全" "智能体IDE"，简单的代码编辑器图标
-- Zone 2: Level 3 "上下文工程" — prompt窗口图标，token过滤
-- Zone 3: Level 4 "复利工程" — 循环箭头，知识沉淀
-- Zone 4: Level 5 "MCP与技能" — 工具连接网络
-- Zone 5: Level 6 "工程脚手架" — 反馈循环环
-- Zone 6: Level 7 "后台智能体" — 中心辐射式多智能体
-- Zone 7 (顶部): Level 8 "自主智能体团队" — 网状去中心化
-- 右侧: 指数增长曲线，标注"每升一级，产出指数级跃升"
+- 8 ascending platforms, each labeled with level number and short English name
+- Right side: exponential growth curve
 
-LABELS: Level 1-8, Tab补全, 智能体IDE, 上下文工程, 复利工程, MCP与技能, 工程脚手架, 后台智能体, 自主智能体团队, 产出×10
-COLORS: Deep Blue (#1A2B4A) background, Cyan (#00D4FF) for level highlights, White (#FFFFFF) for labels, Electric Blue (#0066FF) for growth curve, Teal (#00B8A9) for connection lines
-STYLE: Blueprint technical drawing style. Fine grid lines on dark blue background. Glowing cyan accent lines. Clean geometric shapes. Monospace font for labels. Subtle glow effects on active elements.
-ASPECT: 9:16
+LABELS: L1 Tab Complete, L2 Agentic IDE, L3 Context Engineering, L4 Compounding, L5 MCP & Skills, L6 Harness & Backpressure, L7 Background Agents, L8 Autonomous Teams, Output x10
+COLORS: Deep Blue (#1A2B4A) background, Cyan (#00D4FF) highlights, White (#FFFFFF) labels, Electric Blue (#0066FF) growth curve
+STYLE: Blueprint technical drawing. Fine grid on dark blue. Glowing cyan accents. Clean geometric platforms. Large readable monospace font.
+ASPECT: 1:1
 
-Clean composition with generous white space between levels. Simple dark blue background with subtle grid. Main elements centered vertically.
+Clean composition with generous white space between levels. Keep all elements well within frame margins. No edge clipping.
