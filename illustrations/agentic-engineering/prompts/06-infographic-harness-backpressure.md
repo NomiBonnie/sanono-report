@@ -18,4 +18,4 @@ COLORS: Deep Blue (#1A2B4A) background, Cyan (#00D4FF) agent core, Green (#00FF8
 STYLE: Blueprint technical drawing. Grid background. Feedback ring with directional arrows. Red X marks for errors. Clean geometric shapes. Large monospace font.
 ASPECT: 16:9
 
-Clean composition. Agent centered with feedback ring. Wide margins. No edge clipping.
+Clean composition. Agent centered with feedback ring. Wide margins. Wide angle shot, zoomed out. All text and elements must be COMPLETELY within the frame with at least 15% margin from all edges. No edge clipping. Wide angle shot, zoomed out. All text and elements must be COMPLETELY within the frame with at least 15% margin from all edges. Camera pulled back to show full scene.

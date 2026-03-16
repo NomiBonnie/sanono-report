@@ -19,4 +19,4 @@ COLORS: Deep Blue (#1A2B4A) background, Cyan (#00D4FF) command center, Blue (#44
 STYLE: Blueprint technical drawing. Grid background. Hub-and-spoke with colored worker nodes. Async arrows with clock icons. Large monospace font.
 ASPECT: 16:9
 
-Clean composition. Command center upper-center, workers below. Wide margins.
+Clean composition. Command center upper-center, workers below. Wide margins. Wide angle shot, zoomed out. All text and elements must be COMPLETELY within the frame with at least 15% margin from all edges.

@@ -18,4 +18,4 @@ COLORS: Deep Blue (#1A2B4A) background, Cyan (#00D4FF) LLM core, Teal (#00B8A9) 
 STYLE: Blueprint technical drawing. Grid background. Central glowing sphere. Tool nodes as simple geometric icons. Clean connection lines. Large monospace font.
 ASPECT: 16:9
 
-Clean composition. Hub centered. All spokes well within frame. Wide margins.
+Clean composition. Hub centered. All spokes well within frame. Wide margins. Wide angle shot, zoomed out. All text and elements must be COMPLETELY within the frame with at least 15% margin from all edges.

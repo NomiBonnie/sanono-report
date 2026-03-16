@@ -17,4 +17,4 @@ COLORS: Deep Blue (#1A2B4A) background, Cyan (#00D4FF) highlights, White (#FFFFF
 STYLE: Blueprint technical drawing. Fine grid on dark blue. Glowing cyan accents. Clean geometric platforms. Large readable monospace font.
 ASPECT: 1:1
 
-Clean composition with generous white space between levels. Keep all elements well within frame margins. No edge clipping.
+Clean composition with generous white space between levels. Keep all elements well within frame margins. No edge clipping. Wide angle shot, zoomed out. All text and elements must be COMPLETELY within the frame with at least 15% margin from all edges. Camera pulled back to show full scene.

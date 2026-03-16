@@ -18,4 +18,4 @@ COLORS: Deep Blue (#1A2B4A) background, Cyan (#00D4FF) high-value tokens, Gray (
 STYLE: Blueprint technical drawing. Grid background. Token blocks as rounded rectangles. Glow on high-value tokens. Large monospace font.
 ASPECT: 16:9
 
-Clean composition. Wide margins. All elements well within frame.
+Clean composition. Wide margins. Wide angle shot, zoomed out. All text and elements must be COMPLETELY within the frame with at least 15% margin from all edges. All elements well within frame.
