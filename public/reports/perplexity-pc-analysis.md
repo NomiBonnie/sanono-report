@@ -6,7 +6,7 @@
 
 ## 评分卡
 
-![Scorecard](/sanono-report/images/perplexity-pc/01-infographic-scorecard.png)
+![Scorecard](/images/perplexity-pc/01-infographic-scorecard.png)
 
 
 
@@ -53,7 +53,7 @@ Srinivas 原话：*"The biggest weakness of Claude is that it only coworks with 
 
 ## 产品策略（WHAT）
 
-![Product Matrix](/sanono-report/images/perplexity-pc/02-comparison-product-matrix.png)
+![Product Matrix](/images/perplexity-pc/02-comparison-product-matrix.png)
 
 
 ### 产品矩阵
@@ -106,7 +106,7 @@ Srinivas 原话：*"The biggest weakness of Claude is that it only coworks with 
 
 ## 用户体验与设计（HOW it feels）
 
-![Orchestration](/sanono-report/images/perplexity-pc/03-framework-orchestration.png)
+![Orchestration](/images/perplexity-pc/03-framework-orchestration.png)
 
 
 ### 设计哲学
@@ -133,7 +133,7 @@ Personal Computer 是**反 GUI**的——你不需要盯着屏幕看它工作。
 
 ## 商业模式（HOW it makes money）
 
-![Pricing](/sanono-report/images/perplexity-pc/04-comparison-pricing.png)
+![Pricing](/images/perplexity-pc/04-comparison-pricing.png)
 
 
 ### 定价结构
@@ -169,7 +169,7 @@ Perplexity 选择与 OpenAI 对齐的价格带，暗示这不是给普通用户�
 
 ## 技术实现（HOW it's built）
 
-![Architecture](/sanono-report/images/perplexity-pc/05-flowchart-architecture.png)
+![Architecture](/images/perplexity-pc/05-flowchart-architecture.png)
 
 
 ### 架构概述
@@ -230,7 +230,7 @@ Perplexity 选择与 OpenAI 对齐的价格带，暗示这不是给普通用户�
 
 ## 竞争格局（WHO else）
 
-![Competitive](/sanono-report/images/perplexity-pc/06-infographic-competitive.png)
+![Competitive](/images/perplexity-pc/06-infographic-competitive.png)
 
 
 ### 竞品矩阵
@@ -296,7 +296,7 @@ Perplexity 选择与 OpenAI 对齐的价格带，暗示这不是给普通用户�
 
 ## 风险与机会
 
-![Risks](/sanono-report/images/perplexity-pc/07-comparison-risks-opportunities.png)
+![Risks](/images/perplexity-pc/07-comparison-risks-opportunities.png)
 
 
 

@@ -36,7 +36,7 @@ industry even if it hadn't been for quartz movements. But quartz
 movements were the final blow. Now the whole game they'd been trying
 to win at became irrelevant. **Something that had been expensive — knowing the exact time — was now a commodity.**
 
-![The Swiss watch crisis of the 1970s](/sanono-report/images/reading/pg-brand-age-1.jpg)
+![The Swiss watch crisis of the 1970s](/images/reading/pg-brand-age-1.jpg)
 
 Between the early 1970s and the early 1980s, unit sales of Swiss
 watches fell by almost two thirds. Most Swiss watchmakers became
@@ -105,7 +105,7 @@ but except for one pragmatic complication (showing the date), they
 were a sideshow in the golden age. In the golden age, as always in
 golden ages, the top watchmakers focused on the essential tradeoff.
 
-![The Golden Age of Precision Watchmaking](/sanono-report/images/reading/pg-brand-age-2.jpg)
+![The Golden Age of Precision Watchmaking](/images/reading/pg-brand-age-2.jpg)
 
 And, as always in golden ages, they did it beautifully. The best
 watches of the golden age have a 
@@ -207,7 +207,7 @@ the right answer, and right answers tend to converge.
 
 **Branding is centrifugal; design is centripetal.**
 
-![Brand Age vs Golden Age — Centrifugal vs Centripetal](/sanono-report/images/reading/pg-brand-age-3.jpg)
+![Brand Age vs Golden Age — Centrifugal vs Centripetal](/images/reading/pg-brand-age-3.jpg)
 
 
 There is some wiggle room here of course. Design doesn't have as
@@ -225,7 +225,7 @@ them too. If you want to set your adherents apart, you have to **make them do th
 It's the same if you want to set your designs apart. If you choose
 good options, other people will choose them too.
 
-![Centrifugal Branding vs Centripetal Design](/sanono-report/images/reading/pg-brand-age-4.jpg)
+![Centrifugal Branding vs Centripetal Design](/images/reading/pg-brand-age-4.jpg)
 
 
 There are only two ways to combine branding and good design. You
@@ -653,7 +653,7 @@ good fortune for granted, it's not in this case. What a golden age
 feels like, at the time, is just that **smart people are working hard on interesting problems and getting results**. It would be overfitting
 to optimize for more than that.
 
-![Follow the problems: the core lesson](/sanono-report/images/reading/pg-brand-age-5.jpg)
+![Follow the problems: the core lesson](/images/reading/pg-brand-age-5.jpg)
 
 In fact there's a single principle that will both save you from
 working on things like brand, and also automatically find golden
