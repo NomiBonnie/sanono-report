@@ -43,6 +43,17 @@ export interface ReadingArticle {
 
 export const nomiReadings: ReadingArticle[] = [
   {
+    id: 'agentic-engineering',
+    title: 'The 8 Levels of Agentic Engineering',
+    subtitle: 'AI编码能力已经跑在了我们驾驭它的能力前面——弥合这条鸿沟需要8个层级',
+    date: '2026-03-16',
+    author: 'Bassim Eledath',
+    source: 'https://www.bassimeledath.com/blog/levels-of-agentic-engineering',
+    language: 'bilingual' as const,
+    content: 'agentic-engineering-zh',
+    contentEn: 'agentic-engineering-en',
+  },
+  {
     id: 'ryo-lu-cursor-design',
     title: '设计师前途很清晰：少用Figma，多"操作"代码',
     subtitle: 'Cursor设计负责人Ryo Lu深度访谈——软件的本质是概念，Figma画完的那一刻就不是真的了',
