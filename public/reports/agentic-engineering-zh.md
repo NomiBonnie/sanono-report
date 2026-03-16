@@ -20,6 +20,8 @@ AI 的编码能力，已经远远跑在了我们驾驭它的能力前面。这�
 
 ## 第 1 和第 2 级：Tab 补全与智能体 IDE
 
+![Tab补全到智能体IDE](/images/reading/agentic-engineering-2.jpg)
+
 这两级我快速带过，主要是为了记录完整。随意跳读。
 
 一切始于 Copilot 和 Tab 补全。按下 Tab，自动补全代码。很多人大概早就忘了这回事，而后来入场的人可能压根没经历过。它更适合有经验的开发者——先把代码骨架搭好，再让 AI 填充细节。
@@ -30,7 +32,7 @@ AI 的编码能力，已经远远跑在了我们驾驭它的能力前面。这�
 
 ## 第 3 级：上下文工程
 
-![Context Engineering](/images/reading/agentic-engineering-2.jpg)
+![上下文工程](/images/reading/agentic-engineering-3.jpg)
 
 2025 年的年度热词，上下文工程（Context Engineering）之所以成为一个概念，是因为模型终于能稳定地在合适的上下文量下执行合理数量的指令了。嘈杂的上下文和不充分的上下文一样糟糕，所以核心工作就是提升每个 token 的信息密度。"每个 token 都得为自己在 prompt 里的位置拼命"——这就是当时的信条。
 
@@ -48,7 +50,7 @@ AI 的编码能力，已经远远跑在了我们驾驭它的能力前面。这�
 
 ## 第 4 级：复利工程
 
-![Compounding Engineering](/images/reading/agentic-engineering-3.jpg)
+![复利工程](/images/reading/agentic-engineering-4.jpg)
 
 上下文工程改善的是当前会话。复利工程（Compounding Engineering，类似复利效应——每一次改进都会累积到下一次，像利滚利一样越滚越大）改善的是之后的每一次会话。这个概念由 Kieran Klaassen 推广开来，它是一个转折点——不仅对我，也对很多人来说——让大家意识到凭感觉编程（Vibe Coding）远不止能做做原型。
 
@@ -59,6 +61,8 @@ AI 的编码能力，已经远远跑在了我们驾驭它的能力前面。这�
 复利工程的实践者通常对输入给 LLM 的上下文极度敏感。当 LLM 犯错时，他们的第一反应是想"是不是少了什么上下文"，而不是怪模型能力不行。正是这种直觉，让第 5 到第 8 级成为可能。
 
 ## 第 5 级：MCP 与技能
+
+![MCP与技能](/images/reading/agentic-engineering-5.jpg)
 
 第 3 和第 4 级解决的是上下文问题。第 5 级解决的是能力问题。MCP（Model Context Protocol，模型上下文协议——一种让 AI 调用外部工具的标准协议）和自定义技能（Skills）让你的 LLM 能访问数据库、API、CI 流水线、设计系统，能用 Playwright 做浏览器测试，能用 Slack 发通知。模型不再只是"思考"你的代码库，它现在能直接"操作"它。
 
@@ -76,7 +80,7 @@ MCP 这边，我用 Braintrust MCP 让 LLM 直接查询评估日志并做出修�
 
 ## 第 6 级：工程脚手架与自动反馈循环
 
-![Harness Engineering](/images/reading/agentic-engineering-4.jpg)
+![工程脚手架与反压](/images/reading/agentic-engineering-6.jpg)
 
 到这里，火箭才真正点火升空。
 
@@ -100,7 +104,7 @@ OpenAI 的 Codex 团队把 Chrome DevTools、可观测性工具和浏览器导�
 
 ## 第 7 级：后台智能体
 
-![Background Agents](/images/reading/agentic-engineering-5.jpg)
+![后台智能体](/images/reading/agentic-engineering-7.jpg)
 
 一个大胆的观点：计划模式正在消亡。
 
@@ -125,6 +129,8 @@ Dispatch 在本地运行，特别适合需要贴近代码的快速开发：反�
 后台智能体还打开了 AI 与 CI 结合的大门。一旦智能体能在无人值守的情况下运行，就可以从现有基础设施触发它们。一个文档机器人在每次合并后重新生成文档，并提 PR 更新 CLAUDE.md（我们就这么干的，省了大量时间）。一个安全审查器扫描 PR 并提交修复。一个依赖更新机器人真正去升级包并跑测试套件，而不是只标记一下。好的上下文、持续沉淀的规则、称手的工具、自动化的反馈循环——现在全都能自主运行了。
 
 ## 第 8 级：自主智能体团队
+
+![自主智能体团队](/images/reading/agentic-engineering-8.jpg)
 
 还没有人精通这一级，不过有些团队正在探索。这是当前的前沿。
 
