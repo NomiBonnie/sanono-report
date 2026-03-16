@@ -46,7 +46,7 @@
 
 但负面影响同样深远。**第一，为了推行技术引进路线，疯狂打压了铁道部积累多年的自研派，彻底断送了自研成果。第二，花了近千亿的技术引进，到底消化吸收了多少？** 前几期的故事已经给出了答案。第三，也是最严重的——**为了追求规模盲目扩张，铁道部负债超过两万亿。** 而据最新统计，目前只有6条高铁线路盈利，80%以上的线路处于亏损状态。
 
-![刘部长陨落](/images/reading/qianliangfm-highspeed-rail-5-1.jpg)
+![刘部长陨落](/sanono-report/images/reading/qianliangfm-highspeed-rail-5-1.jpg)
 
 刘部长倒了，但高铁不能停。接下来的问题是：谁来收拾这个烂摊子？
 
@@ -108,7 +108,7 @@ B车司机立刻采取紧急制动，但距离太近、速度太快。而且B车
 
 事故发生在铁路桥上。前车最后两节车厢脱轨，后车前五节车厢脱轨，其中前三节直接坠落桥下，第四节悬空，第五节压在了前车最后一节车厢上面。**40人死亡（包括后车司机），172人受伤。** 事故级别认定为"特别重大铁路交通事故"。
 
-![7·23事故](/images/reading/qianliangfm-highspeed-rail-5-2.jpg)
+![7·23事故](/sanono-report/images/reading/qianliangfm-highspeed-rail-5-2.jpg)
 
 ### 那个B车司机的30秒
 
@@ -142,7 +142,7 @@ B车司机立刻采取紧急制动，但距离太近、速度太快。而且B车
 
 最后一个细节：**发布会结束后，几名记者直接把王永平围住，两人锁住他的手臂，逼他继续回答问题。** 这在中国新闻发布会历史上绝无仅有。王永平后来被调往波兰担任华沙铁路合作组织中方代表，几年后回国当了铁路总公司文联主席直到退休。
 
-![至于你信不信](/images/reading/qianliangfm-highspeed-rail-5-3.jpg)
+![至于你信不信](/sanono-report/images/reading/qianliangfm-highspeed-rail-5-3.jpg)
 
 发布会的闹剧结束了，但问责才刚刚开始。
 
@@ -186,7 +186,7 @@ B车司机立刻采取紧急制动，但距离太近、速度太快。而且B车
 
 **2017年6月，中国标准动车组正式定名——复兴号。** 英文名从CRH直接简化为CR。2017年6月26日复兴号上线京沪高铁，三个月后**恢复了时速350公里运营**——距离降速已经过去了整整6年。
 
-![复兴号](/images/reading/qianliangfm-highspeed-rail-5-4.jpg)
+![复兴号](/sanono-report/images/reading/qianliangfm-highspeed-rail-5-4.jpg)
 
 复兴号因为统一标准和自主产权的优势，在出口方面实现了突破——**印尼雅万高铁、老挝中老铁路、中泰铁路**都使用了复兴号技术。到了那边当然不叫复兴号——就跟当初新干线进中国要贴CRH一样。
 
@@ -209,4 +209,4 @@ B车司机立刻采取紧急制动，但距离太近、速度太快。而且B车
 
 你看这高铁从1990年提出到今天，多少年了？芯片想三年做出来？没那么容易。
 
-![200年铁路史](/images/reading/qianliangfm-highspeed-rail-5-5.jpg)
+![200年铁路史](/sanono-report/images/reading/qianliangfm-highspeed-rail-5-5.jpg)

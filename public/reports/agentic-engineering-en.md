@@ -8,7 +8,7 @@
 
 # The 8 Levels of Agentic Engineering
 
-![The 8 Levels of Agentic Engineering](/images/reading/agentic-engineering-1.jpg)
+![The 8 Levels of Agentic Engineering](/sanono-report/images/reading/agentic-engineering-1.jpg)
 
 **AI's coding ability is outpacing our ability to wield it effectively.** That's why all the SWE-bench score maxxing isn't syncing with the productivity metrics engineering leadership actually cares about. When Anthropic's team ships a product like Cowork in 10 days and another team can't move past a broken POC using the same models, **the difference is that one team has closed the gap between capability and practice and the other hasn't.**
 
@@ -30,7 +30,7 @@ Most people at this level are also experimenting with plan mode in their coding 
 
 ## Level 3: Context Engineering
 
-![Context Engineering](/images/reading/agentic-engineering-2.jpg)
+![Context Engineering](/sanono-report/images/reading/agentic-engineering-2.jpg)
 
 Buzz phrase of the year in 2025, context engineering became a thing when models got reliably good at following a reasonable number of instructions with just the right amount of context. **Noisy context was just as bad as underspecified context**, so the effort was in improving the information density of each token. "Every token needs to fight for its place in the prompt" was the mantra.
 
@@ -48,7 +48,7 @@ The broader point is that **context engineering hasn't gone away, it's just evol
 
 ## Level 4: Compounding Engineering
 
-![Compounding Engineering](/images/reading/agentic-engineering-3.jpg)
+![Compounding Engineering](/sanono-report/images/reading/agentic-engineering-3.jpg)
 
 Context engineering improves the current session. **Compounding engineering improves every session after it.** Popularized by Kieran Klaassen, compounding engineering was an inflection point for not only me but many others that "vibe coding" could do far more than just prototyping.
 
@@ -76,7 +76,7 @@ One thing before we continue. **Levels 3 through 5 are the building blocks for e
 
 ## Level 6: Harness Engineering & Automated Feedback Loops
 
-![Harness Engineering](/images/reading/agentic-engineering-4.jpg)
+![Harness Engineering](/sanono-report/images/reading/agentic-engineering-4.jpg)
 
 **This is where the rocket really starts to ship.**
 
@@ -100,7 +100,7 @@ Once you've built all of this, a natural question emerges: if the agent can veri
 
 ## Level 7: Background Agents
 
-![Background Agents](/images/reading/agentic-engineering-5.jpg)
+![Background Agents](/sanono-report/images/reading/agentic-engineering-5.jpg)
 
 **Hot take: plan mode is dying.**
 

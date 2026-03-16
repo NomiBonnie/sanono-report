@@ -22,7 +22,7 @@
 
 为了监督这一切，铁道部组建了一个特殊部门——**"动联办"（动车组联合办公室）**。动联办负责两件事：考核机车厂是否真正掌握了核心技术，以及考核国产化零部件是否达标能替代进口件。这是当年铁道部**最有权力的办公室**，手握几百亿的资金支付权——考核不过，钱就不出。
 
-![联合设计生产](/images/reading/qianliangfm-highspeed-rail-4-1.jpg)
+![联合设计生产](/sanono-report/images/reading/qianliangfm-highspeed-rail-4-1.jpg)
 
 有了这套精密的体系，联合设计生产迅速推进。到2006年，第一批成果终于要面世了。
 
@@ -57,7 +57,7 @@ CRH3交给了谁？长客已经被阿尔斯通坑惨了——在四方两家的�
 
 从这次大提速开始，中国老百姓对火车的认知彻底改变了——崭新的动车，时速200公里，不卖站票，不能随便上车补票，体验和绿皮车完全不是一个量级。
 
-![和谐号诞生](/images/reading/qianliangfm-highspeed-rail-4-2.jpg)
+![和谐号诞生](/sanono-report/images/reading/qianliangfm-highspeed-rail-4-2.jpg)
 
 老百姓满意了，中央领导也满意了。大提速带来的不仅是口碑，更是政治资本。
 
@@ -124,7 +124,7 @@ CRH3交给了谁？长客已经被阿尔斯通坑惨了——在四方两家的�
 
 科技部是怎么获得铁路系统内部这么多机密信息的？不得不提铁道部内部的派系斗争——被疯狂打压的**两株团队**，心里有气是肯定的，在信息传递上恐怕也出了不少力。
 
-![科技部的质疑](/images/reading/qianliangfm-highspeed-rail-4-3.jpg)
+![科技部的质疑](/sanono-report/images/reading/qianliangfm-highspeed-rail-4-3.jpg)
 
 举报信引起了中央的高度重视。科技部的这记重拳，终于撬动了铁道部看似铁板一块的技术路线。
 
@@ -168,7 +168,7 @@ CRH3交给了谁？长客已经被阿尔斯通坑惨了——在四方两家的�
 
 但正是这段被排挤的岁月，反而保护了两株团队。**没参与技术引进，就没有养成对外部技术的依赖性，自研能力完整保留。** 结果到了科技部主导的自研项目中，动车组最核心的部分——还是两株做出来的。有时候被排挤，也是一种保护。
 
-![380A的胜利](/images/reading/qianliangfm-highspeed-rail-4-4.jpg)
+![380A的胜利](/sanono-report/images/reading/qianliangfm-highspeed-rail-4-4.jpg)
 
 380A的成功证明了自研路线的可行性。但同一个380系列里，另一个型号却走上了截然相反的道路。
 
@@ -206,7 +206,7 @@ CRH3交给了谁？长客已经被阿尔斯通坑惨了——在四方两家的�
 
 令人唏嘘。
 
-![京沪高铁开工](/images/reading/qianliangfm-highspeed-rail-4-5.jpg)
+![京沪高铁开工](/sanono-report/images/reading/qianliangfm-highspeed-rail-4-5.jpg)
 
 京沪高铁开工了，一切看起来都在往最好的方向发展。但故事远未结束——事实上，最大的风暴还在前方。
 

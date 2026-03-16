@@ -34,7 +34,7 @@
 
 **Satya Nadella：** 你知道，**最终真正重要的是接下来会发生什么，而不是过去发生了什么**。如果要回顾的话——微软走到今天，不只是我任期内这十二年的事，真正的问题是：成立五十年之后，到了 2026 年的今天，我们依然充满干劲。对我来说，根本在于拥有一种使命感和目标感，让我们能持续保持相关性，以及一种文化，让我们能够构建能力。就拿我们现在谈论的 AI 来说——早在 2018、2019 年，我们就判断会出现一个全新的 AI 创新范式，远在大家形成共识之前。
 
-![Satya Nadella at Munich AI Tour](/images/reading/satya-nadella-omr-1.jpg)
+![Satya Nadella at Munich AI Tour](/sanono-report/images/reading/satya-nadella-omr-1.jpg)
 
 **采访者：** 你们 2019 年第一次投资 OpenAI，据说 Bill Gates 当时并不太看好？
 
@@ -50,7 +50,7 @@
 
 或者看另一个极端——慕尼黑消防部门在用 AI 来提升紧急转运效率。**对我来说，如果看不到这些落地案例，那泡沫才是泡沫**。
 
-![AI diffusion in the real world](/images/reading/satya-nadella-omr-2.jpg)
+![AI diffusion in the real world](/sanono-report/images/reading/satya-nadella-omr-2.jpg)
 
 **采访者：** 我给你举个例子，让我觉得可能有点过热。德国最重要的三家公司——SAP、Deutsche Telekom、Siemens——它们加在一起的市值还不如现在的 OpenAI。这合理吗？
 
@@ -76,7 +76,7 @@
 
 **「降低门槛」是什么意思？任何人都可以成为软件开发者——就像 Excel 让任何人都能做分析一样。但它同时也在「抬高天花板」**——你需要掌握新的复杂技能才能高效使用这些新工具，确保这些生成出来的代码库不是黑盒子。这就是我们所有人都需要重新学习的东西。
 
-![Reducing the floor, raising the ceiling](/images/reading/satya-nadella-omr-3.jpg)
+![Reducing the floor, raising the ceiling](/sanono-report/images/reading/satya-nadella-omr-3.jpg)
 
 所以对我来说，短期内更重要的是——我不是说不会有岗位被替代，我们必须清醒地面对——但**抵御替代的最好方式是什么？是理解新的媒介、新的工具、所需的新技能，在工作中完成转型**。软件开发领域正在发生这件事：开发者变得更高效了，IT 积压需求又是巨大的。
 
@@ -102,7 +102,7 @@
 
 **Satya Nadella：** 当然。我和 Siemens 的 Roland 聊，和奔驰的 Ola 聊。今天还要见很多人。是的，我一直都和德国的 CEO 们保持联系。
 
-![Office in the agent era](/images/reading/satya-nadella-omr-4.jpg)
+![Office in the agent era](/sanono-report/images/reading/satya-nadella-omr-4.jpg)
 
 **采访者：** 你觉得未来五年，微软还会高度依赖 Office 和 Windows 的收入吗？
 
@@ -122,7 +122,7 @@
 
 再想想训练这个模型。量子计算机可以做最好的模拟。毕竟，**我们在试图学习自然的语言，而自然本身就是量子的**。量子计算机能让我们获得训练数据，来训练 AI 模型，这些模型在计算机模拟中就能更好地模拟真实世界，从而赋予它更强的预测能力。
 
-![Quantum + AI convergence](/images/reading/satya-nadella-omr-5.jpg)
+![Quantum + AI convergence](/sanono-report/images/reading/satya-nadella-omr-5.jpg)
 
 **采访者：** 最后一个问题。一个微软 CEO 怎么看待健康长寿？你怎么锻炼？
 

@@ -34,7 +34,7 @@
 
 **Satya Nadella:** Look, at the end of the day, **what matters the most is what happens next, as opposed to what happened in the past**. And if I had to recount — how is Microsoft, not just in my tenure or whatever 12 years, but what's the real question is: what is it that after 50 years after our formation, here we are in 2026, and going at it. And the fundamental thing to me is having that sense of purpose and mission that allows us to be relevant going forward, and a culture that allows us to build the capability.
 
-![Satya Nadella at Munich AI Tour](/images/reading/satya-nadella-omr-1.jpg)
+![Satya Nadella at Munich AI Tour](/sanono-report/images/reading/satya-nadella-omr-1.jpg)
 
 **Interviewer:** Is it true that you invested in OpenAI in 2019, I think for the first time, and Bill Gates was not a big fan of that?
 
@@ -50,7 +50,7 @@
 
 Or go the other extreme — you see the Munich fire department using AI to get better at their emergency transfers. **To me, the bubble is a bubble if you don't have these examples of diffusion.**
 
-![AI diffusion in the real world](/images/reading/satya-nadella-omr-2.jpg)
+![AI diffusion in the real world](/sanono-report/images/reading/satya-nadella-omr-2.jpg)
 
 **Interviewer:** I give you an example for when I thought it might be a little bit overhyped. The three most important German companies — SAP, Deutsche Telekom, Siemens — they're all together less valuable than OpenAI is these days. Is that real?
 
@@ -76,7 +76,7 @@ If I look at what's happening with software development — and if you look at e
 
 **What does it mean, "reducing the floor"? Anyone can be a software developer — just like how Excel reduced the floor for anyone to be an analyst. But it's also raising the ceiling** on what is the new sophistication you need in order to be productive with these new tools, so that these codebases that are getting generated are not black boxes. That's going to be what all of us will have to reskill ourselves on.
 
-![Reducing the floor, raising the ceiling](/images/reading/satya-nadella-omr-3.jpg)
+![Reducing the floor, raising the ceiling](/sanono-report/images/reading/satya-nadella-omr-3.jpg)
 
 So to me, what I think is more important in the short run — I'm not saying that there is not going to be displacement, we have to be clear-eyed about it — but **what's the best protection against displacement? It's to understand the new medium, the new tool, the new skills required, and transform yourself in the job**.
 
@@ -98,7 +98,7 @@ And so I think at some level — I'm not being Pollyannaish about this — but I
 
 **Satya Nadella:** Absolutely. I talk to Roland at Siemens. I talk to Ola at Mercedes. I'm going to talk to many people today.
 
-![Office in the agent era](/images/reading/satya-nadella-omr-4.jpg)
+![Office in the agent era](/sanono-report/images/reading/satya-nadella-omr-4.jpg)
 
 **Interviewer:** Do you think in the next five years Microsoft will still rely heavily on revenue from Office and Windows?
 
@@ -118,7 +118,7 @@ And so I think one way to think about it is: if we remain static in anything, of
 
 Now think about training that model. A quantum computer can do the best simulation. After all, **we're trying to learn the language of nature, and nature is quantum**. And so a quantum computer will allow us to get training data to train AI models that then in silico can be much better at simulation of the real world. And that will allow us to give it more predictive power.
 
-![Quantum + AI convergence](/images/reading/satya-nadella-omr-5.jpg)
+![Quantum + AI convergence](/sanono-report/images/reading/satya-nadella-omr-5.jpg)
 
 **Interviewer:** Last question. How does a Microsoft CEO think about longevity, and how do you work out?
 

@@ -51,7 +51,7 @@
 
 不过不管有没有私心，从后来几十年的发展来看，这个战略还是值得肯定的。
 
-![刘部长的战略](/images/reading/qianliangfm-highspeed-rail-3-1.jpg)
+![刘部长的战略](/sanono-report/images/reading/qianliangfm-highspeed-rail-3-1.jpg)
 
 回过头来看，刘部长从闭关沉思到国务院批准，前后不过一年多时间，却完成了从战略定位、向上管理到舆论造势的全套组合拳。这套打法对每一个在组织里推动变革的人都有启发。
 
@@ -93,7 +93,7 @@
 
 **第二条：** 只接受两家中方企业参与投标——**北车长客**和**南车四方**。强行把供需关系从"国内50家抢外方3家"调整为"国内2家对外方3家"。**这就是"二桃杀三士"的来源——两颗桃子，让三个勇士争。**
 
-![二桃杀三士](/images/reading/qianliangfm-highspeed-rail-3-2.jpg)
+![二桃杀三士](/sanono-report/images/reading/qianliangfm-highspeed-rail-3-2.jpg)
 
 **第三条：** 技术转让实施评价制度——铁道部在购买机车付款之前，先考核中方掌握了多少核心技术，考核不通过不付钱。**这逼得外方必须摁着中方的脑袋把技术学会，不想学都不行。**
 
@@ -155,7 +155,7 @@
 
 消息一出，全球媒体一片哗然。**西门子股票当天暴跌，整个谈判团队被辞退，负责的高管引咎辞职。**
 
-![投标日](/images/reading/qianliangfm-highspeed-rail-3-3.jpg)
+![投标日](/sanono-report/images/reading/qianliangfm-highspeed-rail-3-3.jpg)
 
 尘埃落定之后，铁道部很快公布了最终的分配方案。
 
@@ -189,7 +189,7 @@ SM3刚引入的时候故障率奇高，而且外方自己也不懂。长客和�
 
 长客成了这波技术引进中执行"联合设计生产"最彻底的一家，因祸得福积累了大量经验丰富的工程师。而且SM3原本是菲亚特为出口芬兰设计的——芬兰高纬度、极度高寒。长客由此在**耐寒车型**方面独树一帜，后来的产品在东北地区销量特别好。有时候，最好的老师不是最强的那个，而是最逼你动手的那个。
 
-![技术消化](/images/reading/qianliangfm-highspeed-rail-3-4.jpg)
+![技术消化](/sanono-report/images/reading/qianliangfm-highspeed-rail-3-4.jpg)
 
 四方和长客各自以不同的方式完成了技术积累，中国高铁的制造能力已经今非昔比。而当第二次招标的号角吹响时，形势已经完全逆转了。
 
@@ -213,6 +213,6 @@ SM3刚引入的时候故障率奇高，而且外方自己也不懂。长客和�
 
 **最终，中国中车——这个曾经的徒弟——在全球的市场份额已经超过了四个老师傅的总和，远远甩在了身后。**
 
-![中国中车](/images/reading/qianliangfm-highspeed-rail-3-5.jpg)
+![中国中车](/sanono-report/images/reading/qianliangfm-highspeed-rail-3-5.jpg)
 
 不过二桃杀三士只是揭幕战。后面的故事更加精彩——和谐号从何而来？中国第一条高铁到底是谁？争了十多年的京沪高铁终于开工，结果又掀起了铁道部的陈年旧案？二桃杀三士背后还有另一个版本？这些，留待下期。

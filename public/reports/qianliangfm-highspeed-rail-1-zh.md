@@ -32,7 +32,7 @@
 
 简单来说，中国高铁在全球就是独一档的存在。然而，这个让世界刮目相看的成就，在二十多年前还只是一个遥不可及的梦想。
 
-![铁道部帝国](/images/reading/qianliangfm-highspeed-rail-1-1.jpg)
+![铁道部帝国](/sanono-report/images/reading/qianliangfm-highspeed-rail-1-1.jpg)
 
 那这个奇迹是怎么从无到有发生的？这就要回到最初的起点，回到那个曾经掌控着中国所有铁路命脉的超级部门。
 
@@ -66,7 +66,7 @@
 
 于是，铁道部出身是军委，在国家层面又是战略性存在，行政管理上就变得极为特殊。各地的铁路分局、铁路局，在所在地方拥有独立自主的管辖权——相当于当地政府的一块"飞地"。**拥有军队、警察、法院、学校、医院、电厂、通信公司——几乎就是一个"独立王国"。**
 
-![铁道部的前世今生](/images/reading/qianliangfm-highspeed-rail-1-2.jpg)
+![铁道部的前世今生](/sanono-report/images/reading/qianliangfm-highspeed-rail-1-2.jpg)
 
 但随着改革开放的推进，国家意识到一个政府组成部门不能继续像国中之国一样运转。于是"政企分离"被提上了日程。这个拆分过程，将彻底改变中国铁路系统的面貌。
 
@@ -172,7 +172,7 @@
 
 太落后了。这种巨大的反差，在邓小平心中埋下了一颗种子。
 
-![邓小平与新干线](/images/reading/qianliangfm-highspeed-rail-1-3.jpg)
+![邓小平与新干线](/sanono-report/images/reading/qianliangfm-highspeed-rail-1-3.jpg)
 
 ## 铁路人的隐忍与积累
 
@@ -208,7 +208,7 @@
 
 这个实验台意义重大。它为中国培养了一大批高铁科研人才。后来中国高铁能建得这么好，很多核心科研人员都是在这个实验台上做出了关键的技术积累。这就是沈志云被称为"高铁之父"的原因——他不只是一个科学家，他更像是一所学校，一个摇篮。
 
-![沈志云的实验室](/images/reading/qianliangfm-highspeed-rail-1-4.jpg)
+![沈志云的实验室](/sanono-report/images/reading/qianliangfm-highspeed-rail-1-4.jpg)
 
 ## 京沪高铁的起点
 
@@ -244,7 +244,7 @@
 
 而这场"京沪之争"的精彩程度，个人认为比后来闻名世界的"二桃杀三士"还要刺激。
 
-![京沪之争](/images/reading/qianliangfm-highspeed-rail-1-5.jpg)
+![京沪之争](/sanono-report/images/reading/qianliangfm-highspeed-rail-1-5.jpg)
 
 但因为过于曲折，一集讲不完。
 

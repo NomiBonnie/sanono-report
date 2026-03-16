@@ -64,13 +64,13 @@
 
 最终结果：**京沪高铁没有出现在人大审批通过的"九五"计划里。** 取而代之的是一个模糊的说法——把它写进了"二十一世纪远景目标"。换句话说：还得研究，以后再说。
 
-![缓建派vs速建派](/images/reading/qianliangfm-highspeed-rail-2-1.jpg)
+![缓建派vs速建派](/sanono-report/images/reading/qianliangfm-highspeed-rail-2-1.jpg)
 
 铁道部想必是轻敌了。他们觉得论证完了，八十个人同意、两个人反对，交个报告就完事了，可能没做太多的游说工作。而高层领导也许觉得，现在确实太费钱了，经济上不太合算。
 
 这是京沪高铁之争的**第一轮论战**。参与方包括铁道部、中铁和副总理。最终缓建派胜出，速建派铩羽而归。两派之间在论证会上唇枪舌剑的激烈交锋，最终定格成了这一历史性的对峙时刻。
 
-![京沪之争第一轮：缓建派与速建派的较量](/images/reading/qianliangfm-highspeed-rail-2-1.jpg)
+![京沪之争第一轮：缓建派与速建派的较量](/sanono-report/images/reading/qianliangfm-highspeed-rail-2-1.jpg)
 
 ### 铁道部的韬光养晦
 
@@ -100,7 +100,7 @@
 
 不过无论德国还是日本，虽然技术领先，但都还停留在实验阶段，**没有一条真正投入商业运营的磁悬浮线路**。所以总理当时提出这个想法，也许是期望中国能借磁悬浮技术来一个弯道超车——全球首例商用磁悬浮，在中国，一下子扬眉吐气。这个雄心勃勃的构想，彻底改变了京沪高铁之争的格局。
 
-![磁悬浮：第三派势力登场](/images/reading/qianliangfm-highspeed-rail-2-2.jpg)
+![磁悬浮：第三派势力登场](/sanono-report/images/reading/qianliangfm-highspeed-rail-2-2.jpg)
 
 ### 三足鼎立
 
@@ -200,13 +200,13 @@
 
 这个世界纪录的诞生，既是中国技术野心的胜利，也是一场昂贵实验的开始。
 
-![上海磁悬浮：全球第一，也是唯一](/images/reading/qianliangfm-highspeed-rail-2-3.jpg)
+![上海磁悬浮：全球第一，也是唯一](/sanono-report/images/reading/qianliangfm-highspeed-rail-2-3.jpg)
 
 但这里有一个颇为尴尬的数学问题。按时速430公里算，30公里其实4分钟就够了。但实际上需要8分钟，因为30公里的距离太短——**列车刚提速就得降速**，加速和减速的过程占了一大半时间。就像开一辆超跑在小区里转圈，刚踩油门就得踩刹车。
 
 这也正是磁浮派一直强调"中国最适合建磁悬浮"的原因——中国的国土面积大，距离足够长，不像日本那样的弹丸小国，可能刚加速就得减速，甚至"刚一提速就掉海里去了"。
 
-![上海磁悬浮](/images/reading/qianliangfm-highspeed-rail-2-3.jpg)
+![上海磁悬浮](/sanono-report/images/reading/qianliangfm-highspeed-rail-2-3.jpg)
 
 ### 票价之殇
 
@@ -272,7 +272,7 @@
 
 尽管名字低调，但这条线路在中国高铁史上的地位，却是无可替代的。
 
-![秦沈客专：中国高铁的黄埔军校](/images/reading/qianliangfm-highspeed-rail-2-4.jpg)
+![秦沈客专：中国高铁的黄埔军校](/sanono-report/images/reading/qianliangfm-highspeed-rail-2-4.jpg)
 
 ### 黄埔军校
 
@@ -336,7 +336,7 @@
 
 而中华之星的命运，也就在这样的派系斗争中走向了终局。
 
-![中华之星的最终命运](/images/reading/qianliangfm-highspeed-rail-2-5.jpg)
+![中华之星的最终命运](/sanono-report/images/reading/qianliangfm-highspeed-rail-2-5.jpg)
 
 ### 无人喝彩的历史性时刻
 
@@ -368,7 +368,7 @@
 
 注意——不是"开"到北京的，是**"拖运"**到北京的。不允许它再有动力了。最终被安放在北京铁道博物馆里。
 
-![中华之星命运](/images/reading/qianliangfm-highspeed-rail-2-5.jpg)
+![中华之星命运](/sanono-report/images/reading/qianliangfm-highspeed-rail-2-5.jpg)
 
 投入了1.3亿的研究经费，被整个铁路系统寄予厚望，四个机车厂、四个研究所、两个高校，无数科研人员倾注了青春和心血共同研发的高速列车——最终的命运是：以临时客车身份跑了一年，限速160公里，然后被拖运进博物馆，做了一个大模型。
 

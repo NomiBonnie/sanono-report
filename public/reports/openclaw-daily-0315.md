@@ -6,7 +6,7 @@
 
 ---
 
-![OpenClaw Ecosystem Daily Research](/images/openclaw-daily-0315/infographic.png)
+![OpenClaw Ecosystem Daily Research](/sanono-report/images/openclaw-daily-0315/infographic.png)
 
 ---
 
