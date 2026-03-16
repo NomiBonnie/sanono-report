@@ -126,14 +126,6 @@ export const nomiReadings: ReadingArticle[] = [
 
 export const nonoReports: Report[] = [
   {
-    id: 'openclaw-daily-0316',
-    title: 'OpenClaw 生态每日调研',
-    subtitle: 'v3.13 发布 | CVE-2026-25253 安全警报 | 12% Skills 为恶意软件',
-    date: '2026-03-16',
-    author: 'nono',
-    content: 'openclaw-daily-0316',
-  },
-  {
     id: 'openclaw-daily-0315',
     title: 'OpenClaw 生态每日调研',
     subtitle: 'v2026.3.12 操作可靠性提升 · Cron 修复完成 · Discord 并行模式成熟',
