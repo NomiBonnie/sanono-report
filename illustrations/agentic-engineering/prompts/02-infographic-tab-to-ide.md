@@ -1,21 +1,7 @@
 ---
 illustration_id: 02
 type: infographic
-style: blueprint
+style: whiteboard-sketch
 ---
 
-From Tab Completion to Agentic IDE
-
-Layout: left-right comparison, centered with wide margins
-
-ZONES:
-- Left: simple code editor with cursor and autocomplete highlight, label "L1 Tab Complete"
-- Right: multi-panel IDE with chat + codebase connection, label "L2 Agentic IDE"
-- Top: horizontal dashed line labeled "Context Ceiling"
-
-LABELS: L1 Tab Complete, L2 Agentic IDE, Context Ceiling, Plan Mode
-COLORS: Deep Blue (#1A2B4A) background, Cyan (#00D4FF) highlights, Amber (#FFB800) ceiling line, White (#FFFFFF) labels
-STYLE: Blueprint technical drawing. Grid background. Clean geometric UI mockups. Glowing accents. Large monospace font.
-ASPECT: 16:9
-
-Clean composition. Keep all elements 10% away from edges. Generous white space.
+Hand-drawn whiteboard sketch comparing two scenes side by side. Left: a simple code editor with a cursor and a small autocomplete popup, labeled "Tab Complete" in marker handwriting. Right: a full IDE window with chat panel, file tree, and codebase connection lines, labeled "Agentic IDE". A dotted arrow between them labeled "Level Up!". White background with faint grid lines. Blue and orange markers. Casual doodle style, like a developer explaining tools on a whiteboard. Wide angle shot, zoomed out. All elements COMPLETELY within frame with at least 15% margin from all edges.

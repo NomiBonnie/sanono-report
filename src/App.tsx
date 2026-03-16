@@ -410,7 +410,7 @@ function ReadingView() {
               img: ({ src, alt, ...props }: React.ImgHTMLAttributes<HTMLImageElement>) => {
                 const base = import.meta.env.BASE_URL
                 const fixedSrc = src && src.startsWith('/') ? `${base}${src.slice(1)}` : src
-                return <img src={fixedSrc} alt={alt} className="rounded-xl my-6 w-full" {...props} />
+                return <img src={fixedSrc} alt={alt} className="rounded-xl my-6 w-full block mx-auto" {...props} />
               },
               blockquote: (() => {
                 let blockquoteIndex = 0

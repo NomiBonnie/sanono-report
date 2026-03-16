@@ -1,21 +1,7 @@
 ---
 illustration_id: 05
 type: infographic
-style: blueprint
+style: whiteboard-sketch
 ---
 
-MCP & Skills - Capability Network
-
-Layout: radial hub-and-spoke, centered
-
-ZONES:
-- Center: glowing LLM core sphere, label "LLM: Think → Act"
-- 6 tool nodes radiating outward: Database, API, CI Pipeline, Browser, Slack, Docs
-- Each node has a simple geometric icon
-
-LABELS: LLM, Database, API, CI, Browser, Slack, Docs, Think → Act
-COLORS: Deep Blue (#1A2B4A) background, Cyan (#00D4FF) LLM core, Teal (#00B8A9) tool nodes, Electric Blue (#0066FF) connection lines, White (#FFFFFF) labels
-STYLE: Blueprint technical drawing. Grid background. Central glowing sphere. Tool nodes as simple geometric icons. Clean connection lines. Large monospace font.
-ASPECT: 16:9
-
-Clean composition. Hub centered. All spokes well within frame. Wide margins. Wide angle shot, zoomed out. All text and elements must be COMPLETELY within the frame with at least 15% margin from all edges.
+Hand-drawn whiteboard sketch showing a central brain/robot icon labeled "LLM" with 5 tool icons radiating outward like a star pattern: a database cylinder, an API cloud, a browser window, a chat bubble (Slack), and a document icon. Lines connecting them like a mind map. Title at top: "MCP & Skills". Each tool has a tiny label. White background with faint grid. Blue center, green tool icons, orange connection lines. Casual friendly marker doodle. Wide angle shot, zoomed out. All elements COMPLETELY within frame with at least 15% margin from all edges.

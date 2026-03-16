@@ -1,22 +1,7 @@
 ---
 illustration_id: 07
 type: infographic
-style: blueprint
+style: whiteboard-sketch
 ---
 
-Background Agents - Hub-and-Spoke Orchestration
-
-Layout: hub-and-spoke with 3 colored workers, centered
-
-ZONES:
-- Center top: "Command Center" node with human operator icon
-- 3 worker nodes below, each in different color: Opus (blue, "Implement"), Gemini (green, "Research"), Codex (purple, "Review")
-- Async arrows from center to workers
-- Small clock icon indicating background/async execution
-
-LABELS: Command Center, Opus: Implement, Gemini: Research, Codex: Review, Async, Wisdom of Crowds
-COLORS: Deep Blue (#1A2B4A) background, Cyan (#00D4FF) command center, Blue (#4488FF) Opus, Green (#00CC88) Gemini, Purple (#AA66FF) Codex, White (#FFFFFF) labels
-STYLE: Blueprint technical drawing. Grid background. Hub-and-spoke with colored worker nodes. Async arrows with clock icons. Large monospace font.
-ASPECT: 16:9
-
-Clean composition. Command center upper-center, workers below. Wide margins. Wide angle shot, zoomed out. All text and elements must be COMPLETELY within the frame with at least 15% margin from all edges.
+Hand-drawn whiteboard sketch showing a command center at top (stick figure with headset labeled "You") with 3 worker agents below, each doing different tasks: blue one labeled "Opus: Build", green one labeled "Gemini: Research", purple one labeled "Codex: Review". Dotted async arrows connecting them. Small clock icons indicating background work. Title: "Background Agents". White background with faint grid. Colored markers matching each agent. Casual playful doodle style. Wide angle shot, zoomed out. All elements COMPLETELY within frame with at least 15% margin from all edges.
