@@ -4,8 +4,6 @@
 
 ---
 
-![Agent Browser Landscape 2026 — Product Comparison Matrix](/images/agent-browser/landscape-comparison.png)
-
 ## 一、市场快照
 
 AI Browser 市场 2024 年规模约 45 亿美元，预计 2034 年达 768 亿美元（CAGR 32.8%）🟢。79% 的企业已在使用某种形式的 AI Agent 技术（PwC 2025 调查）🟢。McKinsey 2025 报告显示 88% 的组织常规性使用 AI，62% 在试验或使用 AI Agent 🟢。
@@ -14,7 +12,7 @@ GitHub 上，Browser Use 拿到 78,000+ star，Firecrawl 82,000+，Stagehand 21,
 
 2025 年是 Agentic Browser 的元年。OpenAI 发布 Operator（1月），Google 推出 Project Mariner / Gemini in Chrome，Anthropic 发布 Computer Use，Perplexity 推出 Comet，The Browser Co. 发布 Dia，Opera 推出 Neon。每家巨头都在押注"让 AI 操作浏览器"。
 
-但这个赛道有一个根本矛盾：Agent 越自主、访问权限越高，安全风险越大。Gartner 2025 年 12 月直接建议 CISO 暂时封禁 AI Browser 🟡。OpenAI CISO Dane Stuckey 公开承认 prompt injection 仍是"未解决的前沿安全问题"🟢。
+但这个市场有一个根本矛盾：Agent 越自主、访问权限越高，安全风险越大。Gartner 2025 年 12 月直接建议 CISO 暂时封禁 AI Browser 🟡。OpenAI CISO Dane Stuckey 公开承认 prompt injection 仍是"未解决的前沿安全问题"🟢。
 
 ---
 
@@ -24,13 +22,13 @@ GitHub 上，Browser Use 拿到 78,000+ star，Firecrawl 82,000+，Stagehand 21,
 
 Agent Browser 的核心区别：
 
-1. **输入解析方式不同**。传统浏览器渲染 HTML/CSS 给人的视觉系统。Agent Browser 需要把页面转换成 LLM 能理解的格式：DOM tree、accessibility tree、截图、markdown。这个"翻译层"是整个赛道的技术核心。
+1. **输入解析方式不同**。传统浏览器渲染 HTML/CSS 给人的视觉系统。Agent Browser 需要把页面转换成 LLM 能理解的格式：DOM tree、accessibility tree、截图、markdown。这个"翻译层"是整个领域的技术核心。
 
 2. **操作发起方式不同**。人通过鼠标/键盘操作。Agent 通过 CDP（Chrome DevTools Protocol）、Playwright API、或者直接的坐标点击来操作。前者精准但脆弱（依赖 selector），后者灵活但容易误操作。
 
 3. **状态管理不同**。人类在多个标签页之间切换时，大脑天然维护上下文。Agent 需要显式的 session 管理、cookie 持久化、以及跨页面的状态追踪。
 
-4. **安全模型不同**。传统浏览器的安全模型假设操作者是人，能识别钓鱼和欺诈。Agent 没有这个"常识"——Guardio Labs 的 "Scamlexity" 测试证明 AI Browser 会在假冒网站上完成购买 🟢。
+4. **安全模型不同**。传统浏览器的安全模型假设操作者是人，能识别钓鱼和欺诈。Agent 没有这个"常识"。Guardio Labs 的 "Scamlexity" 测试证明 AI Browser 会在假冒网站上完成购买 🟢。
 
 | 维度 | 传统浏览器 | Agent Browser |
 |------|-----------|--------------|
@@ -41,7 +39,7 @@ Agent Browser 的核心区别：
 | 安全 | 人的判断力 | HITL + classifier |
 | 适应性 | 人脑随机应变 | LLM 推理 |
 
-**反面证据**：(1) 有观点认为 Agent Browser 并非新物种，只是 Selenium/Playwright 加了个 LLM 外壳。从架构看确实如此——绝大多数 Agent Browser 底层就是 Playwright/Puppeteer。真正的区别在推理层，不在浏览器本身。(2) 部分场景下传统自动化脚本比 Agent 更可靠、更快。在确定性流程（如每天抓取同一个页面的同一个数据）中，硬编码脚本的成功率和速度都优于 LLM 驱动的 Agent。
+**反面证据**：(1) 有观点认为 Agent Browser 并非新物种，只是 Selenium/Playwright 加了个 LLM 外壳。从架构看确实如此，绝大多数 Agent Browser 底层就是 Playwright/Puppeteer。真正的区别在推理层，不在浏览器本身。(2) 部分场景下传统自动化脚本比 Agent 更可靠、更快。在确定性流程（如每天抓取同一个页面的同一个数据）中，硬编码脚本的成功率和速度都优于 LLM 驱动的 Agent。
 
 ---
 
@@ -136,7 +134,7 @@ Agent Browser 的核心区别：
 **定价**：按 Claude API token 计费
 
 **优势**：
-- 范围最广——不只是浏览器，是整台电脑
+- 不只是浏览器，是整台电脑
 - Constitutional AI 理念下的安全设计：Constitutional Classifiers 扫描不可信内容
 - 模型能力强，Claude 4 在复杂推理上表现好
 - API 形式灵活，可嵌入任意系统
@@ -157,7 +155,7 @@ Agent Browser 的核心区别：
 
 **定位**：最流行的开源 browser agent 框架
 
-**技术架构**：Python 框架，基于 Playwright，支持 OpenAI/Anthropic/Google/本地模型。核心是 DOM distillation——将页面精简为关键交互元素，降低 token 消耗。WebVoyager benchmark 89.1% 成功率。🟢
+**技术架构**：Python 框架，基于 Playwright，支持 OpenAI/Anthropic/Google/本地模型。核心是 DOM distillation，将页面精简为关键交互元素，降低 token 消耗。WebVoyager benchmark 89.1% 成功率。🟢
 
 **定价**：开源免费，LLM API 费用自付
 
@@ -175,7 +173,7 @@ Agent Browser 的核心区别：
 
 **适用场景**：开发者构建自定义 browser agent，需要最大灵活性
 
-**反面证据**：(1) 在生产环境中，"自己搞定一切"的模式意味着你要同时处理 browser 管理、proxy、反检测、session 持久化——复杂度不低。(2) 89.1% 的 benchmark 数字看起来好，但 WebVoyager 的任务分布和真实场景有差距，实际成功率可能更低 🟡。
+**反面证据**：(1) 在生产环境中，"自己搞定一切"的模式意味着你要同时处理 browser 管理、proxy、反检测、session 持久化，复杂度不低。(2) 89.1% 的 benchmark 数字看起来好，但 WebVoyager 的任务分布和真实场景有差距，实际成功率可能更低 🟡。
 
 ---
 
@@ -200,7 +198,7 @@ Agent Browser 的核心区别：
 
 **适用场景**：开发者工具链集成，特别是已使用 MCP 协议的 AI 开发环境
 
-**反面证据**：(1) MCP 协议本身成为安全攻击目标——NeuralTrust 预测 MCP 将是 2026 年的"高价值攻击面" 🟡。(2) A11y tree 在复杂页面上可能丢失视觉上下文（如图表、地图），导致 Agent 理解不完整。
+**反面证据**：(1) MCP 协议本身成为安全攻击目标。NeuralTrust 预测 MCP 将是 2026 年的"高价值攻击面" 🟡。(2) A11y tree 在复杂页面上可能丢失视觉上下文（如图表、地图），导致 Agent 理解不完整。
 
 ---
 
@@ -280,7 +278,7 @@ Agent Browser 的核心区别：
 
 ### 3.10 其他值得关注的产品
 
-**Firecrawl + Browser Sandbox**：从 web scraping 起家，2026 年推出 Browser Sandbox——每个 session 运行在隔离容器中，Playwright 预装。82,000+ star，500,000+ 开发者。2 credits/browser minute。定位是 AI 应用的"web data layer" 🟢。
+**Firecrawl + Browser Sandbox**：从 web scraping 起家，2026 年推出 Browser Sandbox，每个 session 运行在隔离容器中，Playwright 预装。82,000+ star，500,000+ 开发者。2 credits/browser minute。定位是 AI 应用的"web data layer" 🟢。
 
 **Hyperbrowser**：YC 背景，managed browser infra，内置 LLM 集成和自然语言自动化 API 🟡。
 
@@ -350,7 +348,7 @@ OpenClaw 采用了一条独特路线：通过 CDP 直接控制用户已有的 Ch
 
 **核心优势**：
 
-1. **认证问题自动消失**。这是所有 cloud browser 方案最头疼的问题。你的 Gmail 需要 2FA？你的银行网站有设备绑定？OpenClaw 不在乎——因为你的 Chrome 早就登录了。
+1. **认证问题自动消失**。这是所有 cloud browser 方案最头疼的问题。你的 Gmail 需要 2FA？你的银行网站有设备绑定？OpenClaw 不在乎，因为你的 Chrome 早就登录了。
 
 2. **反检测天然满分**。因为 Agent 操作的就是你真实的 Chrome，有你真实的浏览器指纹、cookie、历史记录。没有任何网站能区分这是人在操作还是 Agent 在操作。
 
@@ -368,9 +366,9 @@ OpenClaw 采用了一条独特路线：通过 CDP 直接控制用户已有的 Ch
 
 4. **共享使用冲突**。Agent 在操作浏览器时，你自己可能也想用。
 
-**定位判断**：OpenClaw 的方式适合个人用户的私人 Agent——你想让 AI 帮你在已登录的网站上做事，且你信任这个 Agent 不会被 prompt injection 攻击。它不适合企业级批量自动化。
+**定位判断**：OpenClaw 的方式适合个人用户的私人 Agent。你想让 AI 帮你在已登录的网站上做事，且你信任这个 Agent 不会被 prompt injection 攻击。它不适合企业级批量自动化。
 
-和其他方案的对比中，OpenClaw 占据了一个独特的生态位：**"你已经登录的 Chrome 就是最好的 Agent Browser"**。这个观点在技术上是成立的——认证和反检测是 Agent Browser 两大难题，OpenClaw 一次性解决了。
+和其他方案的对比中，OpenClaw 的位置很独特：**"你已经登录的 Chrome 就是最好的 Agent Browser"**。认证和反检测是 Agent Browser 两大难题，OpenClaw 一次性解决了。
 
 **反面证据**：(1) 认证问题并非不可解。Browserbase 的 "Agent Identity" 功能允许通过 cookie 注入复用 session。只是操作更麻烦，不像 OpenClaw 那样开箱即用。(2) 单点故障风险。Chrome 崩溃 = Agent 瘫痪。没有高可用机制。
 
@@ -384,7 +382,7 @@ OpenClaw 采用了一条独特路线：通过 CDP 直接控制用户已有的 Ch
 
 ### 7.2 表单填写 & 企业工作流
 
-Skyvern 的主战场。保险报价、政府表单、HR 系统——这些没有 API 的遗留系统。AI benchmark 显示 AI 填写 30 字段表单约 90 秒，人类 12+ 分钟。
+Skyvern 的主战场。保险报价、政府表单、HR 系统，这些没有 API 的遗留系统。AI benchmark 显示 AI 填写 30 字段表单约 90 秒，人类 12+ 分钟。
 
 ### 7.3 测试自动化
 
@@ -459,7 +457,7 @@ Cloudflare、Akamai、PerimeterX 等反爬服务日益成熟。Headless browser 
 
 WebVoyager benchmark 最高 89.1%（Browser Use）。这意味着每 10 个任务有 1 个会失败。在生产环境中，"大部分时候能工作"和"可靠"之间的差距巨大。
 
-**反面证据**：(1) 也有人认为可靠性问题会随模型进步自然解决——GPT-3.5 到 GPT-4o 的进步已经很大 🟡。(2) 对于某些容错高的场景（如数据收集），89% 的成功率已经足够用了。
+**反面证据**：(1) 也有人认为可靠性问题会随模型进步自然解决。GPT-3.5 到 GPT-4o 的进步已经很大 🟡。(2) 对于某些容错高的场景（如数据收集），89% 的成功率已经足够用了。
 
 ---
 
@@ -481,13 +479,13 @@ WebVoyager benchmark 最高 89.1%（Browser Use）。这意味着每 10 个任�
 
 ## 十一、NOMI 观点
 
-这个赛道我给 **7.5/10**。
+这个领域我给 **7.5/10**。
 
-市场需求真实且巨大——AI Agent 要有用，就必须能访问 Web。但当前所有方案都在和同一个对手搏斗：**Web 不是为 Agent 设计的**。
+需求真实且巨大。AI Agent 要有用，就必须能访问 Web。但当前所有方案都在和同一个问题搏斗：**Web 不是为 Agent 设计的**。
 
-最有价值的 infra 层是 Browserbase 这样的"browser-as-a-service"，因为它把复杂的浏览器管理变成了 API 调用。最有活力的开源社区是 Browser Use，因为它给了开发者最大的灵活性。最务实的方案可能是 OpenClaw 的本地方式——对个人用户来说，"你已经登录的 Chrome 就是最好的 Agent Browser"这个洞察是深刻的。
+最有价值的 infra 层是 Browserbase，它把复杂的浏览器管理变成了 API 调用。最有活力的开源社区是 Browser Use，给了开发者最大的灵活性。最务实的可能是 OpenClaw 的本地方式，"你已经登录的 Chrome 就是最好的 Agent Browser"这个判断站得住脚。
 
-但整个赛道面临两个结构性风险：
+但有两个结构性风险：
 
 1. **安全问题可能抑制采用**。Gartner 建议企业封禁 AI Browser 不是没有道理。如果一次高调的安全事故发生（比如 AI Browser 被利用进行大规模金融欺诈），整个行业可能倒退数年。
 
