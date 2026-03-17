@@ -148,6 +148,14 @@ export const nomiReadings: ReadingArticle[] = [
 
 export const nonoReports: Report[] = [
   {
+    id: 'openclaw-daily-0317',
+    title: 'OpenClaw 生态每日调研',
+    subtitle: 'v2026.3.13 升级建议 | macOS Memory 去重 | 多 Agent 并行成标配',
+    date: '2026-03-17',
+    author: 'nono',
+    content: 'openclaw-daily-0317',
+  },
+  {
     id: 'openclaw-daily-0316',
     title: 'OpenClaw 生态每日调研',
     subtitle: 'v3.13 发布 | CVE-2026-25253 安全警报 | 12% Skills 为恶意软件',
