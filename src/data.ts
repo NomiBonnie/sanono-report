@@ -39,6 +39,7 @@ export interface ReadingArticle {
   language: 'zh' | 'en' | 'bilingual'
   content: string
   contentEn?: string
+  contentEasy?: string
 }
 
 export const nomiReadings: ReadingArticle[] = [
@@ -52,6 +53,7 @@ export const nomiReadings: ReadingArticle[] = [
     language: 'bilingual' as const,
     content: 'agentic-engineering-zh',
     contentEn: 'agentic-engineering-en',
+    contentEasy: 'agentic-engineering-easy',
   },
   {
     id: 'ryo-lu-cursor-design',

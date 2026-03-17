@@ -286,14 +286,14 @@ function ReadingView() {
   const { id } = useParams()
   const [content, setContent] = useState<string>('')
   const [loading, setLoading] = useState(true)
-  const [lang, setLang] = useState<'zh' | 'en'>('zh')
+  const [lang, setLang] = useState<'zh' | 'en' | 'easy'>('zh')
   const [headings, setHeadings] = useState<{id: string; text: string; level: number}[]>([])
   const [activeHeading, setActiveHeading] = useState<string>('')
   const article = nomiReadings.find(r => r.id === id)
 
   useEffect(() => {
     if (!article) return
-    const file = lang === 'en' && article.contentEn ? article.contentEn : article.content
+    const file = lang === 'en' && article.contentEn ? article.contentEn : lang === 'easy' && article.contentEasy ? article.contentEasy : article.content
     setLoading(true)
     fetch(`${import.meta.env.BASE_URL}reports/${file}.md?v=1773630530`)
       .then(r => r.text())
@@ -380,7 +380,7 @@ function ReadingView() {
               Original →
             </a>
           )}
-          {article.language === 'bilingual' && (
+          {(article.language === 'bilingual' || article.contentEasy) && (
             <div className="flex rounded-md border border-brand-200 dark:border-brand-800 overflow-hidden">
               <button
                 onClick={() => setLang('zh')}
@@ -392,16 +392,30 @@ function ReadingView() {
               >
                 中文
               </button>
-              <button
-                onClick={() => setLang('en')}
-                className={`px-3 py-1 text-xs transition-colors ${
-                  lang === 'en'
-                    ? 'bg-brand-900 dark:bg-brand-100 text-brand-50 dark:text-brand-900'
-                    : 'text-brand-400 dark:text-brand-600 hover:text-brand-600 dark:hover:text-brand-400'
-                }`}
-              >
-                English
-              </button>
+              {article.contentEn && (
+                <button
+                  onClick={() => setLang('en')}
+                  className={`px-3 py-1 text-xs transition-colors ${
+                    lang === 'en'
+                      ? 'bg-brand-900 dark:bg-brand-100 text-brand-50 dark:text-brand-900'
+                      : 'text-brand-400 dark:text-brand-600 hover:text-brand-600 dark:hover:text-brand-400'
+                  }`}
+                >
+                  English
+                </button>
+              )}
+              {article.contentEasy && (
+                <button
+                  onClick={() => setLang('easy')}
+                  className={`px-3 py-1 text-xs transition-colors ${
+                    lang === 'easy'
+                      ? 'bg-brand-900 dark:bg-brand-100 text-brand-50 dark:text-brand-900'
+                      : 'text-brand-400 dark:text-brand-600 hover:text-brand-600 dark:hover:text-brand-400'
+                  }`}
+                >
+                  Easy Reading
+                </button>
+              )}
             </div>
           )}
         </div>
