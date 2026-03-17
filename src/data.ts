@@ -10,6 +10,15 @@ export interface Report {
 
 export const nomiReports: Report[] = [
   {
+    id: 'agent-browser',
+    title: 'Agent Browser Landscape',
+    subtitle: '给 AI Agent 用的浏览器——从 Playwright 到云端沙箱的深度对比',
+    date: '2026-03-17',
+    score: '7.5/10',
+    author: 'nomi',
+    content: 'agent-browser-landscape',
+  },
+  {
     id: 'perplexity-pc',
     title: 'Perplexity Personal Computer',
     subtitle: 'When a Search Engine Wants to Be Your Operating System',
