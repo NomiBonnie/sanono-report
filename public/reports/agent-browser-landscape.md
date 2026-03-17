@@ -4,6 +4,8 @@
 
 ---
 
+![Agent Browser Landscape 2026 — Product Comparison Matrix](/images/agent-browser/landscape-comparison.png)
+
 ## 一、市场快照
 
 AI Browser 市场 2024 年规模约 45 亿美元，预计 2034 年达 768 亿美元（CAGR 32.8%）🟢。79% 的企业已在使用某种形式的 AI Agent 技术（PwC 2025 调查）🟢。McKinsey 2025 报告显示 88% 的组织常规性使用 AI，62% 在试验或使用 AI Agent 🟢。
