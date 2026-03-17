@@ -2,7 +2,104 @@ import { Routes, Route, NavLink, useParams, useNavigate, useLocation } from 'rea
 import { nomiReports, nonoReports, nomiReadings, type Report, type ReadingArticle } from './data'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback, useRef } from 'react'
+
+function ImageLightbox({ src, alt, onClose }: { src: string; alt?: string; onClose: () => void }) {
+  const [scale, setScale] = useState(1)
+  const [translate, setTranslate] = useState({ x: 0, y: 0 })
+  const lastDist = useRef(0)
+  const lastCenter = useRef({ x: 0, y: 0 })
+  const dragging = useRef(false)
+  const dragStart = useRef({ x: 0, y: 0 })
+
+  useEffect(() => {
+    document.body.style.overflow = 'hidden'
+    return () => { document.body.style.overflow = '' }
+  }, [])
+
+  useEffect(() => {
+    const handleKey = (e: KeyboardEvent) => { if (e.key === 'Escape') onClose() }
+    window.addEventListener('keydown', handleKey)
+    return () => window.removeEventListener('keydown', handleKey)
+  }, [onClose])
+
+  const handleWheel = useCallback((e: React.WheelEvent) => {
+    e.stopPropagation()
+    setScale(s => Math.min(5, Math.max(0.5, s - e.deltaY * 0.002)))
+  }, [])
+
+  const handleTouchStart = useCallback((e: React.TouchEvent) => {
+    if (e.touches.length === 2) {
+      const dx = e.touches[0].clientX - e.touches[1].clientX
+      const dy = e.touches[0].clientY - e.touches[1].clientY
+      lastDist.current = Math.sqrt(dx * dx + dy * dy)
+      lastCenter.current = {
+        x: (e.touches[0].clientX + e.touches[1].clientX) / 2,
+        y: (e.touches[0].clientY + e.touches[1].clientY) / 2,
+      }
+    } else if (e.touches.length === 1 && scale > 1) {
+      dragging.current = true
+      dragStart.current = { x: e.touches[0].clientX - translate.x, y: e.touches[0].clientY - translate.y }
+    }
+  }, [scale, translate])
+
+  const handleTouchMove = useCallback((e: React.TouchEvent) => {
+    if (e.touches.length === 2) {
+      e.preventDefault()
+      const dx = e.touches[0].clientX - e.touches[1].clientX
+      const dy = e.touches[0].clientY - e.touches[1].clientY
+      const dist = Math.sqrt(dx * dx + dy * dy)
+      if (lastDist.current > 0) {
+        setScale(s => Math.min(5, Math.max(0.5, s * (dist / lastDist.current))))
+      }
+      lastDist.current = dist
+    } else if (e.touches.length === 1 && dragging.current) {
+      setTranslate({ x: e.touches[0].clientX - dragStart.current.x, y: e.touches[0].clientY - dragStart.current.y })
+    }
+  }, [])
+
+  const handleTouchEnd = useCallback(() => {
+    lastDist.current = 0
+    dragging.current = false
+  }, [])
+
+  const handleDoubleClick = useCallback(() => {
+    if (scale > 1) { setScale(1); setTranslate({ x: 0, y: 0 }) }
+    else setScale(2.5)
+  }, [scale])
+
+  return (
+    <div className="fixed inset-0 z-[100] bg-black/95 flex items-center justify-center" onClick={onClose}>
+      <button
+        className="absolute top-4 right-4 z-10 w-14 h-14 flex items-center justify-center text-white/80 hover:text-white text-4xl transition-colors"
+        onClick={onClose}
+      >✕</button>
+      <div
+        className="w-full h-full flex items-center justify-center p-4"
+        onClick={e => e.stopPropagation()}
+        onWheel={handleWheel}
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+        onDoubleClick={handleDoubleClick}
+        style={{ touchAction: 'none' }}
+      >
+        <img
+          src={src}
+          alt={alt || ''}
+          className="max-w-full max-h-full object-contain transition-transform duration-100"
+          style={{ transform: `translate(${translate.x}px, ${translate.y}px) scale(${scale})` }}
+          draggable={false}
+        />
+      </div>
+      {scale > 1 && (
+        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-white/50 text-xs">
+          {Math.round(scale * 100)}% · double-tap to reset
+        </div>
+      )}
+    </div>
+  )
+}
 
 function useTheme() {
   const [dark, setDark] = useState(() => document.documentElement.classList.contains('dark'))
@@ -125,6 +222,7 @@ function ReportView() {
   const [loading, setLoading] = useState(true)
   const [headings, setHeadings] = useState<{id: string; text: string; level: number}[]>([])
   const [activeHeading, setActiveHeading] = useState<string>('')
+  const [lightboxSrc, setLightboxSrc] = useState<string | null>(null)
   const allReports = [...nomiReports, ...nonoReports]
   const report = allReports.find(r => r.id === id)
 
@@ -227,11 +325,12 @@ function ReportView() {
             img: ({ src, alt, ...props }: React.ImgHTMLAttributes<HTMLImageElement>) => {
               const base = import.meta.env.BASE_URL
               const fixedSrc = src && src.startsWith('/') ? `${base}${src.slice(1)}` : src
-              return <img src={fixedSrc} alt={alt} className="rounded-xl my-6 w-full block mx-auto" {...props} />
+              return <img src={fixedSrc} alt={alt} className="rounded-xl my-6 w-full block mx-auto cursor-zoom-in" onClick={() => fixedSrc && setLightboxSrc(fixedSrc)} {...props} />
             },
           }}>{content}</ReactMarkdown>
         </article>
       )}
+      {lightboxSrc && <ImageLightbox src={lightboxSrc} onClose={() => setLightboxSrc(null)} />}
     </div>
   )
 }
@@ -294,6 +393,7 @@ function ReadingView() {
   }
   const [headings, setHeadings] = useState<{id: string; text: string; level: number}[]>([])
   const [activeHeading, setActiveHeading] = useState<string>('')
+  const [lightboxSrc, setLightboxSrc] = useState<string | null>(null)
   const article = nomiReadings.find(r => r.id === id)
 
   useEffect(() => {
@@ -435,7 +535,7 @@ function ReadingView() {
               img: ({ src, alt, ...props }: React.ImgHTMLAttributes<HTMLImageElement>) => {
                 const base = import.meta.env.BASE_URL
                 const fixedSrc = src && src.startsWith('/') ? `${base}${src.slice(1)}` : src
-                return <img src={fixedSrc} alt={alt} className="rounded-xl my-6 w-full block mx-auto" {...props} />
+                return <img src={fixedSrc} alt={alt} className="rounded-xl my-6 w-full block mx-auto cursor-zoom-in" onClick={() => fixedSrc && setLightboxSrc(fixedSrc)} {...props} />
               },
               blockquote: (() => {
                 let blockquoteIndex = 0
@@ -463,6 +563,7 @@ function ReadingView() {
           >{content}</ReactMarkdown>
         </article>
       )}
+      {lightboxSrc && <ImageLightbox src={lightboxSrc} onClose={() => setLightboxSrc(null)} />}
     </div>
   )
 }
