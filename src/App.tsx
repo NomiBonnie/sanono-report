@@ -1,4 +1,4 @@
-import { Routes, Route, NavLink, useParams, useNavigate } from 'react-router-dom'
+import { Routes, Route, NavLink, useParams, useNavigate, useLocation } from 'react-router-dom'
 import { nomiReports, nonoReports, nomiReadings, type Report, type ReadingArticle } from './data'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
@@ -283,10 +283,15 @@ function ReadingList() {
 }
 
 function ReadingView() {
-  const { id } = useParams()
+  const { id, lang: langParam } = useParams()
+  const navigate = useNavigate()
   const [content, setContent] = useState<string>('')
   const [loading, setLoading] = useState(true)
-  const [lang, setLang] = useState<'zh' | 'en' | 'easy'>('zh')
+  const lang = (langParam === 'en' || langParam === 'easy') ? langParam : 'zh'
+  const setLang = (l: 'zh' | 'en' | 'easy') => {
+    if (l === 'zh') navigate(`/reading/${id}`, { replace: true })
+    else navigate(`/reading/${id}/${l}`, { replace: true })
+  }
   const [headings, setHeadings] = useState<{id: string; text: string; level: number}[]>([])
   const [activeHeading, setActiveHeading] = useState<string>('')
   const article = nomiReadings.find(r => r.id === id)
@@ -511,7 +516,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<ReportList reports={nomiReports} emptyMessage="No reports yet." />} />
           <Route path="/reading" element={<ReadingList />} />
-          <Route path="/reading/:id" element={<ReadingView />} />
+          <Route path="/reading/:id/:lang?" element={<ReadingView />} />
           <Route path="/nono" element={<ReportList reports={nonoReports} emptyMessage="NONO's research coming soon." />} />
           <Route path="/about" element={<About />} />
           <Route path="/report/:id" element={<ReportView />} />
