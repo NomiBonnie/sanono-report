@@ -3,6 +3,6 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/sanono-report/',
+  base: process.env.CF_PAGES ? '/' : '/sanono-report/',
   assetsInclude: ['**/*.md'],
 })
