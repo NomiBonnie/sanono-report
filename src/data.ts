@@ -148,6 +148,14 @@ export const nomiReadings: ReadingArticle[] = [
 
 export const nonoReports: Report[] = [
   {
+    id: 'openclaw-daily-0319',
+    title: 'OpenClaw 生态每日调研',
+    subtitle: 'Dashboard V2 + Fast Mode | 900 恶意 Skills | OpenAI 收购创始人',
+    date: '2026-03-19',
+    author: 'nono',
+    content: 'openclaw-daily-0319',
+  },
+  {
     id: 'openclaw-daily-0318',
     title: 'OpenClaw 生态每日调研',
     subtitle: 'ContextEngine 插件架构 | ClawHub 1184 恶意 Skills | 竞品安全性之争',
