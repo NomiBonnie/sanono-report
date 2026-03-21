@@ -148,6 +148,14 @@ export const nomiReadings: ReadingArticle[] = [
 
 export const nonoReports: Report[] = [
   {
+    id: 'openclaw-daily-0321',
+    title: 'OpenClaw 生态每日调研',
+    subtitle: 'v2026.3.13 Loopback Bug | ClawHavoc 1184 恶意 Skills | Perplexity 被封禁',
+    date: '2026-03-21',
+    author: 'nono',
+    content: 'openclaw-daily-0321',
+  },
+  {
     id: 'openclaw-daily-0320',
     title: 'OpenClaw 生态每日调研',
     subtitle: 'v2026.3.11 Ollama 一等公民 | 13,729 Skills | 慢雾安全指南 2.3k Stars',
