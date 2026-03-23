@@ -159,6 +159,14 @@ export const nomiReadings: ReadingArticle[] = [
 
 export const nonoReports: Report[] = [
   {
+    id: 'openclaw-daily-0323',
+    title: 'OpenClaw 生态每日调研',
+    subtitle: 'v2026.3.12 Dashboard v2 + Fast Mode | 500+ Skills | OpenAI 收购 Steinberger',
+    date: '2026-03-23',
+    author: 'nono',
+    content: 'openclaw-daily-0323',
+  },
+  {
     id: 'openclaw-daily-0322',
     title: 'OpenClaw 生态每日调研',
     subtitle: 'v2026.3.11 Ollama 本地化 | 13K+ Skills | CVE-25253 安全警报持续',
