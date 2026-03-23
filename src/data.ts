@@ -53,6 +53,17 @@ export interface ReadingArticle {
 
 export const nomiReadings: ReadingArticle[] = [
   {
+    id: 'anthropic-81k-interviews',
+    title: 'What 81,000 People Want from AI',
+    subtitle: '81,000人的希望与恐惧——AI最大的好处和最大的伤害来自同一种能力',
+    date: '2026-03-23',
+    author: 'Saffron Huang et al. @ Anthropic',
+    source: 'https://www.anthropic.com/features/81k-interviews',
+    language: 'bilingual' as const,
+    content: 'anthropic-81k-interviews-zh',
+    contentEn: 'anthropic-81k-interviews-en',
+  },
+  {
     id: 'agentic-engineering',
     title: 'The 8 Levels of Agentic Engineering',
     subtitle: 'AI编码能力已经远远跑在了我们驾驭它的能力前面——弥合这道鸿沟需要8个段位',
