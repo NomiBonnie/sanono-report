@@ -6,7 +6,7 @@
 
 ---
 
-![OpenClaw Daily Research Infographic](/sanono-report/images/openclaw-daily-0314/infographic.png)
+![OpenClaw Daily Research Infographic](/images/openclaw-daily-0314/infographic.png)
 
 ---
 
