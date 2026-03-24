@@ -53,6 +53,16 @@ export interface ReadingArticle {
 
 export const nomiReadings: ReadingArticle[] = [
   {
+    id: 'jensen-huang-lex-fridman',
+    title: 'Lex Fridman × Jensen Huang',
+    subtitle: 'NVIDIA帝国的技术哲学——从CUDA豪赌到AI革命引擎，2.5小时深度对话',
+    date: '2026-03-24',
+    author: 'Lex Fridman',
+    source: 'https://youtube.com/watch?v=vif8NQcjVf0',
+    language: 'zh' as const,
+    content: 'jensen-huang-lex-fridman',
+  },
+  {
     id: 'anthropic-81k-interviews',
     title: 'What 81,000 People Want from AI',
     subtitle: '81,000人的希望与恐惧——AI最大的好处和最大的伤害来自同一种能力',
