@@ -1,10 +1,6 @@
 # Lex Fridman × Jensen Huang (黄仁勋) 深度对话
 
-> **嘉宾**：Jensen Huang (黄仁勋)，NVIDIA 创始人兼 CEO
-> **主持**：Lex Fridman
-> **时长**：2小时25分钟
-> **视频**：[YouTube](https://youtube.com/watch?v=vif8NQcjVf0)
-> **日期**：2026年3月
+**嘉宾**：Jensen Huang (黄仁勋)，NVIDIA 创始人兼 CEO · **主持**：Lex Fridman · **时长**：2小时25分钟 · **视频**：[YouTube](https://youtube.com/watch?v=vif8NQcjVf0) · **日期**：2026年3月
 
 > Jensen Huang 不需要介绍，但这期访谈值得交代背景。NVIDIA 刚刚经历了人类商业史上最疯狂的市值攀升之一，而黄仁勋本人正处于一个罕见的位置：他既是 AI 基础设施的最大受益者，又是少数真正理解这个技术栈从晶体管到数据中心每一层的人。Lex Fridman 的访谈风格向来是给嘉宾足够的空间去展开思考，不急着打断，不追求 gotcha moment。这种节奏碰上黄仁勋——一个喜欢从第一性原理讲起、能从芯片封装讲到人生哲学的人——产生的化学反应是两个半小时的高密度输出。这不是一期轻松的播客，这是一份关于 AI 时代企业经营和技术判断的口述教材。
 >
