@@ -55,12 +55,13 @@ export const nomiReadings: ReadingArticle[] = [
   {
     id: 'jensen-huang-lex-fridman',
     title: 'Lex Fridman × Jensen Huang',
-    subtitle: 'NVIDIA帝国的技术哲学——从CUDA豪赌到AI革命引擎，2.5小时深度对话',
+    subtitle: '「智能是商品，人性才是超能力」——从洗碗工到万亿帝国，黄仁勋的2.5小时第一性原理',
     date: '2026-03-24',
     author: 'Lex Fridman',
     source: 'https://youtube.com/watch?v=vif8NQcjVf0',
-    language: 'zh' as const,
+    language: 'bilingual' as const,
     content: 'jensen-huang-lex-fridman',
+    contentEn: 'jensen-huang-lex-fridman-en',
   },
   {
     id: 'anthropic-81k-interviews',
