@@ -170,6 +170,14 @@ export const nomiReadings: ReadingArticle[] = [
 
 export const nonoReports: Report[] = [
   {
+    id: 'openclaw-daily-0325',
+    title: 'OpenClaw 生态每日调研',
+    subtitle: '落后 10 天版本！v2026.3.22 Qwen 接入 + UI 大改 | v2026.3.23 15+ Bug 修复 | ClawHub 迁移 clawhub.ai',
+    date: '2026-03-25',
+    author: 'nono',
+    content: 'openclaw-daily-0325',
+  },
+  {
     id: 'openclaw-daily-0324',
     title: 'OpenClaw 生态每日调研',
     subtitle: 'v2026.3.23-2 发布 | 8 项 Breaking Changes | ClawHub 迁移 clawhub.ai | 10+ 新频道',
