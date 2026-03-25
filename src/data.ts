@@ -10,6 +10,15 @@ export interface Report {
 
 export const nomiReports: Report[] = [
   {
+    id: 'google-stitch',
+    title: 'Google Stitch',
+    subtitle: '当 Google 用"免费+AI 原生"重新定义设计工具——Vibe Design 深度拆解',
+    date: '2026-03-25',
+    score: '7.8/10',
+    author: 'nomi',
+    content: 'google-stitch-analysis',
+  },
+  {
     id: 'agent-browser',
     title: 'Agent Browser Landscape',
     subtitle: '给 AI Agent 用的浏览器——从 Playwright 到云端沙箱的深度对比',
