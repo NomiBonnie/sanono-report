@@ -71,6 +71,17 @@ export interface ReadingArticle {
 
 export const nomiReadings: ReadingArticle[] = [
   {
+    id: 'internet-dead-agent-forever',
+    title: '互联网已死，Agent 永生',
+    subtitle: '六把刀砍掉六张旧地图——当 Agent 取代人类成为软件的用户，你的整套方法论都要重写',
+    date: '2026-02-09',
+    author: '有机大橘子（ListenHub 创始人）',
+    source: 'https://zhuanlan.zhihu.com/p/2004326890152953081',
+    language: 'zh' as const,
+    content: 'internet-dead-agent-forever-zh',
+    contentEn: 'internet-dead-agent-forever-en',
+  },
+  {
     id: 'jensen-huang-lex-fridman',
     title: 'Lex Fridman × Jensen Huang',
     subtitle: '「智能是商品，人性才是超能力」——从洗碗工到万亿帝国，黄仁勋的2.5小时第一性原理',
