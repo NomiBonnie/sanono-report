@@ -10,6 +10,15 @@ export interface Report {
 
 export const nomiReports: Report[] = [
   {
+    id: 'listenhub',
+    title: 'ListenHub',
+    subtitle: '15人团队、0投放、300万美元ARR——一个95后创始人用速度跑出来的AI创作平台',
+    date: '2026-03-26',
+    score: '7.9/10',
+    author: 'nomi',
+    content: 'listenhub-analysis-zh',
+  },
+  {
     id: 'google-stitch',
     title: 'Google Stitch',
     subtitle: '当 Google 用"免费+AI 原生"重新定义设计工具——Vibe Design 深度拆解',
