@@ -123,7 +123,7 @@ function Header() {
     <header className="border-b border-brand-200 dark:border-brand-800 bg-brand-50/80 dark:bg-brand-950/80 backdrop-blur-xl sticky top-0 z-50">
       <div className="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between">
         <NavLink to="/" className="block">
-          <h1 className="text-2xl font-light tracking-wide" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>
+          <h1 className="text-2xl font-light tracking-wide uppercase" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>
             The Deep Research
           </h1>
         </NavLink>
