@@ -5,4 +5,7 @@ export default defineConfig({
   plugins: [react()],
   base: process.env.CF_PAGES ? '/' : '/sanono-report/',
   assetsInclude: ['**/*.md'],
+  define: {
+    __BUILD_TIME__: JSON.stringify(Date.now()),
+  },
 })

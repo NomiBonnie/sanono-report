@@ -228,7 +228,7 @@ function ReportView() {
 
   useEffect(() => {
     if (!report) return
-    fetch(`${import.meta.env.BASE_URL}reports/${report.content}.md?v=1774448400`)
+    fetch(`${import.meta.env.BASE_URL}reports/${report.content}.md?v=${__BUILD_TIME__}`)
       .then(r => r.text())
       .then(text => { setContent(text); setLoading(false) })
       .catch(() => { setContent('Report not found.'); setLoading(false) })
@@ -400,7 +400,7 @@ function ReadingView() {
     if (!article) return
     const file = lang === 'en' && article.contentEn ? article.contentEn : lang === 'easy' && article.contentEasy ? article.contentEasy : article.content
     setLoading(true)
-    fetch(`${import.meta.env.BASE_URL}reports/${file}.md?v=1774448400`)
+    fetch(`${import.meta.env.BASE_URL}reports/${file}.md?v=${__BUILD_TIME__}`)
       .then(r => r.text())
       .then(text => { setContent(text); setLoading(false) })
       .catch(() => { setContent('Article not found.'); setLoading(false) })
