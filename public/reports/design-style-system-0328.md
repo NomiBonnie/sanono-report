@@ -2,8 +2,6 @@
 
 > 2026-03-28 | NOMI Research
 
-![AI Design Style Systems Infographic](/images/design-style-system-0328/infographic.png)
-
 ## 摘要
 
 Sam 想做一个通用的"设计品味 skill"——一份平台无关的风格描述文件，注入任何 AI agent 后就能影响其设计输出。本报告调研了 Google Stitch、Figma Make、v0.dev、Cursor/Windsurf、Lovable、bolt.new、Canva 等工具的风格系统实现方式，然后对比"主题式"和"卡片式"两种架构，给出混合方案推荐。
@@ -455,32 +453,152 @@ design-taste/
 
 ---
 
-## 第四部分：架构推荐
+## 第四部分：最终推荐方案
 
-**推荐方案 C（混合式），理由如下：**
+经过深入讨论，最终方案在混合式架构基础上做了三个关键决策：
 
-| 评估维度 | 主题式 | 卡片式 | 混合式 |
-|---------|--------|--------|--------|
-| 上手门槛 | ★★★★★ | ★★★ | ★★★★ |
-| 灵活性 | ★★ | ★★★★★ | ★★★★★ |
-| AI 理解度 | ★★★★★ | ★★★★ | ★★★★★ |
-| 维护成本 | ★★★ | ★★★★★ | ★★★★ |
-| 可扩展性 | ★★ | ★★★★★ | ★★★★★ |
-| 风格一致性 | ★★★★★ | ★★★ | ★★★★ |
+### 决策 1：描述性 + 参考锚点（而非精确像素值）
 
-**混合式同时解决了两个核心矛盾：**
+Google Stitch 的 DESIGN.md 写法（`Primary: #1A73E8`、`Heading 1: 32px`）适合单个项目，但不适合跨项目的品味内核。原因：`padding: 48px` 在网页合理，在 PPT 不对，在移动端又不同。
 
-1. **便捷 vs 灵活** — 预设主题给不想深度定制的用户即开即用的体验；卡片系统给有追求的用户无限组合可能
-2. **整体感 vs 精细控制** — 主题文件里的"设计哲学"和"情绪关键词"给 AI 整体方向感；引用的卡片给出具体执行细节
+正确做法是**描述性原则 + 参考锚点 + 禁区**：
 
-**跨平台适配策略：**
+```markdown
+## 间距
+原则：内容之间需要足够呼吸感，密度不等于价值。
+节奏：宽松。组件间距 ≥ 正文行高的 2 倍。
+参考：类似 Muji 网站或 Apple 产品页的间距感。
+
+## 色彩
+原则：克制、低饱和、自然。
+色温：偏暖。
+参考：像原研哉的设计——不是纯白，是带一点米色的白。
+禁区：不用高饱和荧光色，不用纯黑背景。
+```
+
+这样品味层不绑定具体实现，换项目时 AI 根据品味自动推导合适的像素值和颜色。
+
+### 决策 2：Do/Don't + 可选图片（多模态增强）
+
+每张卡片带文字版 do/don't 列表，同时可选附带截图。多模态 AI（Claude、GPT-4o）能直接"看"图片，一张对比截图比 500 字描述更精准；纯文本 AI（Cursor Agent）只读 markdown，文字版保底。
+
+图片不需要自己设计——截取真实网站即可。比如 spacing 卡片：Apple.com 产品页（do）vs 某个信息过载的后台（don't）。
+
+### 决策 3：三层架构（品味底线 + 原子卡片 + 预设主题）
+
+```
+design-taste/
+├── SKILL.md                          # 入口：使用说明 + 调度逻辑
+├── core/
+│   └── philosophy.md                 # 审美内核：不变的品味底线
+├── cards/
+│   ├── color/
+│   │   ├── muted-earth.md
+│   │   ├── monochrome.md
+│   │   └── ...
+│   ├── typography/
+│   ├── spacing/
+│   ├── components/
+│   └── motion/
+├── themes/                           # 预设组合 = 引用卡片 + 风格叙事
+│   ├── wabi-sabi.md
+│   ├── swiss-editorial.md
+│   └── ...
+└── references/
+    ├── images/                       # do/don't 截图（多模态增强）
+    │   ├── spacing-do-apple.png
+    │   ├── spacing-dont-cluttered.png
+    │   └── ...
+    └── card-index.md                 # 全卡片索引 + 标签
+```
+
+**core/philosophy.md（品味底线，所有主题共享）：**
+
+```markdown
+# 审美内核
+
+## 不可动摇的原则
+- 留白 > 填满
+- 克制 > 华丽
+- 排版即设计的 80%
+- 功能驱动装饰，不是反过来
+
+## 永远不要
+- 用渐变彩虹色
+- 用 10 种以上颜色
+- 让动画持续超过 500ms
+- 在一个页面塞超过 3 种字体
+```
+
+**每张卡片的完整格式：**
+
+```markdown
+# generous-breath（大留白呼吸感）
+> tags: spacing, minimal, calm, editorial
+
+## 原则
+内容之间需要呼吸。密度不等于价值。
+节奏宽松，组件间距 ≥ 正文行高的 2 倍。
+
+## Do
+- 大段内容之间留出明显的视觉停顿
+- 内容区域有明确的最大宽度
+- 参考：Apple 产品页、Muji 官网的间距感
+
+## Don't
+- 内容紧贴容器边缘
+- 把页面当 Excel 表格填满
+- 多个卡片紧密排列无间距
+
+## 视觉参考
+![do](references/images/spacing-do-apple.png)
+![dont](references/images/spacing-dont-cluttered.png)
+```
+
+**theme 文件的完整格式：**
+
+```markdown
+# Wabi-Sabi（侘寂风）
+
+## 风格叙事
+追求"少即是多"的极致。每个元素都有存在的理由。
+灵感：无印良品、枯山水、原研哉。
+情绪：宁静、克制、呼吸感、自然、手工感。
+
+## 组成卡片
+- color/muted-earth
+- typography/serif-editorial
+- spacing/generous-breath
+- components/no-shadow
+- motion/slow-gentle
+
+## 本主题特有覆盖
+- 圆角限制在 2-4px
+- 色温偏暖
+- 错误色用柔和的暗红而非标准红
+```
+
+### 架构对比总结
+
+| 评估维度 | Stitch 单文件 | 主题式 | 卡片式 | 我们的方案 |
+|---------|-------------|--------|--------|----------|
+| 上手门槛 | ★★★★★ | ★★★★★ | ★★★ | ★★★★ |
+| 灵活性 | ★ | ★★ | ★★★★★ | ★★★★★ |
+| AI 理解度 | ★★★★★ | ★★★★★ | ★★★★ | ★★★★★ |
+| 跨项目复用 | ★ | ★★ | ★★★★★ | ★★★★★ |
+| 多模态支持 | ★ | ★ | ★★★ | ★★★★★ |
+| 风格一致性 | ★★★★★ | ★★★★★ | ★★★ | ★★★★ |
+
+**核心优势：** Cursor 的多文件架构 + Stitch 的 Markdown 格式 + 描述性品味表达 + 多模态图片增强。三种使用方式——直接用主题 / 自由组合卡片 / 基于主题微调——覆盖从新手到专家的所有场景。
+
+**跨平台适配：**
 
 这个 skill 的输出是 Markdown 文本，任何支持 context file 的 AI 工具都能使用：
 - **OpenClaw** → 作为 skill 文件
-- **Cursor/Windsurf** → 复制内容到 .cursorrules 或 .cursor/rules/design.md
-- **Claude Code** → 放入 CLAUDE.md 的设计部分
+- **Cursor/Windsurf** → 复制到 .cursor/rules/design.md
+- **Claude Code** → 放入 CLAUDE.md
 - **GitHub Copilot** → 放入 .github/copilot-instructions.md
-- **v0.dev** → 粘贴到 system prompt 或 theme 设置
+- **v0.dev** → 粘贴到 system prompt
 - **通用 LLM** → 直接作为对话 context
 
 ---
@@ -488,25 +606,27 @@ design-taste/
 ## 第五部分：实施建议
 
 ### Phase 1：MVP（1-2 天）
-1. 创建 3-5 张核心卡片（color × 2, typography × 2, spacing × 1）
-2. 创建 1 个预设主题（minimal-japanese，因为最符合 Sam 的审美）
-3. 写 SKILL.md 入口文件
-4. 在 OpenClaw 中测试
+1. 写 `core/philosophy.md`（Sam 的审美底线）
+2. 创建 3 张核心卡片（color × 1, spacing × 1, typography × 1），含 do/don't 文字 + 截图
+3. 创建 1 个预设主题（wabi-sabi，最符合 Sam 的审美）
+4. 写 SKILL.md 入口文件
+5. 在 OpenClaw 中测试生成效果
 
 ### Phase 2：扩展（1 周）
-1. 补全卡片到每个维度 3-4 张（共 15-20 张卡片）
+1. 补全卡片到每个维度 3-4 张（共 15-20 张）
 2. 补全主题到 4-5 个
 3. 创建 card-index.md（含 tag 索引）
-4. 测试跨平台使用（Cursor、Claude）
+4. 测试跨平台使用（Cursor、Claude Code）
+5. 收集 do/don't 截图库
 
 ### Phase 3：社区化
-1. 让主题可分享（每个主题就是一个 .md 文件）
-2. 卡片也可社区贡献
-3. 考虑从 Figma token file / Tailwind config 自动生成卡片的工具
+1. 主题和卡片可分享（每个就是一个 .md 文件）
+2. 社区贡献卡片
+3. 从 Figma token file / Tailwind config 自动生成项目级配置的工具
 
 ### 命名建议
 
-Skill 名称：`design-taste`（不叫 design-system，因为这不是传统意义上的设计系统，而是"品味"的编码）
+Skill 名称：`design-taste`（不叫 design-system——这不是传统设计系统，是"品味"的编码）
 
 ---
 
