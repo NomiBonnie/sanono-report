@@ -10,6 +10,15 @@ export interface Report {
 
 export const nomiReports: Report[] = [
   {
+    id: 'design-style-system',
+    title: 'AI Design Style Systems',
+    subtitle: '从 Google Stitch 到混合式卡片架构——如何让 AI 理解你的设计品味',
+    date: '2026-03-28',
+    score: '7.7',
+    author: 'nomi',
+    content: 'design-style-system-0328',
+  },
+  {
     id: 'listenhub',
     title: 'ListenHub',
     subtitle: '15人团队、0投放、300万美元ARR——一个95后创始人用速度跑出来的AI创作平台',
