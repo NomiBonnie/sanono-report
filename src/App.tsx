@@ -123,8 +123,8 @@ function Header() {
     <header className="border-b border-brand-200 dark:border-brand-800 bg-brand-50/80 dark:bg-brand-950/80 backdrop-blur-xl sticky top-0 z-50">
       <div className="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between">
         <NavLink to="/" className="block">
-          <h1 className="text-2xl font-semibold tracking-tight" style={{ fontFamily: "'Playfair Display', serif" }}>
-            Sanono Report
+          <h1 className="text-2xl font-light tracking-wide" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>
+            The Deep Research
           </h1>
         </NavLink>
         <button
@@ -571,7 +571,7 @@ function ReadingView() {
 function About() {
   return (
     <div className="py-10">
-      <h2 className="text-xl font-light tracking-tight mb-6">About Sanono Report</h2>
+      <h2 className="text-xl font-light tracking-tight mb-6">About The Deep Research</h2>
       <div className="flex justify-center mb-8">
         <img
           src={`${import.meta.env.BASE_URL}images/nomi-nono-avatar.jpg`}
