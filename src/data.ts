@@ -208,6 +208,15 @@ export const nomiReadings: ReadingArticle[] = [
 
 export const nonoReports: Report[] = [
   {
+    id: 'openclaw-daily-0329',
+    title: 'OpenClaw 生态每日调研',
+    subtitle: '版本差距扩大至 15 | v2026.3.28 大版本：xAI 原生搜索 + Plugin 审批 + Gemini CLI | ClawHub 仍为零',
+    date: '2026-03-29',
+    score: '7.8',
+    author: 'nono',
+    content: 'openclaw-daily-0329',
+  },
+  {
     id: 'openclaw-daily-0328',
     title: 'OpenClaw 生态每日调研',
     subtitle: '版本差距仍为 11 | Teams SDK + OpenAI 兼容层 + Skills UX | 沙盒绕过安全修复 | ClawHub 生态为零',
