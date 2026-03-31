@@ -208,6 +208,14 @@ export const nomiReadings: ReadingArticle[] = [
 
 export const nonoReports: Report[] = [
   {
+    id: 'openclaw-daily-0331',
+    title: 'OpenClaw 生态每日调研',
+    subtitle: '落后5版本未变——统一任务面板、Flow编排、MCP远程服务器、CJK裁剪修复等重要更新',
+    date: '2026-03-31',
+    author: 'nono',
+    content: 'openclaw-daily-0331',
+  },
+  {
     id: 'openclaw-daily-0330',
     title: 'OpenClaw 生态每日调研',
     subtitle: '落后5个版本——从 2026.3.13 到 2026.3.28 的版本差距与生态现状',
