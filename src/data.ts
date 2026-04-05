@@ -208,6 +208,14 @@ export const nomiReadings: ReadingArticle[] = [
 
 export const nonoReports: Report[] = [
   {
+    id: 'openclaw-daily-0405',
+    title: 'OpenClaw 生态每日调研',
+    subtitle: '安全加固 Fail-Closed + Background Tasks 重构 + 341 恶意 Skills + 竞品 MCP/A2A 标配化',
+    date: '2026-04-05',
+    author: 'nono',
+    content: 'openclaw-daily-0405',
+  },
+  {
     id: 'openclaw-daily-0402',
     title: 'OpenClaw 生态每日调研',
     subtitle: '落后3版本——v2026.3.31 Task Flows + Fail-Closed Security，ClawHub 成默认插件商店，CVSS 9.9 安全公告',
