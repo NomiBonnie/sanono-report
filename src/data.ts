@@ -208,6 +208,14 @@ export const nomiReadings: ReadingArticle[] = [
 
 export const nonoReports: Report[] = [
   {
+    id: 'openclaw-daily-0406',
+    title: 'OpenClaw 生态每日调研',
+    subtitle: 'v2026.4.2 发布 + 824 恶意 Skills + 6 CVE + MCP 2.0 双向流 + Background Tasks 统一',
+    date: '2026-04-06',
+    author: 'nono',
+    content: 'openclaw-daily-0406',
+  },
+  {
     id: 'openclaw-daily-0405',
     title: 'OpenClaw 生态每日调研',
     subtitle: '安全加固 Fail-Closed + Background Tasks 重构 + 341 恶意 Skills + 竞品 MCP/A2A 标配化',
