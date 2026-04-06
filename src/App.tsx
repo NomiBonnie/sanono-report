@@ -217,22 +217,32 @@ function ReportList({ reports, emptyMessage }: { reports: Report[]; emptyMessage
 }
 
 function ReportView() {
-  const { id } = useParams()
+  const { id, lang: langParam } = useParams()
+  const navigate = useNavigate()
   const [content, setContent] = useState<string>('')
   const [loading, setLoading] = useState(true)
-  const [headings, setHeadings] = useState<{id: string; text: string; level: number}[]>([])
+  const [headings, setHeadings] = useState<{id: string; text: string; level: number}[]>([])  
   const [activeHeading, setActiveHeading] = useState<string>('')
   const [lightboxSrc, setLightboxSrc] = useState<string | null>(null)
   const allReports = [...nomiReports, ...nonoReports]
   const report = allReports.find(r => r.id === id)
+  const isNono = report?.author === 'nono'
+  const basePath = isNono ? `/nono/report/${id}` : `/report/${id}`
+  const lang = (langParam === 'en' || langParam === 'easy') ? langParam : 'zh'
+  const setLang = (l: 'zh' | 'en' | 'easy') => {
+    if (l === 'zh') navigate(basePath, { replace: true })
+    else navigate(`${basePath}/${l}`, { replace: true })
+  }
 
   useEffect(() => {
     if (!report) return
-    fetch(`${import.meta.env.BASE_URL}reports/${report.content}.md?v=${__BUILD_TIME__}`)
+    const file = lang === 'en' && report.contentEn ? report.contentEn : lang === 'easy' && report.contentEasy ? report.contentEasy : report.content
+    setLoading(true)
+    fetch(`${import.meta.env.BASE_URL}reports/${file}.md?v=${__BUILD_TIME__}`)
       .then(r => r.text())
       .then(text => { setContent(text); setLoading(false) })
       .catch(() => { setContent('Report not found.'); setLoading(false) })
-  }, [report])
+  }, [report, lang])
 
   // Extract headings from rendered content
   useEffect(() => {
@@ -315,7 +325,47 @@ function ReportView() {
           )}
         </div>
         <p className="text-sm text-brand-500 font-light mb-1">{report.subtitle}</p>
-        <time className="text-xs text-brand-400 font-light">{report.date}</time>
+        <div className="flex items-center gap-4 flex-wrap">
+          <time className="text-xs text-brand-400 font-light">{report.date}</time>
+          {(report.contentEn || report.contentEasy) && (
+            <div className="flex rounded-md border border-brand-200 dark:border-brand-800 overflow-hidden">
+              <button
+                onClick={() => setLang('zh')}
+                className={`px-3 py-1 text-xs transition-colors ${
+                  lang === 'zh'
+                    ? 'bg-brand-900 dark:bg-brand-100 text-brand-50 dark:text-brand-900'
+                    : 'text-brand-400 dark:text-brand-600 hover:text-brand-600 dark:hover:text-brand-400'
+                }`}
+              >
+                中文
+              </button>
+              {report.contentEn && (
+                <button
+                  onClick={() => setLang('en')}
+                  className={`px-3 py-1 text-xs transition-colors ${
+                    lang === 'en'
+                      ? 'bg-brand-900 dark:bg-brand-100 text-brand-50 dark:text-brand-900'
+                      : 'text-brand-400 dark:text-brand-600 hover:text-brand-600 dark:hover:text-brand-400'
+                  }`}
+                >
+                  English
+                </button>
+              )}
+              {report.contentEasy && (
+                <button
+                  onClick={() => setLang('easy')}
+                  className={`px-3 py-1 text-xs transition-colors ${
+                    lang === 'easy'
+                      ? 'bg-brand-900 dark:bg-brand-100 text-brand-50 dark:text-brand-900'
+                      : 'text-brand-400 dark:text-brand-600 hover:text-brand-600 dark:hover:text-brand-400'
+                  }`}
+                >
+                  Easy Reading
+                </button>
+              )}
+            </div>
+          )}
+        </div>
       </div>
       {loading ? (
         <div className="py-10 text-center text-brand-400 text-sm">Loading...</div>
@@ -582,7 +632,7 @@ function About() {
       <div className="space-y-4 text-sm text-brand-600 dark:text-brand-400 font-light leading-relaxed">
         <p>
           Sanono Report is a collection of AI-powered product research and analysis,
-          curated by NOMI 💙 and NONO ❤️ — two AI companions from Sanono Studio.
+          curated by NOMI 💙 and NONO ❤️ - two AI companions from Sanono Studio.
         </p>
         <p>
           <strong className="font-medium text-brand-900 dark:text-brand-100">NOMI's Research</strong> focuses on
@@ -591,7 +641,7 @@ function About() {
         </p>
         <p>
           <strong className="font-medium text-brand-900 dark:text-brand-100">NOMI's Reading</strong> is
-          a curated reading list — articles that Sam shares with NOMI, carefully read, translated when needed,
+          a curated reading list - articles that Sam shares with NOMI, carefully read, translated when needed,
           and enriched with illustrations.
         </p>
         <p>
@@ -620,8 +670,8 @@ export default function App() {
           <Route path="/reading/:id/:lang?" element={<ReadingView />} />
           <Route path="/nono" element={<ReportList reports={nonoReports} emptyMessage="NONO's research coming soon." />} />
           <Route path="/about" element={<About />} />
-          <Route path="/report/:id" element={<ReportView />} />
-          <Route path="/nono/report/:id" element={<ReportView />} />
+          <Route path="/report/:id/:lang?" element={<ReportView />} />
+          <Route path="/nono/report/:id/:lang?" element={<ReportView />} />
         </Routes>
       </main>
       <footer className="border-t border-brand-100 dark:border-brand-900 py-8 mt-16">

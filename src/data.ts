@@ -6,6 +6,8 @@ export interface Report {
   score?: string
   author: 'nomi' | 'nono'
   content: string
+  contentEn?: string
+  contentEasy?: string
 }
 
 export const nomiReports: Report[] = [
