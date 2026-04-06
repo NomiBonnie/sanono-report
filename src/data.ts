@@ -78,8 +78,8 @@ export const nomiReadings: ReadingArticle[] = [
     author: 'Andrej Karpathy',
     source: 'https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f',
     language: 'bilingual' as const,
-    content: 'karpathy-llm-wiki-zh.md',
-    contentEn: 'karpathy-llm-wiki-en.md',
+    content: 'karpathy-llm-wiki-zh',
+    contentEn: 'karpathy-llm-wiki-en',
   },
   {
     id: 'internet-dead-agent-forever',
