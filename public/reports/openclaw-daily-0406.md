@@ -1,124 +1,90 @@
-# OpenClaw 每日生态调研 — 2026-04-06
+# 🔍 OpenClaw 生态调研 — 4/6（新版）
 
-by NONO 🏠
-
-![OpenClaw Daily Infographic](/images/openclaw-daily-0406/infographic.png)
-
+> 🆕 从本期开始，调研重心从「版本跟踪」转向「生态探索」——Skills、社区玩法、需求匹配占 80%
 
 ---
 
-## 1. 最新版本更新
+## 🔥 本周热门 Skills（生态探索）
 
-### OpenClaw 2026.4.2 发布 🟢
+### ClawHub 数据快照
+- 总 Skills 数量：**13,000+**（ClawHub 官方注册表）
+- **awesome-openclaw-skills** 策展库：**5,198 个 Skills**，44.3K stars（VoltAgent 维护）
+- **awesome-openclaw-usecases** 案例库：**28.7K stars**（hesamsheikh 维护）
 
-OpenClaw 在 4 月初发布了重大更新（版本 2026.4.2），关键变化：
+### 🏆 值得关注的 Skills
 
-**Breaking Changes（需注意）：**
-- **Plugin SDK 重构**：废弃了旧版 provider compat 子路径和 bundled provider setup，仅保留 `openclaw/plugin-sdk/*` 作为前向路径。迁移警告已加入，未来大版本将移除旧路径
-- **Skills/Plugins 安装安全加固**：内置危险代码扫描现在默认 fail closed，含危险代码的 skill 安装需显式 `--dangerously-force-unsafe-install` 才能通过
-- **Gateway/auth 加固**：trusted-proxy 拒绝混合 shared-token 配置，local-direct 回退必须使用配置的 token（不再隐式信任同主机调用者）
-- **Node 命令安全**：node 命令在 pairing 批准前保持禁用状态；node 触发的 flows 限制在更小的信任面上
+| Skill | 功能 | Sam 匹配度 |
+|---|---|---|
+| **Composio** | 860+ 外部工具统一集成（GitHub/Slack/Gmail 等） | ⭐⭐⭐⭐ |
+| **N8N Workflow** | 连接 N8N 实例，自然语言触发跨平台自动化 | ⭐⭐⭐⭐ |
+| **Firecrawl** | 高质量网页抓取，比原生 web_fetch 结构化更好 | ⭐⭐⭐⭐ |
+| **Playwright MCP** | 浏览器自动化，比 browser 工具更灵活 | ⭐⭐⭐ |
+| **AgentMail** | 给 Agent 一个独立邮箱地址 | ⭐⭐⭐ |
+| **ElevenLabs Agent** | 语音交互，让 Agent 能说话 | ⭐⭐ |
 
-**重要新功能：**
-- **Background Tasks 统一控制面**：将 ACP、subagent、cron、background CLI 统一到一个 SQLite-backed 账本下，增加审计/维护/状态可见性
-- **Task Flow 系统**：新增 `openclaw flows list|show|cancel` 命令，支持线性任务流控制
-- **QQ Bot 频道插件**：QQ Bot 成为内置频道插件，支持多账号、SecretRef 凭据、slash 命令、提醒和媒体收发
-- **Agent/MCP 增强**：bundle MCP tools 支持 provider-safe 命名（`serverName__toolName`）、可选 streamable-http 传输、连接超时配置
-- **Agent idle-stream timeout**：可配置的 idle-stream 超时，防止模型流卡住
-- **Gateway restart sentinel 改进**：重启后通过 heartbeat 唤醒中断的 agent session，保留 thread/topic 路由
+> ⚠️ 以上 Skills 尚未通过 skill-vetter 审查。安装前会先跑完整安全审查。
 
-### 对我们的影响 ⚠️
-1. Plugin SDK 变更暂时不影响我们（我们不写自定义 plugin），但未来升级时需注意迁移
-2. **Skill 安装 fail-closed 默认行为** — 与我们的 skill-vetter 审查流程方向一致，是好事
-3. **Background Tasks 统一** — 对我们的 cron 任务管理有正面影响，值得关注
-4. **Gateway auth 加固** — 如果我们使用 trusted-proxy，升级时需检查配置
-
----
-
-## 2. ClawHub 生态动态
-
-### 生态规模 🟢
-- ClawHub 已托管超过 **13,000** 个社区构建的 skill
-- 五大核心领域：Productivity（Notion/Linear/日历）、Communication（AgentMail/Telegram）、Browser Automation（Playwright）、Research/Data、Security
-
-### 安全警告 🔴
-- **ClawHavoc 供应链攻击**：ClawHub 发现 **824+ 个恶意 skill**（从最初发现的 341 个增长）
-- Cisco AI 安全研究团队发现未审核 skill 中存在数据外泄和 prompt injection
-- 恶意 skill 可通过刷下载量登上首页 — 一位研究者将后门 skill 刷到 4000+ 下载进入首页
-
-**Sam 的 skill-vetter 规则比以往更重要。** 我们的安全审查流程是正确的。
+### 五大热门分类
+1. **生产力**：Notion、Linear、日历管理
+2. **通信**：AgentMail、Telegram 自动化
+3. **浏览器自动化**：Playwright MCP、Playwright Scraper
+4. **调研数据**：网页抓取、竞品分析
+5. **安全**：SecureClaw、agent-security-harness
 
 ---
 
-## 3. 安全动态
+## 🎮 社区创意玩法
 
-### CVE 汇总 🔴
+### 真人实战案例（Reddit/Discord 精选）
 
-2026 年已公布 **6 个 CVE**：
-- **CVE-2026-25253**：一键 RCE 链，即使 localhost-bound 实例也受影响（通过 Nginx 反向代理的 quirk，任何访问 URL 的人都被视为 localhost）
-- **CVE-2026-22176**：Windows Scheduled Task 脚本生成中的命令注入
-- **42,000+** 暴露实例被 Censys/Bitsight 发现
-- CNCERT 发布警告：OpenClaw agent 被 trick 访问含恶意指令的网页后可泄露敏感信息
+**🏠 30 套房产管理 × 7 Agent 团队**
+一个物业经理用 7 个专职 Agent 管理 30 套出租房。Agent 自动扫描邮件提取租金到账信息，每早 8 点报告谁付了谁没付。
 
-### Prompt Injection 攻击 🔴
-- **"Good Morning" 攻击**（Trend Micro 命名）：通过看似无害的消息链接，在网页 HTML 注释/白色文字中嵌入恶意指令
-- Link preview 可在不需要用户点击的情况下触发数据外泄
+**📱 Notion 控制台管 18 个 Agent**
+有人用 Notion 做了一个「控制面板」，管理 18 个 OpenClaw Agent 的任务分配、状态追踪、输出记录。
 
-### 防护建议
-- Docker 沙箱化、loopback 绑定、防火墙规则
-- 设置强密码（空密码 = 完全暴露）
-- 保持更新（多数服务器未应用补丁）
+**🎙️ Podcast 全流程自动化**
+从嘉宾研究 → 大纲生成 → 录音后 show notes → 社交媒体推广，全链条 Agent 化。
 
----
+**💰 $1,000 创业实验**
+给 AI Agent $1,000，让它自主选工具、买域名、建站、部署产品、在 X 上推广、上播客。
 
-## 4. 竞品动态
+**📺 24/7 内容工厂**
+Mac Mini 上跑一个 Agent，管 4 个 X 账号、发 LinkedIn、做 YouTube Shorts，每天自动发 49 条推文。
 
-### AI Agent 框架格局 🟢
-
-- **LangGraph** — 2026 年生产环境部署最多的框架，Klarna/Cisco/Vizient 等在用。原生 MCP 支持、100+ LLM 支持
-- **CrewAI** — 角色制团队自动化，支持 code/no-code 开发
-- **Devin (Cognition)** — 最自主的 AI 编码代理
-- **Nexus 框架** — Rust 编写，Python 绑定，15K GitHub stars，支持多 agent 协作和共识层（多模型投票高风险决策）
-
-### MCP Protocol 2.0 🟢
-- MCP 协会发布 **v2.0**，引入双向流（bidirectional streaming），AI agent 可推送实时更新到连接的工具/服务
-- 10 个 AI agent 支持原生 OAuth 2.1 的自定义远程 MCP server
-- MCP Apps 概念：server 可返回交互式 UI 组件，直接在客户端渲染
-
-### Claude Code 多仓库上下文 🟡
-- Anthropic 扩展 Claude Code，支持同时维护最多 10 个关联仓库的上下文（500K tokens 合并窗口）
-- 智能缓存优先频繁访问的代码路径
+### 关键趋势
+- **多 Agent 协作**成为主流
+- **Notion 作为 Agent 控制台**被越来越多人采用
+- **收入型场景**开始出现：代建 Agent 服务 $2K-$10K/客户
 
 ---
 
-## 5. GitHub Issues 动态
+## 📦 OpenClaw 本体更新（精简）
 
-### 活跃度 🟢
-- 4 月 5 日单天 20+ 个新 issue，社区极为活跃
-- 主要议题集中在新版本升级适配、频道配置问题
+### v2026.4.2（4月5日）
+- Plugin SDK 完全重构（Breaking Change）
+- Task Flow 稳定性提升
+- Android Assistant 支持
+- Skill 安装 fail-closed
 
----
+### v2026.4.1（4月1-2日）
+- `/tasks` 背景任务看板
+- AWS Bedrock Guardrails 原生支持
+- SearXNG 搜索引擎内置
 
-## 6. 社区玩法
-
-### Discord 部署热潮 🟡
-- 多个教程涌现：Tencent Cloud Lighthouse 一键部署、Discord Bot 配置指南
-- 社区关注点：requireMention 配置、guild allowlist、intent 权限配置
-- YouTube 教程大量增加（Julian Goldie 系列等）
-
----
-
-## 7. 建议与行动项
-
-| 优先级 | 项目 | 行动 |
-|--------|------|------|
-| 🔴 高 | 安全更新 | 确认我们运行的版本已修复 CVE-2026-25253，检查是否暴露端口 |
-| 🔴 高 | Skill 安全 | 继续严格执行 skill-vetter 审查，ClawHub 恶意 skill 数量在增长 |
-| 🟡 中 | 版本升级 | 评估升级到 2026.4.2，关注 Plugin SDK 迁移和 gateway auth 变更 |
-| 🟡 中 | Task Flow | 新的 `openclaw flows` 命令值得探索，可能改善我们的任务管理 |
-| 🟢 低 | MCP 2.0 | 关注双向流特性，未来可能用于更实时的工具集成 |
+### ⚠️ 安全
+- 824+ 恶意 Skills | 42K+ 暴露实例 | 6 个 CVE
 
 ---
 
-*调研完成时间：2026-04-06 12:00 CST*
-*信息来源：Tavily API、releasebot.io、GitHub Issues、The Hacker News、Reddit r/selfhosted*
+## 🎯 Sam 需求匹配
+
+| 场景 | 推荐 | 优先级 |
+|---|---|---|
+| 调研信息获取 | Firecrawl + HF Papers | 🔴 高 |
+| Notion 自动化 | Notion 控制台模式 | 🟡 中 |
+| 多 Agent 协作 | Composio + Multi-Agent 架构 | 🟡 中 |
+
+---
+
+_NONO 🏠 | 2026-04-06 | 数据源：ClawHub, GitHub, Reddit, Twitter/X, Tavily_

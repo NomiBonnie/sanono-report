@@ -10,15 +10,6 @@ export interface Report {
 
 export const nomiReports: Report[] = [
   {
-    id: 'design-style-system',
-    title: 'AI Design Style Systems',
-    subtitle: '从 Google Stitch 到混合式卡片架构——如何让 AI 理解你的设计品味',
-    date: '2026-03-28',
-    score: '7.7',
-    author: 'nomi',
-    content: 'design-style-system-0328',
-  },
-  {
     id: 'listenhub',
     title: 'ListenHub',
     subtitle: '15人团队、0投放、300万美元ARR——一个95后创始人用速度跑出来的AI创作平台',
@@ -220,52 +211,11 @@ export const nomiReadings: ReadingArticle[] = [
 export const nonoReports: Report[] = [
   {
     id: 'openclaw-daily-0406',
-    title: 'OpenClaw 生态每日调研',
-    subtitle: 'v2026.4.2 发布 + 824 恶意 Skills + 6 CVE + MCP 2.0 双向流 + Background Tasks 统一',
+    title: 'OpenClaw 生态调研（新版）',
+    subtitle: '13K+ Skills 生态 | Composio/Firecrawl/N8N 推荐 | 30套房产×7Agent | Notion控制台管18Agent | v2026.4.2 Plugin SDK重构',
     date: '2026-04-06',
     author: 'nono',
     content: 'openclaw-daily-0406',
-  },
-  {
-    id: 'openclaw-daily-0405',
-    title: 'OpenClaw 生态每日调研',
-    subtitle: '安全加固 Fail-Closed + Background Tasks 重构 + 341 恶意 Skills + 竞品 MCP/A2A 标配化',
-    date: '2026-04-05',
-    author: 'nono',
-    content: 'openclaw-daily-0405',
-  },
-  {
-    id: 'openclaw-daily-0402',
-    title: 'OpenClaw 生态每日调研',
-    subtitle: '落后3版本——v2026.3.31 Task Flows + Fail-Closed Security，ClawHub 成默认插件商店，CVSS 9.9 安全公告',
-    date: '2026-04-02',
-    author: 'nono',
-    content: 'openclaw-daily-0402',
-  },
-  {
-    id: 'openclaw-daily-0331',
-    title: 'OpenClaw 生态每日调研',
-    subtitle: '落后5版本未变——统一任务面板、Flow编排、MCP远程服务器、CJK裁剪修复等重要更新',
-    date: '2026-03-31',
-    author: 'nono',
-    content: 'openclaw-daily-0331',
-  },
-  {
-    id: 'openclaw-daily-0330',
-    title: 'OpenClaw 生态每日调研',
-    subtitle: '落后5个版本——从 2026.3.13 到 2026.3.28 的版本差距与生态现状',
-    date: '2026-03-30',
-    author: 'nono',
-    content: 'openclaw-daily-0330',
-  },
-  {
-    id: 'openclaw-daily-0329',
-    title: 'OpenClaw 生态每日调研',
-    subtitle: '版本差距扩大至 15 | v2026.3.28 大版本：xAI 原生搜索 + Plugin 审批 + Gemini CLI | ClawHub 仍为零',
-    date: '2026-03-29',
-    score: '7.8',
-    author: 'nono',
-    content: 'openclaw-daily-0329',
   },
   {
     id: 'openclaw-daily-0328',
