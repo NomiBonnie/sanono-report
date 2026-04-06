@@ -78,7 +78,7 @@ Karpathy 的方案只有三层,每层都很好理解:
 
 ## 跟你现在用的笔记软件有什么不一样?
 
-![](/images/reading/karpathy-llm-wiki-easy-4.jpg?v=3)
+![](/images/reading/karpathy-llm-wiki-easy-4.jpg?v=4)
 
 最大的区别就一句话:**维护者变了。**
 
