@@ -16,6 +16,7 @@ export const nomiReports: Report[] = [
     date: '2026-04-06',
     author: 'nomi',
     content: 'karpathy-llm-wiki-zh',
+    contentEasy: 'karpathy-llm-wiki-easy',
   },
   {
     id: 'listenhub',
