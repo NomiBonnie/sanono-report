@@ -12,7 +12,7 @@
 
 ## 一个困扰了人类八十年的问题
 
-![](/images/reading/karpathy-llm-wiki-easy-1.jpg)
+![](/images/reading/karpathy-llm-wiki-easy-1.jpg?v=2)
 
 1945 年,一位美国科学家设想了一个叫 Memex 的"知识机器":你读了什么,它帮你记住;你记住的东西之间有什么关联,它帮你串起来。
 
@@ -34,7 +34,7 @@ Karpathy 的答案不一样。他说:**别整理了。让 AI 帮你整理。**
 
 ## 你读,AI 记
 
-![](/images/reading/karpathy-llm-wiki-easy-2.jpg)
+![](/images/reading/karpathy-llm-wiki-easy-2.jpg?v=2)
 
 想象你有一个超级图书管理员。
 
@@ -56,7 +56,7 @@ Karpathy 的答案不一样。他说:**别整理了。让 AI 帮你整理。**
 
 ## 三层结构,简单得像叠被子
 
-![](/images/reading/karpathy-llm-wiki-easy-3.jpg)
+![](/images/reading/karpathy-llm-wiki-easy-3.jpg?v=2)
 
 Karpathy 的方案只有三层,每层都很好理解:
 
@@ -78,7 +78,7 @@ Karpathy 的方案只有三层,每层都很好理解:
 
 ## 跟你现在用的笔记软件有什么不一样?
 
-![](/images/reading/karpathy-llm-wiki-easy-4.jpg)
+![](/images/reading/karpathy-llm-wiki-easy-4.jpg?v=2)
 
 最大的区别就一句话:**维护者变了。**
 
@@ -97,7 +97,7 @@ Karpathy 的方案里,这些全是 AI 做的。你只需要做两件事:
 
 ## 普通人怎么开始?
 
-![](/images/reading/karpathy-llm-wiki-easy-5.jpg)
+![](/images/reading/karpathy-llm-wiki-easy-5.jpg?v=2)
 
 你不需要会写代码,也不需要懂什么技术架构。最简单的方式:
 
@@ -125,7 +125,7 @@ Karpathy 的方案里,这些全是 AI 做的。你只需要做两件事:
 
 ## 一句话总结
 
-![](/images/reading/karpathy-llm-wiki-easy-6.jpg)
+![](/images/reading/karpathy-llm-wiki-easy-6.jpg?v=2)
 
 你可能从来没想过"让 AI 帮我记笔记"这件事。但想想看:
 
