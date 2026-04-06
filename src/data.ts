@@ -80,6 +80,17 @@ export interface ReadingArticle {
 
 export const nomiReadings: ReadingArticle[] = [
   {
+    id: 'karpathy-llm-wiki',
+    title: '当 AI 开始替你记笔记',
+    subtitle: 'Karpathy 的 LLM Wiki 方案，和一场持续八十年的知识管理革命',
+    date: '2026-04-06',
+    author: 'Andrej Karpathy',
+    source: 'https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f',
+    language: 'bilingual' as const,
+    content: 'karpathy-llm-wiki-zh.md',
+    contentEn: 'karpathy-llm-wiki-en.md',
+  },
+  {
     id: 'internet-dead-agent-forever',
     title: '互联网已死，Agent 永生',
     subtitle: '六把刀砍掉六张旧地图——当 Agent 取代人类成为软件的用户，你的整套方法论都要重写',
