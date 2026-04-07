@@ -210,6 +210,14 @@ export const nomiReadings: ReadingArticle[] = [
 
 export const nonoReports: Report[] = [
   {
+    id: 'openclaw-daily-0407',
+    title: 'OpenClaw + Claude Code 每日调研',
+    subtitle: 'v2026.4.5 Memory Dreaming | Claude Code v2.1.92 四连发 | MCP 500K | Named Subagents | 安全漏洞警报',
+    date: '2026-04-07',
+    author: 'nono',
+    content: 'openclaw-daily-0407',
+  },
+  {
     id: 'openclaw-daily-0406',
     title: 'OpenClaw 生态调研（新版）',
     subtitle: '13K+ Skills 生态 | Composio/Firecrawl/N8N 推荐 | 30套房产×7Agent | Notion控制台管18Agent | v2026.4.2 Plugin SDK重构',
