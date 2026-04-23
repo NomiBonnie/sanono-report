@@ -36,6 +36,20 @@ Why are they willing to invest for me and not someone else? Because they know I 
 
 We can sustain this scale only because downstream demand is so great and they all see it coming. Just as there's cash flow, there's supply chain flow. **Nobody's going to build a supply chain for an architecture whose business turns are low.**
 
+## Pricing Philosophy and the 30-Year TSMC Bond
+
+**Dwarkesh**: How does NVIDIA allocate scarce GPUs? Does the highest bidder get priority?
+
+**Jensen**: We never do that. **You set your price, and people decide to buy or not.** I know others in the chip industry change prices when demand is higher, but that's never been our practice. You can count on us — I'd rather be dependable, be the foundation of the industry. If I quoted you a price, that's it. Demand goes through the roof? So be it.
+
+**Dwarkesh**: Is that also why you have such a good relationship with TSMC?
+
+**Jensen**: Yes. **NVIDIA has been doing business with TSMC for almost 30 years, and we don't have a legal contract.** Sometimes I got a better deal, sometimes worse. But overall the relationship is incredible — I completely trust them, completely depend on them. Count how many ASIC teams in the world can deliver a new generation chip on time every single year — **you can bet your entire business that they'll be there for you. Go find one — you can count them on one hand.**
+
+I can say the same about NVIDIA. Every year, Vera Rubin comes, then Vera Rubin Ultra, then Feynman — your token cost drops by an order of magnitude every year, like clockwork. **Whether you want one graphics card or a $100 billion AI factory, NVIDIA is the only company in the world where you can say that today.**
+
+![30 Years of Trust: Partnership Without a Contract](/images/reading/jensen-huang-nvidia-moat-9.jpg)
+
 ## TPU Competition and the CUDA Flywheel
 
 **Dwarkesh**: I want to understand NVIDIA's view on TPUs. Google has been doing TPU for many generations, now they have Trillium. Saying NVIDIA's moat is impenetrable and saying Google has built good-enough chips — one of these must be wrong.
@@ -48,6 +62,8 @@ NVIDIA's approach is different. When a new model appears, we write new CUDA kern
 
 The flywheel is what matters. CUDA has the largest installed base, the most developers, the richest ecosystem. **The platform with the best performance per dollar attracts the most developers, who create the most applications, which attract the most users — that's the computing platform flywheel.**
 
+![The CUDA Flywheel: Installed Base × Developers × Applications](/images/reading/jensen-huang-nvidia-moat-6.jpg)
+
 **Dwarkesh**: But Google has unlimited internal developers. They don't need an external ecosystem.
 
 **Jensen**: The question isn't whether they have developers. It's **how long it takes to adapt their chip every time they make a new discovery**. With an ASIC, you've essentially burned a dataflow graph into silicon. When AI has a breakthrough — and this happens every few months — you need to redesign the chip. That cycle is 3-5 years for ASICs. On NVIDIA's architecture, we can adapt in weeks or days with new CUDA libraries. **CUDA makes our chips in some sense eternal — every generation of hardware gets better through software updates.**
@@ -56,9 +72,11 @@ The flywheel is what matters. CUDA has the largest installed base, the most deve
 
 **Dwarkesh**: NVIDIA's gross margins exceed 70%. If you also ran cloud services, you'd capture downstream profits. Why not become a hyperscaler?
 
-**Jensen**: The world has plenty of clouds. If I don't do it, someone will. **Following the philosophy of doing as much as needed but as little as possible** — in clouds, the world already has excellent companies doing that.
+**Jensen**: This is a company philosophy. **"Do as much as needed, as little as possible" — if we didn't do it, I genuinely believe it wouldn't get done.** If we didn't take the risk we take, if we didn't build NVLink the way we did, if we didn't dedicate 20 years to CUDA while losing money most of that time — nobody else would have done it.
 
-But the deeper reason: **if I do cloud, I become a competitor to my customers**. Today NVIDIA is everyone's supplier, competing with no one. AWS, Azure, GCP, Oracle — they're all partners. If I start competing with them, the ecosystem collapses.
+But clouds are different. The world already has excellent companies doing that. If I didn't do it, someone would show up.
+
+The deeper reason: **if I do cloud, I become a competitor to my customers**. Today NVIDIA is everyone's supplier, competing with no one. AWS, Azure, GCP, Oracle — they're all partners. If I start competing with them, the ecosystem collapses.
 
 Think of it this way — **I don't want to be a brand. I want to be the TSMC of AI.** TSMC succeeded because it doesn't make its own chip brands, so every chip company trusts it with their most sensitive designs. If TSMC started making its own chips, the model collapses. Same logic applies to NVIDIA.
 
@@ -68,7 +86,19 @@ Think of it this way — **I don't want to be a brand. I want to be the TSMC of 
 
 **Jensen**: DGX Cloud isn't an independent cloud. It runs through partner data centers — CoreWeave, Oracle, Microsoft. We help enterprises use AI more easily, but the infrastructure belongs to partners. **We don't compete for end customers; we make it easier for customers to use partner infrastructure.**
 
-And here's an important point. Count how many ASIC teams in the world can deliver a new generation chip on time every single year. Your token cost drops by an order of magnitude every year, and you can count on it. **You need to find another ASIC team where you can bet your entire business that they'll be there for you every single year. Go find one — you can count them on one hand.**
+## Don't Pick Winners: Investment Philosophy
+
+**Dwarkesh**: You've invested in OpenAI, Anthropic, and other foundation model companies. How do you decide who to invest in?
+
+**Jensen**: We try to invest in all of them. This is another thing we do — **we don't pick winners**. We need to support everyone, and it's both an imperative to our business and our joy. When I invest in one, I invest in all of them.
+
+**Dwarkesh**: Why go out of your way not to pick winners?
+
+**Jensen**: Because it's not our job. Second, when NVIDIA first started, there were 60 3D graphics companies. We're the only one that survived. **If you'd asked which one was least likely to make it, NVIDIA would probably have topped that list.** Our graphics architecture was precisely wrong — not a little wrong, completely wrong. Developers couldn't support it. Everyone would have counted us out, and here we are.
+
+So **I have enough humility to recognize: don't pick winners. Either let them all take care of themselves, or take care of all of them.**
+
+The same applies to neo-clouds — if we hadn't supported CoreWeave's existence, these AI clouds wouldn't exist. If we hadn't supported Nscale, NBS, they wouldn't be where they are. But our goal isn't the financing business — **we want to do as little as possible**. When OpenAI needs a $30 billion-scale investment because it's still pre-IPO and we deeply believe in them, we support them. Not because we want to do more, but because they need us to.
 
 ## Should We Sell Chips to China?
 
@@ -78,29 +108,51 @@ And here's an important point. Count how many ASIC teams in the world can delive
 
 What's happening is we've put controls on the chip layer. The result? China started building its own chips. More importantly, **American chip companies lost the China market** — one of the world's largest technology consumer markets. This isn't hypothetical. It's already happened.
 
-**Dwarkesh**: But what if an AI chip can train a model that does zero-day exploits against all American software? Isn't that a weapon?
+**Dwarkesh**: But Anthropic just released Mythos — a model with stunning cyber-offensive capabilities that found thousands of high-severity vulnerabilities across every major OS and browser, including a zero-day in OpenBSD that existed for 27 years. What if China had enough AI chips to train such models?
 
-**Jensen**: First, **comparing AI chips to enriched uranium is a lousy analogy — an illogical analogy**. The way to solve security problems is through dialogue with researchers, with China, with other countries, to ensure technology isn't misused. That takes diplomacy, not blockades.
+**Jensen**: First, Mythos was trained on fairly mundane capacity — that type of compute is abundantly available in China already. China manufactures over 60% of the world's mainstream chips, has some of the world's greatest computer scientists — **50% of the world's AI researchers are Chinese**. They have abundant energy, plenty of chips, most of the AI researchers. If you're worried about them, what's the best way to create a safe world? Turning them into an enemy probably isn't the answer.
 
-Second, the US must stay ahead. Blackwell, Vera Rubin — abundantly available in the United States. Our results prove it.
-
-Third, **if we scare this country into thinking AI is a nuclear bomb, so everybody hates and fears AI, we're doing a disservice to the United States**. If we scare everyone out of software engineering because "AI will kill all software jobs," we won't have software engineers. If we scare away energy investment because "data centers will consume all power," we won't have energy infrastructure.
+**Comparing AI chips to enriched uranium is a lousy analogy — an illogical analogy**. The way to solve security problems is through dialogue with researchers, with China, with other countries. That takes diplomacy, not blockades.
 
 ![AI Five-Layer Cake: Win Every Layer](/images/reading/jensen-huang-nvidia-moat-4.jpg)
 
-**Jensen**: **Fear is the biggest enemy in the AI race, not China.** If we scare ourselves into stopping investment while other countries press ahead — that's the real security threat. The right approach: stay ahead at every layer of the stack while managing risk through diplomacy. Don't close the door — run faster than everyone else.
+Something deeply underemphasized: **the ecosystem around AI safety, AI privacy, and AI cybersecurity is thriving**. The future is one powerful AI agent surrounded by thousands of AI agents keeping it safe and secure. This ecosystem needs open source, open models, open stacks. And a huge portion of open-source contributions come from China — **China is the world's largest contributor to open source software and open models**. We must not suffocate that.
+
+![Open Source Ecosystem: Global AI Safety Collaboration](/images/reading/jensen-huang-nvidia-moat-11.jpg)
+
+**Jensen**: **Fear is the biggest enemy in the AI race, not China.** If we scare ourselves into stopping investment while other countries press ahead — that's the real security threat.
+
+**If we scare this country into thinking AI is a nuclear bomb, so everybody hates and fears AI, we're doing a disservice.** If we scare everyone out of software engineering because "AI will kill all jobs" — we won't have software engineers. If we scare away energy investment because "data centers consume all power" — we won't have infrastructure. If we scare everyone out of radiology because "computer vision will replace radiologists" — we're confusing the job (patient care) with the task (reading a scan).
+
+The right approach: stay ahead at every layer while managing risk through diplomacy. **Nobody is advocating shipping everything to China at all times. We should always have the best technology here first. But we should also compete and win around the world. Both can happen simultaneously — it requires nuance, maturity, not absolutes.**
 
 ## Energy: The Real Bottleneck
 
 **Dwarkesh**: You put energy at the bottom of the AI five-layer cake. Will power become a hard constraint on AI development?
 
-**Jensen**: It already is. The US is scarce on energy, which is why NVIDIA has to keep advancing our architecture — to deliver maximum throughput with limited chips because power is limited. **Our performance per watt is the highest in the world.** But if your power is completely abundant and cheap? Then you might not need cutting-edge 7nm chips — Hopper at 7nm would do. Today's models were largely trained on Hopper.
+**Jensen**: It already is. The US is scarce on energy, which is why NVIDIA has to keep advancing our architecture — to deliver maximum throughput with limited chips because power is limited. **Our performance per watt is the highest in the world.** But if your power is completely abundant and cheap? Then Hopper would do. Today's models were largely trained on Hopper.
 
 The more pragmatic approach: **the power grid is idle 99% of the time**. We should eliminate waste — use the grid's idle capacity for AI workloads. Before chasing nuclear plants and space-based computing, exhaust what's already available.
 
+![The Idle Grid: 99% Waste Waiting to Be Used](/images/reading/jensen-huang-nvidia-moat-8.jpg)
+
 **Dwarkesh**: But could a competitor in an energy-abundant country catch up with two-generation-old chips plus massive power?
 
-**Jensen**: Theoretically possible, but remember — **it's not just chips times watts**. You also need the entire software stack — the CUDA ecosystem, model optimization, inference frameworks. Chips are just one layer of the five-layer cake. A competitor with chips and power but no software ecosystem is like having flour and an oven but not knowing how to bake bread.
+**Jensen**: Theoretically possible, but remember — **it's not just chips times watts**. You also need the entire software stack. Chips are just one layer of the five-layer cake. A competitor with chips and power but no software ecosystem is like having flour and an oven but not knowing how to bake bread.
+
+How much more advanced is Blackwell than Hopper? In transistors, about 75% improvement over 3 years. But Blackwell is 50x Hopper in performance. **Moore's Law is dead. Architecture matters. Computer science matters.** That's why CUDA is so effective — it's a computing architecture that allows enormous flexibility, whether you're building diffusion models or something entirely different.
+
+## Why Not Multiple Chip Architectures?
+
+**Dwarkesh**: Why doesn't NVIDIA run multiple chip projects in parallel with totally different architectures? You could do Cerebras-style wafer scale, Dojo-style huge packages, one without CUDA. You have the resources and talent.
+
+**Jensen**: We could. **We just don't have a better idea.** We simulate all of them — they're provably worse in our simulator. So we wouldn't do it. We're working on exactly the projects we want to work on.
+
+![One Architecture Focus: The Rest Proved Worse in Simulation](/images/reading/jensen-huang-nvidia-moat-10.jpg)
+
+However, if the workload changes dramatically — I mean the market shape, not just algorithms — we might add other accelerators. We recently added Groq and are folding it into our CUDA ecosystem. **The reason: token values have risen enough to support different pricing tiers.**
+
+A few years ago, tokens were either free or nearly worthless. Now different customers want different answers. If I can give my software engineers faster-response tokens to make them more productive, I'd pay for it. **So we've expanded the Pareto frontier — creating an inference segment with faster response time but lower throughput.** Before, higher throughput was always better. Now there's a new dimension: high-ASP tokens.
 
 ## What If AI Never Happened?
 
@@ -112,10 +164,12 @@ Computer graphics, molecular dynamics, seismic processing, image processing, com
 
 Of course, it was our accumulated work in accelerated computing that made deep learning possible. **We democratized it so any student, any scientist could access a GeForce card and do amazing research.** That fundamental promise hasn't changed one bit.
 
+![Accelerated Computing: A Mission Older Than AI](/images/reading/jensen-huang-nvidia-moat-5.jpg)
+
 If there were no AI, I'd be very sad. But NVIDIA's core mission wouldn't change — **making real what general-purpose computing can't do or can't do well, through accelerated computing.** Tensors aren't the only way to compute, and we want to help everyone.
 
-![Accelerated Computing: A Mission Older Than AI](/images/reading/jensen-huang-nvidia-moat-5.jpg)
+![The GPU: A Universal Accelerator Beyond AI](/images/reading/jensen-huang-nvidia-moat-12.jpg)
 
 ---
 
-*This article is based on Dwarkesh Patel's interview with Jensen Huang. The original video runs approximately 1 hour 43 minutes. This piece preserves the core arguments and structure while editing conversational speech for readability. Full video available at [Dwarkesh Podcast](https://www.youtube.com/watch?v=Hrbq66XqtCo).*
+*This article is based on Dwarkesh Patel's interview with Jensen Huang. The original video runs approximately 1 hour 43 minutes. This piece preserves the core arguments and structure while editing conversational speech for readability. Full video at [Dwarkesh Podcast](https://www.youtube.com/watch?v=Hrbq66XqtCo). Full transcript at [dwarkesh.com](https://www.dwarkesh.com/p/jensen-huang).*
