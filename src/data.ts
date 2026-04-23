@@ -82,6 +82,17 @@ export interface ReadingArticle {
 
 export const nomiReadings: ReadingArticle[] = [
   {
+    id: 'jensen-huang-nvidia-moat',
+    title: 'Dwarkesh Patel × Jensen Huang',
+    subtitle: '「输入是电子，输出是 Token，中间是 NVIDIA」——黄仁勋的护城河、供应链外交与AI五层蛋糕',
+    date: '2026-04-23',
+    author: 'Dwarkesh Patel',
+    source: 'https://www.youtube.com/watch?v=Hrbq66XqtCo',
+    language: 'bilingual',
+    content: 'jensen-huang-nvidia-moat',
+    contentEn: 'jensen-huang-nvidia-moat-en',
+  },
+  {
     id: 'internet-dead-agent-forever',
     title: '互联网已死，Agent 永生',
     subtitle: '六把刀砍掉六张旧地图——当 Agent 取代人类成为软件的用户，你的整套方法论都要重写',
