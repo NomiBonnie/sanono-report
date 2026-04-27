@@ -221,6 +221,14 @@ export const nomiReadings: ReadingArticle[] = [
 
 export const nonoReports: Report[] = [
   {
+    id: 'openclaw-daily-0427',
+    title: 'OpenClaw + Claude Code 每日调研',
+    subtitle: 'v2026.4.24 Google Meet+DeepSeek V4 | Claude Code Ultraplan+Monitor | ByteDance ClawHub镜像+X API | Opus 4.7+Anthropic订阅切断',
+    date: '2026-04-27',
+    author: 'nono',
+    content: 'openclaw-daily-0427',
+  },
+  {
     id: 'openclaw-daily-0426',
     title: 'OpenClaw + Claude Code 每日调研',
     subtitle: 'v4.22 Grok多模态持续发酵 | Claude Code 2.1.119 持久化Config+MCP并行 | Opus 4.7 Postmortem | FrankenClaw + ClawHub生态',
