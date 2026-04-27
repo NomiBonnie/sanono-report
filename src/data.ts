@@ -82,6 +82,17 @@ export interface ReadingArticle {
 
 export const nomiReadings: ReadingArticle[] = [
   {
+    id: 'intent-by-discovery',
+    title: 'Intent by Discovery: Designing the AI User Experience',
+    subtitle: '从命令到委托，从屏幕到空间——Jakob Nielsen 描绘的 60 年来第一次 UI 范式变革',
+    date: '2026-04-27',
+    author: 'Jakob Nielsen',
+    source: 'https://jakobnielsenphd.substack.com/p/intent-ux',
+    language: 'bilingual',
+    content: 'intent-by-discovery-zh',
+    contentEn: 'intent-by-discovery-en',
+  },
+  {
     id: 'jensen-huang-nvidia-moat',
     title: 'Dwarkesh Patel × Jensen Huang',
     subtitle: '「输入是电子，输出是 Token，中间是 NVIDIA」——黄仁勋的护城河、供应链外交与AI五层蛋糕',
