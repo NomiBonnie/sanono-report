@@ -1,48 +1,64 @@
 #!/bin/bash
-set -e
+# deploy.sh — Deploy sanono-report to both Cloudflare Pages and GitHub Pages
+# Usage: ./deploy.sh [cf|gh|both]  (default: both)
+set -euo pipefail
 
-echo "🚀 Sanono Report 部署脚本"
-echo "========================"
+cd "$(dirname "$0")"
+TARGET="${1:-both}"
 
-# 1. 检查是否有未提交的更改
-if [[ -n $(git status -s) ]]; then
-  echo "⚠️  检测到未提交的更改，先提交代码..."
+deploy_cf() {
+  echo "🔶 Building for Cloudflare Pages (base=/)..."
+  CF_PAGES=1 npm run build
+  
+  # Verify base path is correct
+  if grep -q 'src="/sanono-report/' dist/index.html; then
+    echo "❌ ERROR: Cloudflare build has wrong base path! Aborting."
+    exit 1
+  fi
+  echo "  ✅ Base path verified: /"
+  
+  TOKEN=$(python3 -c "import json; print(json.load(open('$HOME/.config/cloudflare/config.json'))['api_token'])")
+  echo "🚀 Deploying to Cloudflare..."
+  CLOUDFLARE_API_TOKEN="$TOKEN" npx wrangler pages deploy dist --project-name=sanono-report
+  echo "✅ Cloudflare deployed!"
+}
+
+deploy_gh() {
+  echo "🔷 Building for GitHub Pages (base=/sanono-report/)..."
+  npm run build
+  
+  # Verify base path is correct
+  if grep -q 'src="/assets/' dist/index.html; then
+    echo "❌ ERROR: GitHub Pages build has wrong base path! Aborting."
+    exit 1
+  fi
+  echo "  ✅ Base path verified: /sanono-report/"
+  
+  echo "🚀 Pushing to GitHub..."
   git add -A
-  read -p "提交信息: " commit_msg
-  git commit -m "$commit_msg"
-  git push
-  echo "✅ 代码已提交并推送"
-else
-  echo "✅ 工作目录干净"
-fi
+  git diff --cached --quiet && echo "  No changes to commit" || {
+    git commit -m "deploy: update site"
+    git pull --rebase origin main
+    git push origin main
+  }
+  echo "✅ GitHub Pages deployed (Actions will build)!"
+}
 
-# 2. 构建 Cloudflare 版本（base: /）
-echo ""
-echo "📦 构建 Cloudflare Pages 版本..."
-CF_PAGES=1 npm run build
-echo "✅ Cloudflare 版本构建完成"
-
-# 3. 部署到 Cloudflare
-echo ""
-echo "☁️  部署到 Cloudflare Pages..."
-npx wrangler pages deploy dist --project-name=sanono-report --commit-dirty=true
-echo "✅ Cloudflare Pages 部署完成"
-echo "   访问: https://report.sanono.xyz"
-
-# 4. 构建 GitHub Pages 版本（base: /sanono-report/）
-echo ""
-echo "📦 构建 GitHub Pages 版本..."
-npm run build
-echo "✅ GitHub Pages 版本构建完成"
-
-# 5. 触发 GitHub Actions（自动部署 gh-pages）
-echo ""
-echo "🔄 触发 GitHub Actions..."
-gh workflow run "Deploy to GitHub Pages"
-echo "✅ GitHub Actions 已触发"
-echo "   访问: https://nomibonnie.github.io/sanono-report"
+case "$TARGET" in
+  cf)   deploy_cf ;;
+  gh)   deploy_gh ;;
+  both)
+    deploy_cf
+    echo ""
+    deploy_gh
+    ;;
+  *)
+    echo "Usage: ./deploy.sh [cf|gh|both]"
+    exit 1
+    ;;
+esac
 
 echo ""
-echo "🎉 部署完成！"
-echo "   - Cloudflare: https://report.sanono.xyz"
-echo "   - GitHub:     https://nomibonnie.github.io/sanono-report"
+echo "🎉 Done! Check:"
+echo "  Cloudflare: https://report.sanono.xyz"
+echo "  GitHub:     https://nomibonnie.github.io/sanono-report/"
