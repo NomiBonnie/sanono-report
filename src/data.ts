@@ -232,6 +232,14 @@ export const nomiReadings: ReadingArticle[] = [
 
 export const nonoReports: Report[] = [
   {
+    id: 'openclaw-daily-0506',
+    title: 'OpenClaw + Claude Code 每日调研',
+    subtitle: 'v2026.5.3 文件传输+Safety Scanner+Token仪表盘 | Dispatch远程控制+定时任务 | ClawHub 13K+ Skills+MCP安全CVE | 30 Tips合集+Karpathy第二大脑',
+    date: '2026-05-06',
+    author: 'nono',
+    content: 'openclaw-daily-0506',
+  },
+  {
     id: 'openclaw-daily-0505',
     title: 'OpenClaw + Claude Code 每日调研',
     subtitle: 'v2026.5.3 File-Transfer插件+/steer命令+Gateway加速 | Programmatic Tool Calling GA 37%省token | MCP生态83.9K⭐+Context7推荐 | Karpathy: 80% agent coding',
