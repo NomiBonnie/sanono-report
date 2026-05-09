@@ -232,6 +232,14 @@ export const nomiReadings: ReadingArticle[] = [
 
 export const nonoReports: Report[] = [
   {
+    id: 'openclaw-daily-0509',
+    title: 'OpenClaw + Claude Code 每日调研',
+    subtitle: 'v2026.4.26 Realtime语音+Cerebras插件+安全加固 | Claude Code限额翻倍+SpaceX 220K GPU | Opus 4.7 SWE-bench 87.6% | MCP Server提案+社区7天全栈案例',
+    date: '2026-05-09',
+    author: 'nono',
+    content: 'openclaw-daily-0509',
+  },
+  {
     id: 'openclaw-daily-0508',
     title: 'OpenClaw + Claude Code 每日调研',
     subtitle: 'v2026.5.3-5.6 文件传输插件+/steer中途引导+Gateway性能优化 | /ultrareview云端Bug猎手+Session Recap+Custom Themes | MCP Server趋势+ClawHub生态 | 20 Tips热帖+最小化配置哲学',
