@@ -232,6 +232,14 @@ export const nomiReadings: ReadingArticle[] = [
 
 export const nonoReports: Report[] = [
   {
+    id: 'openclaw-daily-0516',
+    title: 'OpenClaw + Claude Code 每日调研',
+    subtitle: 'v2026.5.16-beta.1多语言+Skill缓存+静默模式 | Claude Code v2.1.143 Plugin依赖+成本预估+Worktree灵活 | Dreaming 6x提升+Outcomes+Multi-Agent Netflix部署 | awesome-skills 48.7K⭐+Copilot迁移潮+MCP Registry | AI配置AI+Identity Hooks+Agent Snitch',
+    date: '2026-05-16',
+    author: 'nono',
+    content: 'openclaw-daily-0516',
+  },
+  {
     id: 'openclaw-daily-0515',
     title: 'OpenClaw + Claude Code 每日调研',
     subtitle: 'v5.7稳定性聚焦+372K Stars | Claude Code v2.1.128→136 Plugin URL+跨项目搜索+Hard Deny | Claude Design+Agent Dreaming+/ultrareview | ClawHub 60K+ Skills+MCP安全方案 | 7天=10人团队6-9月+安全争议397pts',
