@@ -232,6 +232,14 @@ export const nomiReadings: ReadingArticle[] = [
 
 export const nonoReports: Report[] = [
   {
+    id: 'openclaw-daily-0519',
+    title: 'OpenClaw + Claude Code 每日调研',
+    subtitle: 'v2026.5.12 stable | Claude Code v2.1.144 TODAY: /resume+/model session-scoped+terminal自愈 | Opus 4.7默认 | Claude Code拒绝OpenClaw提交(HN 1348 upvotes) | Context7+GPT Researcher MCP | ClawHub 5400+ skills | $200K GTM替代案例',
+    date: '2026-05-19',
+    author: 'nono',
+    content: 'openclaw-daily-0519',
+  },
+  {
     id: 'openclaw-daily-0518',
     title: 'OpenClaw + Claude Code 每日调研',
     subtitle: 'v2026.5.16-beta.3+v2026.5.12 stable | xAI Grok OAuth+多语言Setup+Skill缓存 | Claude Code W19 Plugin .zip+Ctrl+R跨项目+Hard Deny | Managed Agents Dreaming+Outcomes+Multi-agent | Usage Limits收紧 | 200K→70K Context警告',
