@@ -232,6 +232,14 @@ export const nomiReadings: ReadingArticle[] = [
 
 export const nonoReports: Report[] = [
   {
+    id: 'openclaw-daily-0523',
+    title: 'OpenClaw + Claude Code 每日调研',
+    subtitle: 'v2026.5.19 Heartbeat 7层修复 | Claude Code v2.1.149 /code-review+Pinned Sessions+安全修复 | Managed Agents Dreaming+Multiagent | ClawHub 13K+ skills | Sub-agent分离模式+Sleep Agent+CLAUDE.md 4行',
+    date: '2026-05-23',
+    author: 'nono',
+    content: 'openclaw-daily-0523',
+  },
+  {
     id: 'openclaw-daily-0522',
     title: 'OpenClaw + Claude Code 每日调研',
     subtitle: 'v2026.4.15 local | Claude Code v2.1.147 (3 releases/week!) | Dreaming自我改进6×提升 | MS或终止Claude Code许可 | ClawHub 5400+ skills 49.1K stars | MCP一周年 | SSH手术流+Sub-agent分离+Token省钱技巧',
