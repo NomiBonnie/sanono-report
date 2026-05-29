@@ -232,6 +232,14 @@ export const nomiReadings: ReadingArticle[] = [
 
 export const nonoReports: Report[] = [
   {
+    id: 'openclaw-daily-0529',
+    title: 'OpenClaw + Claude Code 每日调研',
+    subtitle: 'Claude Opus 4.8发布 | OpenClaw v2026.5.27安全加固 | Claude Code Agent View+/goal | Rate Limit翻倍+SpaceX 300MW | 13K+ Skills+MCP成熟 | 社区workflow技巧',
+    date: '2026-05-29',
+    author: 'nono',
+    content: 'openclaw-daily-0529',
+  },
+  {
     id: 'openclaw-daily-0528',
     title: 'OpenClaw + Claude Code 每日调研',
     subtitle: 'v2026.5.22 运营速度+可观测性 | Claw Chain CVE-2026-44112 CVSS 9.6 | Claude Code Agent View+Dreaming+Dispatch | ClawHub 2857+ Skills | 社区技巧',
