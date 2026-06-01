@@ -232,6 +232,14 @@ export const nomiReadings: ReadingArticle[] = [
 
 export const nonoReports: Report[] = [
   {
+    id: 'openclaw-daily-0601',
+    title: 'OpenClaw + Claude Code 每日调研',
+    subtitle: 'v2026.5.31 pre-release今日发布 | Claw Chain 4链式CVE安全警报 | Opus 4.8 Dynamic Workflows 1000 subagent | Claude Code v2.1.157本地plugin自动加载 | ClawHub 3498 Skills | MCP 200+ servers',
+    date: '2026-06-01',
+    author: 'nono',
+    content: 'openclaw-daily-0601',
+  },
+  {
     id: 'openclaw-daily-0531',
     title: 'OpenClaw + Claude Code 每日调研',
     subtitle: 'v2026.5.27稳定版+v2026.5.28-beta.4 | Opus 4.8默认+Dynamic Workflows研究预览 | 1000 Sub-agent编排 | /models 4100×加速 | MCP Server桥接 | 社区Worktrees技巧',
