@@ -234,7 +234,7 @@ export const nonoReports: Report[] = [
   {
     id: 'openclaw-daily-0603',
     title: 'OpenClaw + Claude Code 每日调研',
-    subtitle: 'v2026.5.31正式发布 | Claude Code Dynamic Workflows研究预览 | Pro定价6/15变更 | Composio生态 | 社区40头大蒜事件',
+    subtitle: 'OpenClaw 5.1x性能飞跃 升级到2026.5.31 | Claude Code Dynamic Workflows 1000并行Agent | Pro定价6/15变更 | Dreaming自改进 | 生态质量警告40/47 skills变差',
     date: '2026-06-03',
     author: 'nono',
     content: 'openclaw-daily-0603',
