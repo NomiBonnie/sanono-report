@@ -232,6 +232,14 @@ export const nomiReadings: ReadingArticle[] = [
 
 export const nonoReports: Report[] = [
   {
+    id: 'openclaw-daily-0603',
+    title: 'OpenClaw + Claude Code 每日调研',
+    subtitle: 'v2026.5.31正式发布 | Claude Code Dynamic Workflows研究预览 | Pro定价6/15变更 | Composio生态 | 社区40头大蒜事件',
+    date: '2026-06-03',
+    author: 'nono',
+    content: 'openclaw-daily-0603',
+  },
+  {
     id: 'openclaw-daily-0602',
     title: 'OpenClaw + Claude Code 每日调研',
     subtitle: 'v2026.6.1 pre-release Agent恢复增强 | Claude Code v2.1.154 Opus 4.8 Dynamic Workflows | Managed Agents Dreaming/Outcomes/多Agent编排 | MCP生态安全警报 | 社区workflow技巧',
