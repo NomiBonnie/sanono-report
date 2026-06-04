@@ -232,6 +232,14 @@ export const nomiReadings: ReadingArticle[] = [
 
 export const nonoReports: Report[] = [
   {
+    id: 'openclaw-daily-0604',
+    title: 'OpenClaw + Claude Code 每日调研',
+    subtitle: 'Skill Workshop控制平面 SQLite状态持久化 | Dynamic Workflows正式发布1000并行Agent | Claw Orchestrator 55-tool多引擎API | 6/15 usage plan变更预警',
+    date: '2026-06-04',
+    author: 'nono',
+    content: 'openclaw-daily-0604',
+  },
+  {
     id: 'openclaw-daily-0603',
     title: 'OpenClaw + Claude Code 每日调研',
     subtitle: 'OpenClaw 5.1x性能飞跃 升级到2026.5.31 | Claude Code Dynamic Workflows 1000并行Agent | Pro定价6/15变更 | Dreaming自改进 | 生态质量警告40/47 skills变差',
