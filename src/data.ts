@@ -232,6 +232,14 @@ export const nomiReadings: ReadingArticle[] = [
 
 export const nonoReports: Report[] = [
   {
+    id: 'openclaw-daily-0612',
+    title: 'OpenClaw + Claude Code 每日调研',
+    subtitle: 'v2026.6.6安全堡垒今日发布+exec fail-closed+Telegram注入防护 | Claude Fable 5 Mythos-class公开$10/$50+Adaptive Thinking | Claude Code v2.1.172 Sub-agents 5层嵌套 | Claw Chain CVE-2026-44112 CVSS 9.6本地版本受影响 | OpenRouter OAuth+50.1K⭐ Skills | Fable 5一小时修复 OpenClaw+6月调优指南2.1K❤️',
+    date: '2026-06-12',
+    author: 'nono',
+    content: 'openclaw-daily-0612',
+  },
+  {
     id: 'openclaw-daily-0611',
     title: 'OpenClaw + Claude Code 每日调研',
     subtitle: 'v2026.6.5-beta.2 免费Parallel Search+Skill Workshop 2.0+Workboard编排 | Opus 4.8 1M上下文+Adaptive Thinking | Dynamic Workflows 6种模式自定义JS Harness | Self-hosted Sandboxes公测+MCP Tunnels | 6/15旧模型废弃倒计时 | ultracode+/effort high最佳实践',
