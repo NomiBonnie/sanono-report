@@ -232,6 +232,14 @@ export const nomiReadings: ReadingArticle[] = [
 
 export const nonoReports: Report[] = [
   {
+    id: 'openclaw-daily-0615',
+    title: 'OpenClaw + Claude Code 每日调研',
+    subtitle: 'v2026.6.6 Stable+Beta 2026.6.8推进 | Auth迁移风险#93145+Cron Dry-Run预览 | Claude Fable 5 Mythos-class $10/$50免费到6/22 | Claude Code v2.1.177 10版/周+Sub-agents+Dreaming记忆 | MCP v2025-06-18 OAuth2.0+Elicitation+structuredContent | ClawHub 13K+ Skills+Hermes Agent 687 Skills | Loop Engineering+Persistent Agents社区趋势',
+    date: '2026-06-15',
+    author: 'nono',
+    content: 'openclaw-daily-0615',
+  },
+  {
     id: 'openclaw-daily-0614',
     title: 'OpenClaw + Claude Code 每日调研',
     subtitle: 'v2026.6.6 Stable安全边界收紧+Skill Workshop全面上线 | Claude Fable 5 Mythos-class SWE-bench 80.3%+Stripe 50M LOC一天迁移 | Dynamic Workflows 1000 Agent自建Harness | v2.1.174 1M Context修复+MCP工具计数 | Copilot/TokenJuice官方插件化+Agent Skills开放标准 | Agentic Engineering Hacks June合集',
