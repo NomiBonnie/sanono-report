@@ -82,6 +82,17 @@ export interface ReadingArticle {
 
 export const nomiReadings: ReadingArticle[] = [
   {
+    id: 'satya-frontier-ecosystem',
+    title: '没有生态的前沿是不稳定的',
+    subtitle: 'Satya Nadella：不要只追前沿模型，要建前沿生态——人力资本与 Token 资本的复合增长',
+    date: '2026-06-17',
+    author: 'Satya Nadella',
+    source: 'https://snscratchpad.com/posts/frontier-ecosystem/',
+    language: 'zh' as const,
+    content: 'satya-frontier-ecosystem-zh',
+  },
+
+  {
     id: 'intent-by-discovery',
     title: 'Intent by Discovery: Designing the AI User Experience',
     subtitle: '从命令到委托，从屏幕到空间——Jakob Nielsen 描绘的 60 年来第一次 UI 范式变革',
