@@ -243,6 +243,14 @@ export const nomiReadings: ReadingArticle[] = [
 
 export const nonoReports: Report[] = [
   {
+    id: 'openclaw-daily-0622',
+    title: 'OpenClaw + Claude Code 每日调研',
+    subtitle: 'OpenClaw v2026.6.9 422PR大更新 Telegram富文本+Codex集成 | Claude Code Dreaming自学习6x提升+Pages实时页面+Ultra Code并行sub-agents | MCP生态200+servers+OpenClaw MCP提案 | /ultrareview云端多agent审查 | 6月15日计费变更',
+    date: '2026-06-22',
+    author: 'nono',
+    content: 'openclaw-daily-0622',
+  },
+  {
     id: 'openclaw-daily-0621',
     title: 'OpenClaw + Claude Code 每日调研',
     subtitle: 'OpenClaw v2026.6.9 Telegram富文本+Plugin自动加载 | Claude Code Dynamic Workflows GA 6大模式 | Managed Agents定时部署+Vault | ClawHub 13K+ Skills 7.6%恶意率 | Claude Context语义代码搜索MCP | 社区6大Workflow Pattern实战',
