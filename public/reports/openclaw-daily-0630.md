@@ -1,129 +1,121 @@
 # OpenClaw + Claude Code 每日调研 — 2026-06-30
 
-![OpenClaw + Claude Code Daily Pulse Infographic](/images/openclaw-daily-0630/infographic.png)
-
+![Infographic](/images/openclaw-daily-0630/infographic.png)
 
 ## Part 1: OpenClaw 本体
 
-### 当前稳定版：2026.6.10
-🟢 **可靠信息**
+### 当前版本：2026.6.10（稳定）/ 2026.6.11-beta.1（测试）
 
-**主要更新内容：**
-- 短对话自动 fast mode
-- 更可靠的模型路由（model routing）
-- 更安全的 session state trusted policies
-- 更好的 provider onboarding 流程
+**近期重要修复与改进：** 🟢
+- `fix(ollama)`: 远程/云 base URL 跳过自动发现（PR #93956）
+- `fix`: `/status` 对 pinned model session 不再过于冗长（PR #95797）
+- `fix`: npm 插件更新不再中断运行中 gateway imports（PR #95589）
+- `feat(cli)`: 新增 `openclaw sessions compact` 命令（PR #91378）
+- `fix(gateway)`: plugin finalization 期间保留活跃 runs（PR #92746）
+- `fix(agent)`: source message tool replies 后正确 continue（PR #92343）
+- Session identity 注入 runtime prompt（PR #92468）
 
-**2026.6.11-beta.1 已在测试：**
-- Gateway runtime doctor（PR #97075）— 自动诊断运行时问题
-- Telegram long-stream 修复（PR #97312）
-- sessions_history 分页支持（PR #97101）
-- 修复 cron context 浪费问题（#97317）
-- 修复 replay-unsafe tool-call 问题（#97324）
-
-**建议：** 生产环境保持 2026.6.10。beta 版仅在需要特定修复时使用。
-
-### 重要 PRs/Issues
-| PR/Issue | 内容 | 状态 |
-|----------|------|------|
-| #97075 | Gateway runtime doctor | Beta |
-| #97312 | Telegram long-stream | Beta |
-| #97101 | sessions_history pagination | Beta |
-| #97317 | Cron context waste | Open |
-| #97324 | Replay-unsafe tool-call | Open |
+**升级建议：** 生产环境保持 2026.6.10。升级前重点烟雾测试：provider auth、cron failure alerts、channel delivery、media handling。
 
 ---
 
 ## Part 2: Claude Code 本体
 
-### 2026 年 6 月更新汇总
-🟢 **可靠信息（来源：Releasebot + Anthropic）**
+### 🔥 本周重点：Dynamic Workflows + Artifacts（Week 25, Jun 15-19）
 
-**最新功能（v2.1.169+）：**
+**Dynamic Workflows（研究预览）** 🟢
+- 可用于 CLI、Desktop、VS Code 扩展
+- 支持 Max、Team、Enterprise 计划
+- 也可通过 API、Amazon Bedrock、Vertex AI、Microsoft Foundry 使用
+- 核心能力：自动编排多 agent 并行工作，无需手写 orchestration loop
+- 实测案例：50+ agents 并行处理 70+ 文档 data room，30 分钟完成尽职调查报告
 
-1. **Safe Mode（`--safe-mode`）** — 一键禁用所有自定义层（CLAUDE.md、plugins、skills、hooks、MCP servers），用于故障排查
-2. **`/cd` 命令** — 在会话中切换工作目录
-3. **Post-session hook** — 会话结束后可执行自定义脚本
-4. **Bundled-skill hiding** — 隐藏内置 skill 以减少干扰
-5. **Fullscreen mouse click controls** — 全屏模式支持鼠标点击
-6. **Sandbox credential blocking** — 沙箱环境阻止凭证泄露
-7. **Org model restrictions** — 组织级模型限制
-8. **Voice dictation 修复** — macOS/Linux 语音输入更稳定
+**Artifacts（Beta）** 🟢
+- 从 session 输出发布为 claude.ai 上的实时可分享页面
+- 适合：PR walkthrough + diff 标注、session 数据构建的 dashboard
+- 支持 Team 和 Enterprise 计划
 
-**Opus 4.8 成为默认模型** — 更强推理，但也更啰嗦（Anthropic 官方承认）
+**其他 Week 25 更新：**
+- Deny/ask 规则支持工具参数匹配：`Tool(param:value)` 语法
+- `/config key=value` 可直接从 prompt 设置任何配置
+- Auto mode 阻止 destructive git 命令（未主动要求 discard 时）
 
-**已知问题：**
-- 5 次 partial-outage（7月初）影响 Opus 4 & Sonnet 4
-- 背景 agent 可靠性仍在改进中
-- Remote session 启动性能持续优化
+**模型更新：**
+- Opus 4.8 + Haiku 4.5 已在 Messages API 可用
+- Claude Code Safe Mode、`/cd` 命令、Opus 4.8 默认、`/usage` 细分、2x rate limits
 
-**行业预测：** Claude Code 预计到 2026 年底将占所有日常 commits 的 20%+（@TheZvi）
+**Billing 变更（已暂停）** 🟡
+- 原计划 6/15 将 Agent SDK / `claude -p` / GitHub Actions 用量分离计费
+- 当天被暂停，目前仍用订阅额度
 
 ---
 
-## Part 3: 🔥 生态（OpenClaw + Claude Code）
+## Part 3: 🔥 生态（OpenClaw + Claude Code 合并）
 
-### MCP Servers 热门推荐
+### ClawHub 热门 Skills
 
-| Server | 功能 | 适合 Sam 场景 | 安全评估 |
-|--------|------|--------------|----------|
-| **Google Antigravity CLI MCP** | 在 Claude Code 中调用 Gemini 3.5 Flash | ⭐ 多模型协作 | 🟢 官方 |
-| **Graph Memory MCP** | 持久图记忆架构，多 agent 隔离上下文 | ⭐⭐ 多 agent 系统 | 🟡 新项目 |
-| **Calibre MCP** | AI 管理电子书库，RAG 检索 | 中 | 🟢 |
-| **IMAP Email MCP** | AI 驱动邮件管理 | 中 | 🟡 需审查权限 |
-| **Sendmux Email MCP** | 邮件 API 集成 | 低 | 🟢 |
+| Skill | 安装量 | 功能 | Sam 匹配度 |
+|-------|--------|------|------------|
+| **Skill Vetter** | ~256K | 安装前安全扫描 | ⭐⭐⭐ 已装 |
+| **Telegram Notify** | #1 最多下载 | 格式化消息推送 | ⭐⭐⭐ 已装 |
+| **Web Search** | 35K+ | 搜索增强 | ⭐⭐⭐ 已有 |
+| **Agent Browser** | 11K+ | 网页自动化 | ⭐⭐ 已有 |
+| **mcporter** | 高 | MCP 协议桥接（USB-C for agents） | ⭐⭐⭐ 值得关注 |
+| **TranscriptAPI** | 中 | YouTube 转录 + 摘要 | ⭐⭐ 已有类似 |
 
-### 值得关注的工具/项目
+**安全提醒：** 独立安全研究发现 2026 初 ClawHub 约 1/5 插件存在恶意行为，已大规模清理但仍需警惕。Skill Vetter 必装。🔴
 
-1. **OpenTweet MCP** — 在 Claude Code 中直接管理 Twitter（30+ 工具），无需切换浏览器
-2. **Totalum MCP** — 将 Claude Code 连接到生产栈（auth/DB/支付/部署）
-3. **Claude Code Hooks 生产 Playbook** — 10+ 事件钩子（PreToolUse, PostToolUse, Stop, SubagentStop, SessionStart 等）
+### MCP Servers 推荐（2026 热门）
 
-### OpenClaw 生态
+| Server | 用途 | 适合 Sam |
+|--------|------|----------|
+| **Firecrawl MCP** | 搜索 + 抓取一步完成 | ⭐⭐ 已有 web_fetch |
+| **GitHub MCP** | Repo/Issue/PR/CI 上下文 | ⭐⭐⭐ |
+| **Context7** | 实时文档查询 | ⭐⭐ |
+| **Playwright MCP** | 浏览器自动化 | ⭐⭐ 已有 browser |
+| **Notion MCP** | 数据库/页面操作 | ⭐⭐ 已有 skill |
+| **Taskade MCP** | 工作区集成 | ⭐ 不需要 |
 
-- **Skill Workshop 全功能化**（v2026.6.1）— 技能创建/测试/发布流程完善
-- **MiniMax M3 支持** — 新增模型选项
-- **Tokenjuice 插件外部化** — 可独立安装
-- **GitHub Copilot 插件外部化**
-- **SQLite-backed queues** — 更可靠的消息队列
+### Claude Code Skills 生态
+
+- `inference-sh/twitter-automation` — CLI Twitter 自动化，含 AI 图片/视频发布
+- OpenTweet MCP Server — Claude Code 内直接发推/查分析
+- Claude Code Skills Generator（Firecrawl 构建）— 自动生成 skill
 
 ---
 
 ## Part 4: 🎮 社区玩法 / 小技巧
 
-### Claude Code 高效技巧（Advent of Claude 2025 精华）
+### Dynamic Workflows 实战技巧 🔥
 
-1. **`!` 前缀** — 即时执行 bash，不浪费 tokens 让 Claude 帮你跑命令
-2. **`#` 前缀** — 直接保存到 Claude 记忆
-3. **`&` 前缀** — 将任务发送到云端执行
-4. **Plan mode** — 复杂任务先让 Claude 出方案再执行
-5. **Exit early** — 发现方向不对及时退出，省 tokens
+1. **Data Room Due Diligence** — 50+ agents 并行审查 70 份文档，自动交叉验证，30 分钟出报告（Mark Kashef 实测）
+2. **Rust Lifetimes 自动推理** — workflow 自动为每个 struct field 标注正确生命周期
+3. **并行 Code Review** — 每文件双独立 reviewer，spawn 数百 agents
 
-### 实战建议（30 Tips from 1500+ Hours）
+**触发方式：** `workflow` 关键词 / `/workflows` 命令 / `ultracode` 模式
 
-- 并行 sessions 处理多任务
-- CLAUDE.md 写清楚项目上下文，让 Claude 开口就知道怎么做
-- 善用 `--safe-mode` 排查配置冲突
-- Post-session hook 自动提交、运行测试
+### 开发者 Workflow 分享
 
-### Twitter 自动化
+- **AI Developer Workflow 2026**（developersdigest.tech）：Claude Code 为主力编码 agent + Cursor 做 review 层 + vault 做知识库
+- **Twitter 自动化实战**：OpenTweet MCP + Claude Code，commit 后自动发推
 
-- **OpenTweet + Claude MCP** 方案比 OpenClaw skill 更专业：30 工具、调度、分析、常青队列
-- 适合需要 Twitter 运营自动化的场景
+### Week 21 回顾
 
----
-
-## 📊 总结与建议
-
-| 板块 | 要点 | 行动建议 |
-|------|------|----------|
-| OpenClaw | 2026.6.10 稳定，beta 有 cron/session 修复 | 等 6.11 正式版再升 |
-| Claude Code | Safe mode + /cd 是排查利器，Opus 4.8 默认 | 升级到最新，试试 safe mode |
-| 生态 | Graph Memory MCP 适合多 agent | 可评估引入 |
-| 社区 | Hooks 10+ 事件，自动化空间大 | 考虑 post-session hook |
+- Auto mode 登陆 Pro 计划（支持 Sonnet 4.6）
+- `/usage` 按 skill/subagent/plugin/MCP server 细分用量
+- `/code-review` 新命令：报告正确性 bug
+- Background sessions 可在 `/resume` 中查看
 
 ---
 
-*调研时间：2026-06-30 02:02 CST*
-*搜索轮次：7*
-*信息源：Tavily API → GitHub, Releasebot, MCPMarket, Twitter/X, Dev.to, Anthropic*
+## 信息可靠度
+
+- 🟢 OpenClaw 版本信息（来自官方 changelog + releasebot.io）
+- 🟢 Claude Code Week 25 更新（来自 code.claude.com 官方文档）
+- 🟢 Dynamic Workflows（Anthropic 官方博客 + InfoQ 报道）
+- 🟡 ClawHub 安装量数据（第三方博客汇总，可能有时效差异）
+- 🟡 Billing 暂停（BuildThisNow 报道，非官方一手源）
+
+---
+
+*报告生成时间：2026-06-30 12:00 CST*
