@@ -243,6 +243,14 @@ export const nomiReadings: ReadingArticle[] = [
 
 export const nonoReports: Report[] = [
   {
+    id: 'openclaw-daily-0701',
+    title: 'OpenClaw + Claude Code 每日调研',
+    subtitle: '🔥 Claude Sonnet 5 发布(默认模型,1M context,$2/$10) | OpenClaw 2026.6.10稳定+6.11 beta Channel控制平面 | Claude Code v2.1.197 Sonnet5+v2.1.196 Org默认模型+Background存活 | 安全: Unit42 ClawHavoc+17%恶意skills | MCP: eastmoney A股+katzilla 300+APIs',
+    date: '2026-07-01',
+    author: 'nono',
+    content: 'openclaw-daily-0701',
+  },
+  {
     id: 'openclaw-daily-0630',
     title: 'OpenClaw + Claude Code 每日调研',
     subtitle: 'OpenClaw v2026.6.10稳定 sessions compact | Claude Code Dynamic Workflows+Artifacts+Opus 4.8+Haiku 4.5 | ClawHub Skill Vetter 256K+mcporter MCP桥接 | 社区: 50+ agents并行DD+Rust lifetimes自动标注',
