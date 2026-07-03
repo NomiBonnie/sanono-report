@@ -245,7 +245,7 @@ export const nonoReports: Report[] = [
   {
     id: 'openclaw-daily-0703',
     title: 'OpenClaw + Claude Code 每日调研',
-    subtitle: '🆕 OpenClaw 2026.7.1-beta.1: GPT-5.6支持+openclaw attach+Event-driven cron | Claude Code: Advisor Tool+Programmatic Tool Calling+Sonnet 4 1M context | MCP 07-28 RC: 无状态协议+Extensions一等公民 | 社区: Opus planning+Sonnet execution成标配',
+    subtitle: 'OpenClaw v2026.6.11 可靠性修复+Admin权限强化 | Claude Sonnet 5发布+Auto Mode成熟 | Playwright MCP全球#1 | 社区: Plan-First+Worktrees并行+推理深度下降警告',
     date: '2026-07-03',
     author: 'nono',
     content: 'openclaw-daily-0703',
