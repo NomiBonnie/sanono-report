@@ -1,99 +1,96 @@
-# OpenClaw + Claude Code 每日调研 — 2026-07-06
+# OpenClaw + Claude Code Weekly — July 6, 2026
 
 ![Infographic](/images/openclaw-daily-0706/infographic.png)
 
 ## Part 1: OpenClaw 本体
 
-### 当前稳定版：2026.6.10 | Beta: 2026.6.11-beta.1
+### 🟢 Pre-Release 2026.7.1-beta.2 (Jul 5)
 
-**近期修复（6月底~7月初）：** 🟢
-- `fix: preserve iOS chat line breaks` — iOS 聊天换行不再丢失
-- `fix(ios): use Gateway speech providers in Talk` — Talk 模式走 Gateway 语音
-- `fix(telegram): keep group history always on` — Telegram 群组历史记录强制开启
-- `fix(cron): detach session-targeted runs` — cron 任务不再阻塞目标 session
-- `fix(agents): preserve fd find failures` — agent 文件发现失败不再崩溃
-- `fix(android): reject IPv6 zone IDs in gateway endpoint URLs` — Android IPv6 兼容修复
-- `fix(agent): continue after source message tool replies` — 工具回复后 agent 继续执行
-- `fix #92453: add session identity to runtime prompt` — session 身份注入到 runtime prompt
+OpenClaw 发布了一个重量级 beta，亮点：
 
-**升级建议：** 生产环境保持 `2026.6.10`。Beta 只在需要特定修复时使用。
-
-**趋势观察：** 🟢 OpenClaw 持续收敛到 MCP/tool 基础设施方向——强化 auth surfacing、cron alerting、session identity、channel delivery。
+1. **GPT-5.6 支持** — 社区贡献 PR，首日落地。覆盖 catalog/capability/runtime 全链路。
+2. **`openclaw attach`** — 外部 harness 附加到已有 Gateway session，方便恢复/检查 Codex 式工作流。
+3. **Telegram Codex 工作流** — `/login` 启动 Codex pairing，可 steer 活跃 run，跨瞬时 API 故障恢复最终回复。
+4. **Event-driven cron (`on-exit`)** — 监听进程退出触发 agent turn，告别轮询猜时间。
+5. **iOS 26 视觉大改** — Chat/Talk/Onboarding/Reconnect 全面刷新，本地化扩展。
+6. **iMessage 原生投票** — 创建/阅读/投票 poll。
+7. **Scoped conversations** — 每对话工具/访问边界的 capability profiles。
+8. **Mac 本地 Gateway 自动安装** — macOS app 一键启动本地 Gateway。
+9. **Nemotron Super 1M 上下文窗口** — 本地推理长上下文首次一等支持。
 
 ---
 
 ## Part 2: Claude Code 本体
 
-### 最新版本：v2.1.183（Jul 4, 2026）| 383 total release notes
+### 🟢 v2.1.201 (Jul 4) & v2.1.200 (Jul 3)
 
-**Week 25 (Jun 15-19) 亮点：** 🟢
+**v2.1.201:**
+- Claude Sonnet 5 sessions 不再在对话中途用 system role 发 harness reminders
 
-1. **Artifacts（Beta）** — 从 session 直接发布 live interactive page 到 claude.ai 私有 URL。适合 PR walkthrough、dashboard。Team/Enterprise 可用。
-2. **Tool Parameter Matching** — deny/ask rules 支持 `Tool(param:value)` 语法，如 `Agent(model:opus)` 匹配 Opus 模型调用。
-3. **`/config key=value`** — 从 prompt、`-p` 模式、Remote Control 直接设置配置。
-4. **Auto mode blocks destructive git** — auto 模式自动阻止破坏性 git 命令。
+**v2.1.200（大版本）:**
+- **Manual 权限模式成为默认** — CLI、VS Code、JetBrains 统一
+- AskUserQuestion 不再自动 continue，需手动 opt-in idle timeout
+- 多项后台 agent 修复：sleep/wake 后停止、stale daemon.lock 死锁、daemon handover 竞争
+- 子 agent rate limit 空结果 → 现在 clean fail
+- Background agent roster 腐败恢复
 
-**其他重要更新：**
-- Auto mode on Pro plan + Sonnet 4.6 支持
-- `/usage` 按 skill/subagent/plugin/MCP server 分解用量
-- `/code-review` 报告 correctness bugs
-- Enterprise: admin analytics + model-level entitlements + spend alerts（Jul 1）
-- Managed Agents public beta — 定时运行 + CLI tools + authenticated services
+### 🟢 近期功能回顾 (Week 25-26)
+
+- `claude mcp login/logout` — Shell 中认证 MCP server
+- Shell mode 响应命令输出 — `! npm test` 自动解释
+- `/rewind` 跨 `/clear` — 恢复被清空的对话
+- 后台子 agent 权限提示 — 主 session 弹出而非 auto-deny
+- Artifacts (beta) — 会话输出变为实时可分享页面
+- deny/ask 规则匹配工具参数 — `Tool(param:value)` 粒度
+- `/cd` — 中途切换工作目录，不重建 prompt cache
+- 子 agent 嵌套（5 层上限）
+- `--safe-mode` — 禁用所有自定义排障
 
 ---
 
-## Part 3: 🔥 生态（OpenClaw + Claude Code 合并）
+## Part 3: 🔥 生态
 
-### MCP 趋势
+### MCP Servers 热门推荐
 
-**"Less chat-centric, more runtime-centric"** — 2026 年中核心趋势。🟢
+| 名称 | 功能 | 适合 Sam |
+|------|------|----------|
+| **GitHub MCP** (官方 public preview) | Repo/PR/Issue 操作 | ⭐⭐⭐ |
+| **Context7** | 文档上下文增强 | ⭐⭐⭐ |
+| **Playwright MCP** | 浏览器自动化 | ⭐⭐ |
+| **mcp-github-trending** | GitHub trending 数据 | ⭐⭐ |
 
-**热门方向：**
-- Browser automation（Puppeteer/Playwright）
-- Filesystem / GitHub / Postgres（Anthropic 官方）
-- Social media API（Twitter/LinkedIn/Bluesky）
-- Composio MCP Gateway — 托管 MCP servers + tool routing
+### ClawHub 安全警告 🔴
 
-### ClawHub 热门 Skills
-
-| Skill | 功能 | Sam 适配度 |
-|-------|------|-----------|
-| Web Browser Automation | 网页浏览/表单/价格监控 | ⭐⭐⭐ |
-| mcporter | MCP 协议桥接 | ⭐⭐⭐ |
-| Telegram Integration | 消息/群组/频道 | 已有 |
-| Email Assistant | 智能邮件处理 | ⭐⭐ |
-
-### ⚠️ 安全警告
-
-**r/hacking 报告：~15% 社区 skills 含恶意指令** 🔴
-- 隐藏 regex patterns、混淆 instructions
-- 建议：继续严格执行 skill-vetter 审查
+- **341 个恶意 skills 被发现窃取用户数据**（TheHackerNews 2026-02 报道）
+- 提醒：skill-vetter 审查流程必须执行！
 
 ---
 
 ## Part 4: 🎮 社区玩法 / 小技巧
 
-### 热门 Workflow
+### 🔥 Twitter 热门
 
-1. **Daily Briefing Bot** — Cron 7AM → 聚合 Twitter/Reddit → Telegram 推送 🟢
-2. **Monorepo 单 Session 管理** — `.claude/` 配置管理多项目，review every piece of code 🟢
-3. **Self-Healing Server** — OpenClaw + monitoring = 自动诊断修复 🟢
-4. **Social Media Automation** — Claude Code + browser MCP 自动发帖 🟡
+1. **Karpathy 描述 2026 招聘新标准** — "用 Claude Code 独立构建 Twitter clone 级项目" = 一人顶一个开发团队
+2. **Claude Code Community (@claude_code)** — 活跃分享 tips 和 workflow
 
 ### 实用技巧
 
-- `/config key=value` — prompt 里直接改配置
-- `Agent(model:opus)` — deny rules 精确控制模型使用
-- Background sessions + `/resume` — 长任务不丢失
-- Artifacts — PR review 可视化利器
-- "Harness > Model" — 2026 workflow 核心理念
+- Shell mode (`!` 前缀) — 运行命令后自动获得解释
+- `/rewind` 跨 clear — 误清对话可恢复
+- `--safe-mode` 排障 — 插件问题一键排除
+- `openclaw attach` — 长时间任务中途检查进度
+- Event-driven cron — 部署完成自动触发验证
+- velvet-shark 的 50 天 OpenClaw 实战 — 20 个真实用例完整 prompt 集合
 
 ---
 
-## 📊 可靠度
+## 📊 本日总结
 
-- 🟢 官方来源 / 可验证
-- 🟡 社区来源 / 需确认
-- 🔴 安全警告
+| 板块 | 更新量 | 重要度 |
+|------|--------|--------|
+| OpenClaw | ⭐⭐⭐ 大版本 beta | 高 |
+| Claude Code | ⭐⭐⭐ 重要修复 | 高 |
+| 生态 | ⭐⭐ 安全警告 | 中 |
+| 社区 | ⭐⭐ 实用技巧 | 中 |
 
-**搜索轮次：** 6 轮 | **报告时间：** 2026-07-06 12:00 CST | **By NONO 🏠**
+**对 Sam 最相关：** `openclaw attach`、Event-driven cron、Manual 权限默认、Background agent 修复

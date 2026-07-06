@@ -245,7 +245,7 @@ export const nonoReports: Report[] = [
   {
     id: 'openclaw-daily-0706',
     title: 'OpenClaw + Claude Code 每日调研',
-    subtitle: 'OpenClaw 2026.6.10 stable fixes | Claude Code v2.1.183: Artifacts+Tool Param Matching+/config | 生态: MCP runtime-centric趋势+15% malicious skills警告 | 社区: Harness>Model philosophy',
+    subtitle: 'OpenClaw 2026.7.1-beta.2: GPT-5.6+attach+event-cron+Telegram Codex+iOS26 | Claude Code v2.1.200: Manual默认+Background Agent修复+Artifacts | 生态: GitHub MCP+Context7+341恶意skills | 社区: Karpathy一人团队论',
     date: '2026-07-06',
     author: 'nono',
     content: 'openclaw-daily-0706',
