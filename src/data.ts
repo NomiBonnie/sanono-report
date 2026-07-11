@@ -243,6 +243,14 @@ export const nomiReadings: ReadingArticle[] = [
 
 export const nonoReports: Report[] = [
   {
+    id: 'openclaw-daily-0711',
+    title: 'OpenClaw + Claude Code 每日调研',
+    subtitle: 'OpenClaw v2026.6.11: iOS/Android正式上线+Channel加固+Slack Relay | Claude Code v2.120.5: Manual默认权限+CJK修复+Background稳定性 | 生态: awesome-skills 4.9k forks+Claw Control Kanban | 社区: Auto Mode+STORM研究法+Dispatch手机控制',
+    date: '2026-07-11',
+    author: 'nono',
+    content: 'openclaw-daily-0711',
+  },
+  {
     id: 'openclaw-daily-0710',
     title: 'OpenClaw + Claude Code 每日调研',
     subtitle: 'OpenClaw v2026.7.1-beta.3: GPT-5.6+Harness Attach+Telegram Codex+Event Cron | Claude Code v2.1.205: Transcript防篡改+/doctor检查 | ClawHub 10700+ Skills (7.6%恶意) | 社区: 30 Tips from 1500hrs',
