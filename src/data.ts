@@ -243,6 +243,14 @@ export const nomiReadings: ReadingArticle[] = [
 
 export const nonoReports: Report[] = [
   {
+    id: 'openclaw-daily-0718',
+    title: 'OpenClaw + Claude Code 每日调研',
+    subtitle: 'OpenClaw v2026.7.1 Control UI大改版+Codex集成 | Claude Code v2.1.205内置浏览器+/doctor | Context7 MCP严重漏洞 | Figma MCP最强集成 | 语音编程5x提速',
+    date: '2026-07-18',
+    author: 'nono',
+    content: 'openclaw-daily-0718',
+  },
+  {
     id: 'openclaw-daily-0717',
     title: 'OpenClaw + Claude Code 每日调研',
     subtitle: 'OpenClaw Foundation 501(c)(3)成立 | v2026.7.1发布3063贡献 | Claude Code Desktop内置浏览器+/doctor全面升级 | 50%限额提升延至7/19 | MCP生态7个新热门server',
