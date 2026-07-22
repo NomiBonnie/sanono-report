@@ -243,6 +243,14 @@ export const nomiReadings: ReadingArticle[] = [
 
 export const nonoReports: Report[] = [
   {
+    id: 'openclaw-daily-0722',
+    title: 'OpenClaw + Claude Code 每日调研',
+    subtitle: 'v2026.7.1 Stable稳定性争议 | Grok Build仓库窃取丑闻 | Claude Code内存泄漏修复+Memory API | CVE-2026-62225 skill dispatch绕过 | Dreaming自学习agent 6x提升',
+    date: '2026-07-22',
+    author: 'nono',
+    content: 'openclaw-daily-0722',
+  },
+  {
     id: 'openclaw-daily-0721',
     title: 'OpenClaw + Claude Code 每日调研',
     subtitle: 'v2026.7.1 Control UI重构+分屏面板 | Claude Code Artifacts+MCP实时数据 | MCP规范无状态革命7/28正式发布 | /fork变后台session | 社区稳定性争议但v7.1改善',
