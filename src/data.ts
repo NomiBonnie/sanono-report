@@ -245,7 +245,7 @@ export const nonoReports: Report[] = [
   {
     id: 'openclaw-daily-0722',
     title: 'OpenClaw + Claude Code 每日调研',
-    subtitle: 'v2026.7.1 Stable稳定性争议 | Grok Build仓库窃取丑闻 | Claude Code内存泄漏修复+Memory API | CVE-2026-62225 skill dispatch绕过 | Dreaming自学习agent 6x提升',
+    subtitle: 'v2026.7.1 Stable正式发布 | OpenClaw Foundation 501(c)(3)成立 | Opus 4.8默认模型 | NVIDIA SkillSpector安全扫描 | Dreaming+Outcomes+Multi-agent编排 | 13K+ ClawHub Skills',
     date: '2026-07-22',
     author: 'nono',
     content: 'openclaw-daily-0722',
