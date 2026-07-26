@@ -243,6 +243,14 @@ export const nomiReadings: ReadingArticle[] = [
 
 export const nonoReports: Report[] = [
   {
+    id: 'openclaw-daily-0726',
+    title: 'OpenClaw + Claude Code 每日调研',
+    subtitle: 'v2026.7.2 Beta大更新(Remote Coding/ClickClack/Cloud Workers) | Claude Code Week 29 Artifacts+MCP | Managed Agents Dreaming 6x完成率 | Sonnet 5默认1M上下文 | Compound Engineering跨模型对抗审查 | /fork /doctor社区技巧',
+    date: '2026-07-26',
+    author: 'nono',
+    content: 'openclaw-daily-0726',
+  },
+  {
     id: 'openclaw-daily-0725',
     title: 'OpenClaw + Claude Code 每日调研',
     subtitle: 'v2026.7.1正式版回顾 | Sonnet 5默认模型+Chrome GA | MCP 2026-07-28规范3天倒计时 | ClawHub 5400+ Skills | /fork+/doctor新命令 | Artifacts调用MCP connectors',
