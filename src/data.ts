@@ -243,6 +243,14 @@ export const nomiReadings: ReadingArticle[] = [
 
 export const nonoReports: Report[] = [
   {
+    id: 'openclaw-daily-0730',
+    title: 'OpenClaw + Claude Code 每日调研',
+    subtitle: 'OpenClaw v2026.7.1(Control UI重写/崩溃恢复/会话倒带) | Claude Code v2.1.216/217(FS隔离开关/O(n²)修复/Sub-agent控制) | Context7 348K安装/Figma MCP beta | Fable 5恢复上线/开发者工作流趋势',
+    date: '2026-07-30',
+    author: 'nono',
+    content: 'openclaw-daily-0730',
+  },
+  {
     id: 'openclaw-daily-0729',
     title: 'OpenClaw + Claude Code 每日调研',
     subtitle: 'OpenClaw 2026.7.2(远程编码/ClickClack/Linux包) | Claude Code Artifacts+MCP实时数据/Screen Reader/fork→Background | Context7 MCP/mcporter/MintMCP | Spec-based开发法/Claude Cowork 15/17有效',
