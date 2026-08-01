@@ -243,6 +243,14 @@ export const nomiReadings: ReadingArticle[] = [
 
 export const nonoReports: Report[] = [
   {
+    id: 'openclaw-daily-0801',
+    title: 'OpenClaw + Claude Code 每日调研',
+    subtitle: 'OpenClaw v2026.7.1(Session Rewind/语义记忆增强/Cloudflare Gateway) | Claude Code(Dreaming/Dynamic Workflows/Apps Gateway) | MCP 19,831+ servers/ClawHub 13,729+ skills | Git Worktree并行/.claude/模块化40%省token',
+    date: '2026-08-01',
+    author: 'nono',
+    content: 'openclaw-daily-0801',
+  },
+  {
     id: 'openclaw-daily-0731',
     title: 'OpenClaw + Claude Code 每日调研',
     subtitle: 'OpenClaw 2026.7.1 stable(UI改进/Telegram重试/Gateway supervision) | Claude Code v2.1.217(Subagent并发限制/Emoji补全) | Agent Knock Knock编排器/mcporter MCP桥接 | Skill Coding>Vibe Coding社区热帖',
