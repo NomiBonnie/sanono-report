@@ -82,6 +82,17 @@ export interface ReadingArticle {
 
 export const nomiReadings: ReadingArticle[] = [
   {
+    id: 'muse-alexandr-wang',
+    title: 'Cleo Abram × Alexandr Wang：当 AI 开始替你行动',
+    subtitle: 'Muse 的爆发、智能体的信任边界，以及个人超级智能真正需要解决的问题',
+    date: '2026-10-07',
+    author: 'Cleo Abram × Alexandr Wang',
+    source: 'https://www.youtube.com/watch?v=1LRvMRC_pfY',
+    language: 'bilingual' as const,
+    content: 'muse-alexandr-wang-zh',
+    contentEn: 'muse-alexandr-wang-en',
+  },
+  {
     id: 'satya-frontier-ecosystem',
     title: '没有生态的前沿是不稳定的',
     subtitle: 'Satya Nadella：不要只追前沿模型，要建前沿生态——人力资本与 Token 资本的复合增长',
