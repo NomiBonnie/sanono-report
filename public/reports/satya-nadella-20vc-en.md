@@ -34,7 +34,7 @@
 
 **Satya**: If you leave AI safety aside, the trust architecture is going to be the kind of work a company like Microsoft does, or all the people in cybersecurity do. For example, we've built these two things, Agent 365 and Perception. What do they do? They give every agent an identity, then log all its activity: all its tool calls—in fact, every model call and the chain of thought (CoT) within it. That's where I'm also asking that all the CoT had better be in English, not “neuralese,” so you can inspect it using multiple models. Those logs had better be tamper-proof; you can't have an agent going back and modifying its own logs. On top of that, you set policy and then monitor the agents' behavior to check that their activity conforms to that policy. That's the architecture.
 
-![Zero-trust containment: an AI agent inside a glass shield, its tamper-proof log scroll kept outside its reach](/images/reading/satya-nadella-20vc-1.jpg)
+![Assume the model is compromised: identity, logs, tamper-proofing, policy and monitoring around the model](/images/reading/satya-nadella-20vc-en-1.jpg)
 
 **Harry**: We don't have that architecture today. Is that simply a reflection of where we are in the process?
 
@@ -46,7 +46,7 @@
 
 **Satya**: It isn't. We know that the chain of thought itself can be unfaithful. It gets worse when the model company says, “Well, it's unfaithful, so I'm going to hide it.” (Laughs.) That makes it even more problematic.
 
-![Chain of thought under a magnifying glass, with a few faded, unfaithful links](/images/reading/satya-nadella-20vc-2.jpg)
+![Chain of thought is not reliable: unfaithful links under a magnifying glass; make it inspectable and auditable](/images/reading/satya-nadella-20vc-en-2.jpg)
 
 **Satya**: That's where I think we need a bit of a push for standardization, and for CoT to be available as is, at least to trusted partners. It needs to be inspectable and auditable, so I can check it using multiple models and so on. Frankly, that's one of the things that may even drive more use of open weights. It's funny: closed models are more powerful, but if their providers don't recognize the need to be more transparent, especially as their trusted partners use those models, then we may have a problem.
 
@@ -70,7 +70,7 @@
 
 **Satya**: The interesting part is that it's a learned model. We're moving into agent swarms and multiple subagents, so I can call lots of subagents that may even be local models. My suspicion is that there will always be a market for the frontier. There will always be something new; science may be where the next frontier is set. **But most token usage will be commodity token usage.**
 
-![A tall frontier peak and a wide, calm river of commodity tokens flowing through a router gate](/images/reading/satya-nadella-20vc-3.jpg)
+![Most tokens become commodities: the frontier peak, the router gate and a river of commodity tokens](/images/reading/satya-nadella-20vc-en-3.jpg)
 
 **Harry**: Does that mean it will predominantly be open source?
 
@@ -90,7 +90,7 @@
 
 **Satya**: And that doesn't have to happen only by embedding your knowledge in weights. It can be in context or in your evals. You may have a benchmark. One idea I'm very enthusiastic about is that every firm will have a private eval benchmark that is its core IP. Every model comes in and tries to hill-climb on that eval. To me, that's how a firm works.
 
-![Models climbing switchbacks toward a flag on a firm's own summit: private evals](/images/reading/satya-nadella-20vc-4.jpg)
+![Private evals are a firm's core IP: models hill-climb on your eval; your standard of judgment stays](/images/reading/satya-nadella-20vc-en-4.jpg)
 
 **Harry**: I love this idea of private eval benchmarks for each company. But it seems to be the preserve of a rarefied set of companies—Harvey and similar, very forward-thinking AI-native businesses. Will it spread to every company in the world?
 
@@ -104,7 +104,7 @@
 
 **Satya**: It's interesting: an implementation economy and systems integrators have always existed. We've depended on them for the diffusion of many other technologies. This one has different contours because it combines technology and business. It isn't classic management consulting, classic systems integration, or classic technology support.
 
-![A bridge under construction between a business building and an engineering gear: the implementation economy](/images/reading/satya-nadella-20vc-5.jpg)
+![The implementation economy in four steps, with the Unilever order-to-cash case](/images/reading/satya-nadella-20vc-en-5.jpg)
 
 **Satya**: For example, think about where you want to start. When I look at our FDE engagements, take even the Unilever example I discussed in today's keynote. It's fascinating. They've built an agentic system and said, “We're really going to automate order to cash using an agentic system,” plus trade claims. They started by using a frontier model, and then they substituted another model. In fact, I think they're currently using an MAI model for all their trade claims because it's lower cost. And, by the way, they control it, because they're able to train on their own traces. We had some FDEs who were deployed, and now their own IT team is managing it all.
 
@@ -142,7 +142,7 @@
 
 **Satya**: I think so, and I hope so, because that's the point. Take the amount we spend on healthcare as a share of GDP. I look at the deployment of Copilot in the NHS and think: if it can improve patient outcomes and reduce healthcare costs, that is, by definition, helping the UK's GDP.
 
-![A flat 2 percent growth line bending upward, light spreading over a world map outline](/images/reading/satya-nadella-20vc-6.jpg)
+![Can AI lift global growth? The flat 2% line, healthcare and software, and $100B training runs paid for by growth](/images/reading/satya-nadella-20vc-en-6.jpg)
 
 **Satya**: There are pockets of the economy that are ripe for AI adoption, with the least displacement and the greatest benefit. That's where we need to find the best fit. Software development is another example. It's fascinating to see how elastic demand for software development is. It means the IT backlogs were huge, and none of us even recognized it.
 

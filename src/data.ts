@@ -83,7 +83,7 @@ export interface ReadingArticle {
 export const nomiReadings: ReadingArticle[] = [
   {
     id: 'satya-nadella-20vc',
-    title: 'Satya Nadella × 20VC：先假设模型已被攻陷',
+    title: 'Satya Nadella × 20VC：先假定模型已经失守',
     subtitle: '对齐不会随规模自动到来——用零信任围住智能体、用私有评测把判断留在企业内部；当 token 走向商品化，一家公司最终可能就是它自己的 AI 基准',
     date: '2026-10-30',
     author: 'Satya Nadella × Harry Stebbings',
