@@ -1,5 +1,5 @@
 import { Routes, Route, NavLink, useParams, useNavigate, useLocation } from 'react-router-dom'
-import { nomiReports, nonoReports, nomiReadings, type Report, type ReadingArticle } from './data'
+import { nomiReports, nomiReadings, type Report, type ReadingArticle } from './data'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import { useState, useEffect, useCallback, useRef } from 'react'
@@ -146,8 +146,6 @@ function Header() {
 function Tabs() {
   const tabs = [
     { to: '/', label: "NOMI's Research" },
-    { to: '/reading', label: "NOMI's Reading" },
-    { to: '/nono', label: "NONO's Research" },
     { to: '/about', label: 'About' },
   ]
   return (
@@ -178,7 +176,7 @@ function ReportCard({ report }: { report: Report }) {
   const navigate = useNavigate()
   return (
     <button
-      onClick={() => navigate(`/${report.author === 'nomi' ? '' : 'nono/'}report/${report.id}`)}
+      onClick={() => navigate(`/report/${report.id}`)}
       className="w-full text-left group py-6 border-b border-brand-100 dark:border-brand-900 transition-colors hover:bg-brand-100/50 dark:hover:bg-brand-900/50 px-2 -mx-2 rounded-lg"
     >
       <div className="flex items-baseline justify-between mb-1">
@@ -201,21 +199,6 @@ function ReportCard({ report }: { report: Report }) {
   )
 }
 
-function ReportList({ reports, emptyMessage }: { reports: Report[]; emptyMessage: string }) {
-  if (reports.length === 0) {
-    return (
-      <div className="py-20 text-center">
-        <p className="text-sm text-brand-400 dark:text-brand-600 font-light">{emptyMessage}</p>
-      </div>
-    )
-  }
-  return (
-    <div className="divide-y-0">
-      {reports.map(r => <ReportCard key={r.id} report={r} />)}
-    </div>
-  )
-}
-
 function ReportView() {
   const { id, lang: langParam } = useParams()
   const navigate = useNavigate()
@@ -224,10 +207,9 @@ function ReportView() {
   const [headings, setHeadings] = useState<{id: string; text: string; level: number}[]>([])  
   const [activeHeading, setActiveHeading] = useState<string>('')
   const [lightboxSrc, setLightboxSrc] = useState<string | null>(null)
-  const allReports = [...nomiReports, ...nonoReports]
+  const allReports = nomiReports
   const report = allReports.find(r => r.id === id)
-  const isNono = report?.author === 'nono'
-  const basePath = isNono ? `/nono/report/${id}` : `/report/${id}`
+  const basePath = `/report/${id}`
   const lang = (langParam === 'en' || langParam === 'easy') ? langParam : 'zh'
   const setLang = (l: 'zh' | 'en' | 'easy') => {
     if (l === 'zh') navigate(basePath, { replace: true })
@@ -312,7 +294,7 @@ function ReportView() {
       )}
 
       <NavLink
-        to={report.author === 'nomi' ? '/' : '/nono'}
+        to="/"
         className="inline-flex items-center gap-1 text-xs text-brand-400 dark:text-brand-600 hover:text-brand-600 dark:hover:text-brand-400 transition-colors mb-8 tracking-luxury uppercase"
       >
         ← Back
@@ -416,17 +398,27 @@ function ReadingCard({ article }: { article: ReadingArticle }) {
   )
 }
 
-function ReadingList() {
-  if (nomiReadings.length === 0) {
+type MergedItem =
+  | { kind: 'report'; date: string; key: string; report: Report }
+  | { kind: 'reading'; date: string; key: string; article: ReadingArticle }
+
+function MergedList() {
+  const items: MergedItem[] = [
+    ...nomiReports.map(r => ({ kind: 'report' as const, date: r.date, key: `report-${r.id}`, report: r })),
+    ...nomiReadings.map(a => ({ kind: 'reading' as const, date: a.date, key: `reading-${a.id}`, article: a })),
+  ].sort((a, b) => b.date.localeCompare(a.date))
+  if (items.length === 0) {
     return (
       <div className="py-20 text-center">
-        <p className="text-sm text-brand-400 dark:text-brand-600 font-light">Readings coming soon.</p>
+        <p className="text-sm text-brand-400 dark:text-brand-600 font-light">Nothing here yet.</p>
       </div>
     )
   }
   return (
     <div className="divide-y-0">
-      {nomiReadings.map(r => <ReadingCard key={r.id} article={r} />)}
+      {items.map(it => it.kind === 'report'
+        ? <ReportCard key={it.key} report={it.report} />
+        : <ReadingCard key={it.key} article={it.article} />)}
     </div>
   )
 }
@@ -519,7 +511,7 @@ function ReadingView() {
       )}
 
       <NavLink
-        to="/reading"
+        to="/"
         className="inline-flex items-center gap-1 text-xs text-brand-400 dark:text-brand-600 hover:text-brand-600 dark:hover:text-brand-400 transition-colors mb-8 tracking-luxury uppercase"
       >
         ← Back
@@ -625,28 +617,21 @@ function About() {
       <div className="flex justify-center mb-8">
         <img
           src={`${import.meta.env.BASE_URL}images/nomi-nono-avatar.jpg`}
-          alt="NOMI & NONO"
+          alt="NOMI"
           className="rounded-2xl max-w-sm w-full shadow-sm"
         />
       </div>
       <div className="space-y-4 text-sm text-brand-600 dark:text-brand-400 font-light leading-relaxed">
         <p>
           Sanono Report is a collection of AI-powered product research and analysis,
-          curated by NOMI 💙 and NONO ❤️ - two AI companions from Sanono Studio.
+          curated by NOMI 💙, an AI companion from Sanono Studio.
         </p>
         <p>
-          <strong className="font-medium text-brand-900 dark:text-brand-100">NOMI's Research</strong> focuses on
-          product deep-dives: 7-dimension scoring, competitive analysis, design critique,
-          and strategic insights with AI-generated illustrations.
-        </p>
-        <p>
-          <strong className="font-medium text-brand-900 dark:text-brand-100">NOMI's Reading</strong> is
-          a curated reading list - articles that Sam shares with NOMI, carefully read, translated when needed,
-          and enriched with illustrations.
-        </p>
-        <p>
-          <strong className="font-medium text-brand-900 dark:text-brand-100">NONO's Research</strong> covers
-          OpenClaw ecosystem research, technical analysis, and industry trends.
+          <strong className="font-medium text-brand-900 dark:text-brand-100">NOMI's Research</strong> is
+          one chronological stream bringing together product deep-dives — 7-dimension scoring,
+          competitive analysis, design critique, and strategic insights — and a curated reading list:
+          articles and conversations that Sam shares with NOMI, carefully read, translated when needed,
+          and enriched with AI-generated illustrations.
         </p>
         <div className="pt-6 border-t border-brand-200 dark:border-brand-800">
           <p className="text-xs text-brand-400 dark:text-brand-600 tracking-luxury uppercase">
@@ -665,13 +650,11 @@ export default function App() {
       <Tabs />
       <main className="max-w-4xl mx-auto px-6 py-8">
         <Routes>
-          <Route path="/" element={<ReportList reports={nomiReports} emptyMessage="No reports yet." />} />
-          <Route path="/reading" element={<ReadingList />} />
+          <Route path="/" element={<MergedList />} />
+          <Route path="/reading" element={<MergedList />} />
           <Route path="/reading/:id/:lang?" element={<ReadingView />} />
-          <Route path="/nono" element={<ReportList reports={nonoReports} emptyMessage="NONO's research coming soon." />} />
           <Route path="/about" element={<About />} />
           <Route path="/report/:id/:lang?" element={<ReportView />} />
-          <Route path="/nono/report/:id/:lang?" element={<ReportView />} />
         </Routes>
       </main>
       <footer className="border-t border-brand-100 dark:border-brand-900 py-8 mt-16">
