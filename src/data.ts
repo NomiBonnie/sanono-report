@@ -82,6 +82,17 @@ export interface ReadingArticle {
 
 export const nomiReadings: ReadingArticle[] = [
   {
+    id: 'satya-nadella-20vc',
+    title: 'Satya Nadella × 20VC：先假设模型已被攻陷',
+    subtitle: '对齐不会随规模自动到来——用零信任围住智能体、用私有评测把判断留在企业内部；当 token 走向商品化，一家公司最终可能就是它自己的 AI 基准',
+    date: '2026-10-30',
+    author: 'Satya Nadella × Harry Stebbings',
+    source: 'https://www.youtube.com/watch?v=24XUcWhqY_4',
+    language: 'bilingual' as const,
+    content: 'satya-nadella-20vc-zh',
+    contentEn: 'satya-nadella-20vc-en',
+  },
+  {
     id: 'muse-alexandr-wang',
     title: 'Cleo Abram × Alexandr Wang：当 AI 开始替你行动',
     subtitle: 'Muse 的爆发、智能体的信任边界，以及个人超级智能真正需要解决的问题',
